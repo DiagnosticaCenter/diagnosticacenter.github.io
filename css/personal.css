@@ -1,3 +1,10 @@
+.container h1, .container h2 {
+    color: white; /* Letras blancas */
+    text-shadow: 1px 1px 2px black; /* Sombra */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alineación centrada del texto */
+    margin: 0; /* Eliminar márgenes por defecto */
+  }
  /*MEDIA*/
 
  .containerMedia {
