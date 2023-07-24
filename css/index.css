@@ -1,0 +1,69 @@
+
+
+
+ /*CARRUSEL*/
+
+ /* Agregar un sombreado suave a las imágenes */
+ /* Agregar un sombreado suave a las imágenes del carrusel */
+ .shadowimg {
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+     /* Ajustar el color y la opacidad según tus preferencias */
+     transition: box-shadow 0.3s ease-in-out;
+     /* Agregar una transición suave al sombreado */
+ }
+
+ /* Ajustar el sombreado cuando el cursor esté sobre la imagen */
+ .shadowimg:hover {
+     box-shadow: 0 9px 16px rgba(0, 0, 0, 1);
+     /* Cambiar el sombreado cuando el cursor esté sobre la imagen */
+ }
+
+ /* Estilos para el carousel */
+ .owl-four.owl-carousel {
+     display: grid;
+     grid-template-columns: 1fr;
+     /* Cambia a una sola columna en pantallas pequeñas */
+     gap: 10px;
+     height: 100vh;
+     /* Asignar el 100% del alto de la ventana (viewport height) */
+     margin: 0 auto;
+     /* Centrar el carousel en la pantalla */
+
+ }
+
+ .owl-four.owl-carousel .item {
+     width: 100%;
+     /* Ajustar el ancho del item del carousel al 100% */
+     height: 100%;
+     /* Ajustar el alto del item del carousel al 100% */
+     display: flex;
+     /* Utilizar flexbox para centrar la imagen verticalmente */
+     align-items: center;
+     /* Centrar verticalmente la imagen */
+ }
+
+ /*PROMOCIONES*/
+ /* Estilos para las imágenes dentro de "news-img-wrap" */
+ .news-img-wrap img {
+     width: 150%;
+     height: 500px;
+     /* Ajusta esta altura según tus necesidades */
+     /* object-fit: cover;
+     object-position: center;
+     display: block;
+     margin: 0 auto; */
+     /* Centrar verticalmente las imágenes */
+ }
+
+ /* Estilos para la sección "gallery-images-section" */
+ .gallery-images-section {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     max-width: 1200px;
+     /* Ajusta el ancho máximo según tus necesidades */
+     margin: 0 auto;
+     /* Centrar la sección horizontalmente */
+ }
+

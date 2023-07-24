@@ -1,0 +1,10 @@
+
+.main-header {
+    background-color: white;
+    padding: 40px 0; /* Ajustar el espacio vertical aquí */
+    text-align: center; /* Centrar el contenido horizontalmente */
+  }
+  
+  .logo-wrap {
+    display: inline-block; /* Convertir el contenedor en bloque en línea */
+  }
