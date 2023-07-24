@@ -68,9 +68,25 @@
 }
 
 .menu-list li {
-    margin: 0 0 px;
+    margin: 0 0 1px;
 }
+.menu-parent-span{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
 
+    text-decoration: none;
+    padding: 15px 10px;
+    border: 2px solid rgb(76, 74, 74);
+    border-radius: 5px;
+    background-color: rgb(76, 74, 74);
+    opacity: 0.8;
+    gap: 0px;
+}
+.menu-parent-span:hover {
+    background-color: #333;
+    /* Cambia el color de fondo al pasar el mouse sobre el enlace */
+}
 .menu-list li a {
     font-size: 22px;
     font-weight: bold;
@@ -97,6 +113,7 @@
 
 }
 
+
 /*MENÚ PANTALLA MÓVIL*/
 
 /* Estilos para el menu-list en la versión móvil */
@@ -115,6 +132,49 @@
 .menu-list-mobile li {
     margin-bottom: 15px;
 
+}
+.menu-parent-mobile-span{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    text-decoration: none;
+    padding: 15px 10px;
+    border: 2px solid rgb(76, 74, 74);
+    border-radius: 5px;
+    background-color: rgb(76, 74, 74);
+    opacity: 0.8;
+}
+.menu-parent-mobile-span:hover {
+    background-color: #333;
+    /* Cambia el color de fondo al pasar el mouse sobre el enlace */
+}
+.menu-parent-mobile-li{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+
+    text-decoration: none;
+    padding: 15px 10px;
+    border: 2px solid rgb(76, 74, 74);
+    border-radius: 5px;
+    background-color: rgb(76, 74, 74);
+    opacity: 0.8;
+}
+/* Establecer la posición y el z-index para el submenú */
+#sub-menu-mobile {
+    display: none;
+    position: relative;
+    top: 85%; /* Cambiar este valor para ajustar la posición vertical del submenú */
+    left: 0;
+    z-index: 0;
+    padding: 15px 0px; /* Agregar espacio vertical entre los elementos del submenú */
+}
+/* Establecer la posición y el z-index para el submenú */
+
+/* Ajustar el espacio entre los elementos <li> del submenú */
+#sub-menu li {
+    margin-bottom: 15px; /* Agregar margen entre los elementos <li> del submenú */
 }
 
 .menu-list-mobile li a {
