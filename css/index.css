@@ -67,3 +67,26 @@
      /* Centrar la sección horizontalmente */
  }
 
+/* Estilos para el contenedor principal */
+.main-container {
+    max-width: auto; /* Tamaño máximo del contenedor */
+    max-height: 500px; /* Tamaño máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la pantalla */
+    overflow: auto; /* Agregar barra de desplazamiento cuando sea necesario */
+    padding: 20px; /* Agregar un espacio interno al contenedor */
+  }
+  /* Estilos para la barra de desplazamiento */
+.main-container::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+    background-color: #f0f0f0; /* Color de fondo de la barra de desplazamiento */
+  }
+  
+  .main-container::-webkit-scrollbar-thumb {
+    background-color: #1c3961; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 5px; /* Bordes redondeados del "pulgar" */
+  }
+  
+  .main-container::-webkit-scrollbar-thumb:hover {
+    background-color: #1c3961; /* Color del "pulgar" de la barra de desplazamiento cuando el cursor esté sobre él */
+  }
+  
