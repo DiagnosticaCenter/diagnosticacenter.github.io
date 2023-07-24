@@ -167,6 +167,10 @@
      #detailsMap {
          top: 118%;
      }
+
+
+
+
  }
 
  /* Estilos para pantallas grandes */
@@ -192,6 +196,20 @@
 
  /*CARRUSEL*/
 
+ /* Agregar un sombreado suave a las imágenes */
+ /* Agregar un sombreado suave a las imágenes del carrusel */
+ .shadowimg {
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+     /* Ajustar el color y la opacidad según tus preferencias */
+     transition: box-shadow 0.3s ease-in-out;
+     /* Agregar una transición suave al sombreado */
+ }
+
+ /* Ajustar el sombreado cuando el cursor esté sobre la imagen */
+ .shadowimg:hover {
+     box-shadow: 0 9px 16px rgba(0, 0, 0, 1);
+     /* Cambiar el sombreado cuando el cursor esté sobre la imagen */
+ }
 
  /* Estilos para el carousel */
  .owl-four.owl-carousel {
@@ -221,12 +239,12 @@
  /* Estilos para las imágenes dentro de "news-img-wrap" */
  .news-img-wrap img {
      width: 150%;
-     height: 444px;
+     height: 500px;
      /* Ajusta esta altura según tus necesidades */
-     object-fit: cover;
+     /* object-fit: cover;
      object-position: center;
      display: block;
-     margin: 0 auto;
+     margin: 0 auto; */
      /* Centrar verticalmente las imágenes */
  }
 
@@ -242,4 +260,14 @@
      /* Centrar la sección horizontalmente */
  }
 
- 
+ /* Estilos para la sección "email" */
+ .warning {
+     color: red;
+     font-size: 14px;
+     margin-top: 5px;
+ }
+
+ #emailInput {
+     color: white;
+     font-size: 14px;
+ }
