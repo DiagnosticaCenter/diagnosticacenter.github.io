@@ -144,6 +144,7 @@
     border-radius: 5px;
     background-color: rgb(76, 74, 74);
     opacity: 0.8;
+    cursor: pointer;
 }
 .menu-parent-mobile-span:hover {
     background-color: #333;
@@ -156,19 +157,23 @@
 
     text-decoration: none;
     padding: 15px 10px;
-    border: 2px solid rgb(76, 74, 74);
-    border-radius: 5px;
+    border: 1px solid rgb(76, 74, 74);
+    border-radius: 10px;
     background-color: rgb(76, 74, 74);
     opacity: 0.8;
+    z-index: 10;
+    cursor: pointer; /* Agregamos la propiedad cursor para cambiar el cursor a una "manita" */
+
 }
 /* Establecer la posición y el z-index para el submenú */
 #sub-menu-mobile {
     display: none;
     position: relative;
-    top: 85%; /* Cambiar este valor para ajustar la posición vertical del submenú */
+    top: 70%; /* Cambiar este valor para ajustar la posición vertical del submenú */
     left: 0;
-    z-index: 0;
-    padding: 15px 0px; /* Agregar espacio vertical entre los elementos del submenú */
+    z-index: 10;
+    padding: 15px 10px; /* Agregar espacio vertical entre los elementos del submenú */
+
 }
 /* Establecer la posición y el z-index para el submenú */
 

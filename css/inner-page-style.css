@@ -7,7 +7,7 @@
 .course-listing-page .button-group button,
 .gallery-section .button-group button,
 .gallery-section2 .button-group button,
-.learn-courses .box-body p, 
+.learn-courses .box-body p,
 .course-listing-page .grid-item .box-body p,
 .recent-course-single .grid-item .box-body p,
 .details p,
@@ -20,7 +20,7 @@
 .footer-first-section .recent-course-wrap .course-name p,
 .footer-first-section .quick-contact input,
 .footer-first-section .quick-contact textarea,
-.footer-first-section .quick-contact button, 
+.footer-first-section .quick-contact button,
 .grid-box-wrap .grid-body h4,
 .page-content .post-content p,
 .page-content .courses-wrap span,
@@ -40,17 +40,16 @@ aside .reserve-course input[type="email"],
 .post-content span a svg,
 .developer-wrap li a svg,
 .submit-testimonials form span p,
-figcaption h4
-{
-	font-size: 1.4rem;
+figcaption h4 {
+    font-size: 1.4rem;
 }
 
 /*Font size of 15px*/
 
 .row .rewiew-content footer h4,
 .row .rewiew-content footer h4::before,
-.row .rewiew-content footer h4::after{
-	font-size: 1.5rem;
+.row .rewiew-content footer h4::after {
+    font-size: 1.5rem;
 }
 
 /*Font size of 16px*/
@@ -73,9 +72,8 @@ figcaption h4
 .course-detail .course-box button,
 .course-detail p,
 .course-objective li,
-.contact-list li span
-{
-	font-size: 1.6rem;
+.contact-list li span {
+    font-size: 1.6rem;
 }
 
 /*font size of 18px*/
@@ -104,9 +102,8 @@ figcaption h4
 .row .rewiew-content header p,
 .footer-second-section .social-list li a svg,
 .contact-list li svg,
-figcaption h3 
-{
-	font-size: 1.8rem;
+figcaption h3 {
+    font-size: 1.8rem;
 }
 
 /*font size of 20px*/
@@ -117,9 +114,8 @@ figcaption h3
 .navigation.pagination .page-numbers,
 .contact-page-section .contact-social li a,
 #course-page .reserve-course h2,
-.testimonial-page aside .submit-testimonials h2
-{
-	font-size: 2rem;
+.testimonial-page aside .submit-testimonials h2 {
+    font-size: 2rem;
 }
 
 
@@ -132,17 +128,15 @@ figcaption h3
 .page-content .categories-block h2,
 .comments-title,
 .comment-form h2,
-.course-detail h3
-{
-	font-size: 2.4rem;
+.course-detail h3 {
+    font-size: 2.4rem;
 }
 
 /*font size of 25px*/
 
 .featured-points ul svg,
-.about-upper-section .our-story svg
-{
-	font-size: 2.5rem;
+.about-upper-section .our-story svg {
+    font-size: 2.5rem;
 }
 
 
@@ -155,19 +149,17 @@ figcaption h3
 .contact-page-section .contact-info h2,
 .top-heading,
 #course-page .course-detail h2,
-.recent-course-single h2
-{
-	font-size: 3rem;
+.recent-course-single h2 {
+    font-size: 3rem;
 }
 
 /*Font Size of 40px*/
 
 .banner .container h1,
-.banner .owl-nav .owl-prev, 
+.banner .owl-nav .owl-prev,
 .banner .owl-nav .owl-next,
-.page-content .page-article h1
-{
-	font-size: 8rem;
+.page-content .page-article h1 {
+    font-size: 8rem;
 }
 
 /*================================
@@ -184,7 +176,7 @@ figcaption h3
 .learn-courses .learn-desining-banner,
 .course-listing-page .grid-item .learn-desining-banner-course,
 .recent-course-single .grid-item .learn-desining-banner-course,
-.learn-courses .box-body p, 
+.learn-courses .box-body p,
 .course-listing-page .grid-item .box-body p,
 .recent-course-single .grid-item .box-body p,
 .learn-courses .box-body section p,
@@ -209,28 +201,27 @@ figcaption h3
 .grid-box-wrap .grid-body h1,
 .grid-box-wrap .grid-body p,
 .grid-box-wrap .grid-body a,
-.page-content .container aside, 
+.page-content .container aside,
 .testimonial-page .container aside,
 .navigation.pagination .page-numbers,
 .page-content .page-article,
 .comment-section,
 .comment-form,
-.button-section .button, 
+.button-section .button,
 .customer-review .button,
 .contact-page-section,
 .about-upper-section,
 .team-members .container,
 #course-page,
 .course-detail .course-box button,
-#course-page aside .reserve-course input, 
+#course-page aside .reserve-course input,
 #course-page aside .reserve-course textarea,
 .testimonial-page aside .submit-testimonials input,
 .testimonial-page aside .submit-testimonials textarea,
 .recent-course-single h2,
 .testimonial-page .container,
-.customer-review .row .rewiew-content
-{
-	font-family: 'Raleway', sans-serif;
+.customer-review .row .rewiew-content {
+    font-family: 'Raleway', sans-serif;
 }
 
 /*================================
@@ -267,24 +258,22 @@ figcaption h3
 .recent-course-single h2,
 .row .rewiew-content header h3,
 .row .rewiew-content footer h4,
-figcaption h4   
-{
-	color: #000;
+figcaption h4 {
+    color: #000;
 }
 
 /*======Black Background Color==========*/
 .page-footer,
 .footer-first-section .quick-contact input,
-.footer-first-section .quick-contact textarea
-{
-	background: #000;
+.footer-first-section .quick-contact textarea {
+    background: #000;
 }
 
 
 /*====White Text Color==========*/
 .top-header .container a,
 .banner .container,
-.banner .owl-nav .owl-prev, 
+.banner .owl-nav .owl-prev,
 .banner .owl-nav .owl-next,
 .learn-courses .learn-desining-banner,
 .course-listing-page .grid-item .learn-desining-banner-course,
@@ -304,21 +293,20 @@ figcaption h4
 .page-content .courses-wrap p,
 .reply a,
 .comment-form input[type="submit"],
-.button-section .button, 
+.button-section .button,
 .customer-review .button,
 .people-info-wrap form input[type="submit"],
 .course-detail .course-box button,
 #course-page aside .reserve-course input[type="submit"],
-.testimonial-page aside .submit-testimonials input[type="submit"]
-{
-	color: #fff;
+.testimonial-page aside .submit-testimonials input[type="submit"] {
+    color: #fff;
 }
 
 /*======White Background Color========*/
 .sub-menu,
 .nav-menu .sub-menu .sub-menu-g,
 .whyus-wrap h1::after,
-.event-wrap .details,
+.event-wrap,
 .what-other-say .wrap-others-say,
 .news-detail,
 .footer-first-section .quick-contact button,
@@ -330,19 +318,21 @@ figcaption h4
 	/*background: #fff;*/
 }
 
+.details {
+    background: #fff;
+}
 
 /*======Dark BLue Color For BackGround============*/
 
 .top-header,
-.course-listing-page .grid-item .learn-desining-banner-course, 
+.course-listing-page .grid-item .learn-desining-banner-course,
 .recent-course-single .grid-item .learn-desining-banner-course,
 .comment-form input[type="submit"],
 .button-section .button, .customer-review .button,
 .course-detail .course-box button,
 #course-page aside .reserve-course input[type="submit"],
-.testimonial-page aside .submit-testimonials input[type="submit"]
-{
-	background: #1c3961;
+.testimonial-page aside .submit-testimonials input[type="submit"] {
+    background: #1c3961;
 }
 
 /*======Dark BLue Color For Text============*/
@@ -353,75 +343,67 @@ figcaption h4
 .page-content .post-content h3,
 .course-detail .course-box i,
 .course-detail .course-box h3,
-figcaption h3
-{
-	color: #1c3961;
+figcaption h3 {
+    color: #1c3961;
 }
 
 
 /*==========================================*/
-.learn-courses .box-body p, 
+.learn-courses .box-body p,
 .course-listing-page .grid-item .box-body p,
 .recent-course-single .grid-item .box-body p,
 .grid-box-wrap .grid-body h4,
 .grid-box-wrap .grid-body p,
 .page-content .container aside .news-letter p,
 .navigation.pagination .page-numbers,
-.contact-page-section .people-info-wrap p
-{
-	color: #5c5c5c;
+.contact-page-section .people-info-wrap p {
+    color: #5c5c5c;
 }
 
 /*===========================================*/
 .about-upper-section .who-we-are p,
 .about-upper-section .our-story a,
-.about-upper-section .our-story p
-{
-	color: #59616d;
+.about-upper-section .our-story p {
+    color: #59616d;
 }
 
 /*===========================================*/
 .course-detail p,
-.course-objective li
-{
-	color: #646464;
+.course-objective li {
+    color: #646464;
 }
 
 /*===========================================*/
 .row .rewiew-content p,
-.learn-courses .owl-carousel .owl-nav, 
-.latest-news .owl-carousel .owl-nav
-{
-	color:  #636363;
+.learn-courses .owl-carousel .owl-nav,
+.latest-news .owl-carousel .owl-nav {
+    color: #636363;
 }
 
 /*===========================================*/
 .news-detail h2,
 .news-detail p,
-.details p
-{
-	color: #585858;
+.details p {
+    color: #585858;
 }
 
 /*=============================================*/
 .grid-box-wrap .grid-body a,
 .navigation.pagination .page-numbers.current,
-.navigation.pagination .page-numbers:hover
-{
-	color: #2b74b8;
+.navigation.pagination .page-numbers:hover {
+    color: #2b74b8;
 }
+
 /*===========================================*/
 .page-content .container aside .news-letter a,
-.page-content .courses-wrap span
-{
-	background: #2b74b8; 
+.page-content .courses-wrap span {
+    background: #2b74b8;
 }
 
 /*===============================================*/
 .about-upper-section .our-story svg,
-.team-members .developer-wrap p
-{
-	color: #1f4271;
+.team-members .developer-wrap p {
+    color: #1f4271;
 }
 
 
@@ -430,9 +412,8 @@ figcaption h3
 .learn-courses .learn-desining-banner,
 .course-listing-page .grid-item .learn-desining-banner-course,
 .recent-course-single .grid-item .learn-desining-banner-course,
-.learn-desining-banner
-{
-	background: #009450;
+.learn-desining-banner {
+    background: #009450;
 }
 
 /*=================================================*/
@@ -440,7 +421,6 @@ figcaption h3
 .page-content .container aside .news-letter,
 #course-page aside .reserve-course,
 .testimonial-page aside .submit-testimonials,
-.query-section
-{
-	background: #f3f3f3;
+.query-section {
+    background: #f3f3f3;
 }

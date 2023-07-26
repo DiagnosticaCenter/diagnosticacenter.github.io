@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const menuParent = document.querySelector('.menu-parent');
     const subMenu = menuParent.querySelector('.sub-menu');
 
     // Agregar evento click al elemento con la clase "menu-parent"
-    menuParent.addEventListener('click', function(event) {
+    menuParent.addEventListener('click', function (event) {
         event.stopPropagation(); // Evitar que el clic en "Más" cierre el submenú
 
         // Alternar la visibilidad del submenú al hacer clic en "menu-parent"
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Agregar evento click para cerrar el submenú "Más" al hacer clic en cualquier otro lugar de la página
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         const target = event.target;
 
         if (!menuParent.contains(target)) {
@@ -33,3 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+function gotoSection(sections) {
+
+    // Obtener el elemento con el id "certificaciones"
+    var section = document.getElementById(sections);
+
+    // Verificar si el elemento existe antes de intentar desplazarse a él
+    if (section) {
+        // Hacer scroll suavemente hasta la sección de ''
+        section.scrollIntoView({behavior: 'smooth'});
+    } else {
+        console.error('La sección de ' + sections + ' no existe.');
+    }
+}
