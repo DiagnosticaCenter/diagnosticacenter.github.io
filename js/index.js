@@ -50,7 +50,7 @@ function gotoSection(sections) {
 }
 
 function sendMessage(action) {
-    let message;
+    let message = "";
     // Crea el enlace de WhatsApp
     let whatsappLink = `https://api.whatsapp.com/send?phone=%2B593982922239&text=`;
 
@@ -63,9 +63,12 @@ function sendMessage(action) {
             message = ("¡Hola! Estoy interesado en cotizar unos exámenes.");
             break;
         case 'resultados':
-            message = ("¡Hola! Estoy interesado en los resultados de los exámenes");
+            message = ("¡Hola! Estoy interesado en los resultados de los exámenes.");
             break;
-        case 'factira':
+        case 'domicilio':
+            message = ("¡Hola! Estoy interesado en su servicio a domicilio.");
+            break;
+        case 'factura':
             message = ("¡Hola! Estoy interesado en mis comprobbantes de pago.");
             break;
         default:
