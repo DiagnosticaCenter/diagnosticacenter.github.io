@@ -313,9 +313,8 @@ figcaption h4 {
 .page-content .post-wrap .post-content,
 .page-content .follow-us,
 .page-content .latest-course,
-.testimonial-page .submit-testimonials form .custom-file-upload 
-{
-	/*background: #fff;*/
+.testimonial-page .submit-testimonials form .custom-file-upload {
+    /*background: #fff;*/
 }
 
 .details {
@@ -413,7 +412,12 @@ figcaption h3 {
 .course-listing-page .grid-item .learn-desining-banner-course,
 .recent-course-single .grid-item .learn-desining-banner-course,
 .learn-desining-banner {
-    background: #009450;
+    background: #007740;
+
+}
+
+.spanbold {
+    font-weight: bold;
 }
 
 /*=================================================*/

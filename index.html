@@ -24,6 +24,8 @@
 
 <body id="top">
 <div id="page" class="site">
+
+    <!-- INIT HEADER -->
     <header class="site-header">
         <div class="top-header">
             <div class="containerMedia">
@@ -52,35 +54,39 @@
             </div>
         </div>
     </header>
-    <!-- Header Close -->
+    <!-- FINISH HEADER -->
 
+    <!-- INIT BANNER -->
     <div class="banner">
 
         <div class="main-header">
             <div class="container">
 
-                <button class="toggle-menu-btn" onclick="toggleMenu()">☰</button>
+                <button class="toggle-menu-btn" style="border: 2px solid black" onclick="toggleMenu()">☰</button>
 
                 <nav class="nav-mobile">
                     <ul class="menu-list-mobile">
                         <li><a href="/">Inicio</a></li>
                         <!-- BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  -->
-                        <li><a href="about.html">Acerca de nosotros</a></li>
+                        <li><a href="about.html">Servicios</a></li>
                         <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN -->
-                        <li><a href="contact.html">Trabaja con nosotros</a></li>
+                        <li><a href="contact.html">Instalaciones</a></li>
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
                         <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>
                             <ul class="sub-menu" id="sub-menu-mobile">
-                                <li onclick="gotoSection('promociones')" class="menu-parent-mobile-li">
-                                    <a>Promociones</a></li>
-                                <li onclick="gotoSection('certificaciones')" class="menu-parent-mobile-li">
-                                    <a>Certificaciones</a>
+                                <li onclick="gotoSection('acciones')" class="menu-parent-mobile-li">
+                                    <a>Acciones</a></li>
+                                <li onclick="gotoSection('actividades')" class="menu-parent-mobile-li">
+                                    <a>Actividades</a>
+                                </li>
+                                <li onclick="gotoSection('examenes')" class="menu-parent-mobile-li">
+                                    <a>Exámenes</a>
                                 </li>
                                 <li onclick="gotoSection('ubicacion')" class="menu-parent-mobile-li">
                                     <a>Ubicación</a>
                                 </li>
                                 <li onclick="gotoSection('publicaciones')" class="menu-parent-mobile-li">
-                                    <a>Publicaciones</a>
+                                    <a>Galería</a>
                                 </li>
                                 <!--                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>-->
                             </ul>
@@ -92,16 +98,18 @@
                     <ul class="menu-list">
                         <li><a href="/">Inicio</a></li>
                         <!-- BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  -->
-                        <li><a href="about.html">Acerca de nosotros</a></li>
+                        <li><a href="about.html">Servicios</a></li>
                         <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN -->
-                        <li><a href="contact.html">Trabaja con nosotros</a></li>
+                        <li><a href="contact.html">Instalaciones</a></li>
+                        <!--                        <li><a href="contact.html">Instalaciones</a></li>-->
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
                         <li class="menu-parent"><span class="menu-parent-span">Más</span>
                             <ul class="sub-menu" id="sub-menu-desktop">
-                                <li><a href="#promociones">Promociones</a></li>
-                                <li><a href="#certificaciones">Certificaciones</a></li>
+                                <li><a href="#acciones">Acciones</a></li>
+                                <li><a href="#actividades">Actividades</a></li>
+                                <li><a href="#examenes">Exámenes</a></li>
                                 <li><a href="#ubicacion">Ubicación</a></li>
-                                <li><a href="#publicaciones">Publicaciones</a></li>
+                                <li><a href="#publicaciones">Galería</a></li>
                                 <!--                                <li><a href="#footer">Pié de página</a></li>-->
                             </ul>
                         </li>
@@ -132,17 +140,157 @@
 
         <div id="owl-four-nav" class="owl-nav"></div>
     </div>
+    <!-- FINISH BANNER -->
 
-    <!-- Banner Close -->
-    <!-- INICIO PROMOCIONES CARRUSEL 1 -->
+    <!-- INIT ACTIONS -->
+    <section id="acciones" style="background-color: white;">
+        <div class="page-heading">
+            <div class="container">
+                <h2>ACCIONES</h2>
+                <div class="menu">
+                    <div class="cardView" onclick="sendMessage('cita')">
+                        <div class="item">
+                            <img src="gif/cuaderno.gif">
+                        </div>
+                        <div class="name">
+                            <h4>
+                                Agendar cita
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="cardView" onclick="sendMessage('cotizar')">
+                        <div class="item">
+                            <img src="gif/devolucion-de-dinero.gif">
+                        </div>
+                        <div class="name">
+                            <h4>
+                                Cotizar exámenes
+                            </h4>
+                        </div>
 
-    <section id="promociones" class="page-heading">
+                    </div>
+                    <div class="cardView" onclick="sendMessage('resultados')">
+                        <div class="item">
+                            <img src="gif/monitor.gif">
+                        </div>
+                        <div class="name">
+                            <h4>
+                                Consultar resultados
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="cardView" onclick="sendMessage('factura')">
+                        <div class="item">
+                            <img src="gif/lista-de-verificacion.gif">
+                        </div>
+                        <div class="name">
+                            <h4>
+                                Consultar facturas
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popular courses End -->
+        <br/>
+    </section>
+    <!-- FINISH ACTIONS -->
+
+    <!-- INIT ACTIVIDADES -->
+    <section id="actividades" style="background-color: rgb(221, 221, 221)">
+        <div class="page-heading">
+            <div class="container">
+                <h2>ACTIVIDADES</h2>
+            </div>
+        </div>
+        <!-- Popular courses End -->
+        <div class="learn-courses">
+            <div class="container">
+                <div class="courses">
+                    <div class="owl-one owl-carousel">
+                        <div class="box-wrap" itemprop="event" itemscope>
+                            <div class="img-wrap" itemprop="image">
+                                <a href="images/certi.jpg" data-lightbox="certificado"
+                                   data-title="Certificado">
+                                    <img src="gif/historial-medico.gif" alt="gallery-images">
+                                </a>
+                            </div>
+                            <span class="learn-desining-banner spanbold" itemprop="name">Convenio con médicos</span>
+                            <!--                            <div class="box-body" itemprop="description">-->
+                            <!--                                <p class="p">Sí eres médico está información podría interesarte</p>-->
+                            <!--                            </div>-->
+                        </div>
+
+                        <div class="box-wrap" itemprop="event" itemscope>
+                            <div class="img-wrap" itemprop="image">
+                                <a href="images/certi.jpg" data-lightbox="certificado"
+                                   data-title="Certificado">
+                                    <img src="gif/fabrica.gif" alt="gallery-images">
+                                </a>
+                            </div>
+                            <span class="learn-desining-banner spanbold" itemprop="name">Convenios coportativos</span>
+                            <!--                            <div class="box-body" itemprop="description">-->
+                            <!--                                <p class="p">Para las empresas</p>-->
+                            <!--                            </div>-->
+                        </div>
+
+                        <div class="box-wrap" itemprop="event" itemscope>
+                            <div class="img-wrap" itemprop="image">
+                                <a href="images/certi.jpg" data-lightbox="certificado"
+                                   data-title="Certificado">
+                                    <img src="gif/puerta.gif" alt="gallery-images">
+                                </a>
+                            </div>
+                            <span class="learn-desining-banner spanbold" itemprop="name">Servicios a domicilio</span>
+                            <!--                            <div class="box-body" itemprop="description">-->
+                            <!--                                <p class="p">Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum-->
+                            <!--                                    Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>-->
+                            <!--                            </div>-->
+                        </div>
+
+                        <div class="box-wrap" itemprop="event" itemscope>
+                            <div class="img-wrap" itemprop="image">
+                                <a href="images/certi.jpg" data-lightbox="certificado"
+                                   data-title="Certificado">
+                                    <img src="gif/ultrasonido.gif" alt="gallery-images">
+                                </a>
+                            </div>
+                            <span class="learn-desining-banner spanbold" itemprop="name">Ecografía</span>
+                            <!--                            <div class="box-body" itemprop="description">-->
+                            <!--                                <p class="p">Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum-->
+                            <!--                                    Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>-->
+                            <!--                            </div>-->
+                        </div>
+
+                        <div class="box-wrap" itemprop="event" itemscope>
+                            <div class="img-wrap" itemprop="image">
+                                <a href="images/certi.jpg" data-lightbox="certificado"
+                                   data-title="Certificado">
+                                    <img src="gif/farmacia.gif" alt="gallery-images">
+                                </a>
+                            </div>
+                            <span class="learn-desining-banner spanbold" itemprop="name">Farmacia</span>
+                            <!--                            <div class="box-body" itemprop="description">-->
+                            <!--                                <p class="p">Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum-->
+                            <!--                                    Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>-->
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </section>
+    <!-- FINISH ACTIVIDADES -->
+
+    <!-- INIT PROMOCIONES - EXÁMENES -->
+    <section id="examenes" style="background-color: white" class="page-heading">
         <div class="container">
-            <h2>PROMOCIONES</h2>
+            <h2>EXÁMENES</h2>
         </div>
     </section>
-
-    <section class="latest-news">
+    <section style="background-color: white" class="latest-news">
         <div class="container" itemprop="event" itemscope>
             <div class="owl-two owl-carousel">
                 <div class="news-wrap" itemprop="event">
@@ -309,91 +457,15 @@
             </div>
         </div>
     </section>
+    <!-- FINISH PROMOCIONES - EXÁMENES -->
 
-    <!-- FIN PROMOCIONES CARRUSEL 1 -->
-
-    <section id="certificaciones" style="background-color: rgb(221, 221, 221);">
-        <div class="page-heading">
-            <div class="container">
-                <h2>CERTIFICACIONES Y
-                    ACREDITACIONES</h2>
-            </div>
-        </div>
-        <!-- Popular courses End -->
-        <div class="learn-courses">
-            <div class="container">
-                <div class="courses">
-                    <div class="owl-one owl-carousel">
-                        <div class="box-wrap" itemprop="event" itemscope>
-                            <div class="img-wrap" itemprop="image">
-                                <a href="images/certi.jpg" data-lightbox="certificado"
-                                   data-title="Certificado">
-                                    <img src="images/certi.jpg" alt="gallery-images">
-                                </a>
-                            </div>
-                            <span class="learn-desining-banner" itemprop="name">Lorem Ipsum</span>
-                            <div class="box-body" itemprop="description">
-                                <p class="p">Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum
-                                    Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>
-                            </div>
-                        </div>
-
-                        <div class="box-wrap" itemprop="event" itemscope>
-                            <div class="img-wrap" itemprop="image">
-                                <a href="images/certi.jpg" data-lightbox="certificado"
-                                   data-title="Certificado">
-                                    <img src="images/certi.jpg" alt="gallery-images">
-                                </a>
-                            </div>
-                            <span class="learn-desining-banner" itemprop="name">Lorem Ipsum</span>
-                            <div class="box-body" itemprop="description">
-                                <p class="p">Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum
-                                    Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>
-                            </div>
-                        </div>
-
-                        <div class="box-wrap" itemprop="event" itemscope>
-                            <div class="img-wrap" itemprop="image">
-                                <a href="images/certi.jpg" data-lightbox="certificado"
-                                   data-title="Certificado">
-                                    <img src="images/certi.jpg" alt="gallery-images">
-                                </a>
-                            </div>
-                            <span class="learn-desining-banner" itemprop="name">Lorem Ipsum</span>
-                            <div class="box-body" itemprop="description">
-                                <p class="p">Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum
-                                    Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>
-                            </div>
-                        </div>
-
-                        <div class="box-wrap" itemprop="event" itemscope>
-                            <div class="img-wrap" itemprop="image">
-                                <a href="images/certi.jpg" data-lightbox="certificado"
-                                   data-title="Certificado">
-                                    <img src="images/certi.jpg" alt="gallery-images">
-                                </a>
-                            </div>
-                            <span class="learn-desining-banner" itemprop="name">Lorem Ipsum</span>
-                            <div class="box-body" itemprop="description">
-                                <p class="p">Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum
-                                    Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br/>
-    </section>
-    <!-- Learn courses End -->
-
-    <!-- End of gallery Images -->
-    <section id="ubicacion" class="page-heading">
+    <!-- INIT UBICACIONES -->
+    <section id="ubicacion" style="background-color: rgb(221, 221, 221)" class="page-heading">
         <div class="container">
             <h2>UBICACIÓN</h2>
         </div>
     </section>
-    <section class="events-section" itemprop="event" itemscope>
+    <section style="background-color: rgb(221, 221, 221)" class="events-section" itemprop="event" itemscope>
         <div class="container">
             <div class="event-wrap">
                 <div class="img-wrap" itemprop="image">
@@ -427,65 +499,13 @@
             </div>
         </div>
     </section>
-    <!-- End of Events section -->
-    <!-- <section class="what-other-say">
+    <!-- FINISH UBICACIONES -->
 
-        <div class="container">
-            <h4 class="article-subtitle">Get to Know</h4>
-            <h2 class="head">what our customer say</h2>
-            <div class="three owl-carousel owl-theme">
-                <div class="customer-item" itemscope itemtype="http://schema.org/Rating">
-                    <div class="border">
-                        <div class="customer">
-                            <figure>
-                                <img class="customer-img" src="images/customer-img.jpg" alt="Person image">
-                                <figcaption>
-                                    <span itemprop="author">SAGAR KUMAR SAPKOTA</span>
-                                    <div class="rateYo" itemprop="ratingValue"></div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="customer-review">
-                            <p itemprop="description">
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="customer-item" itemscope itemtype="http://schema.org/Rating">
-                    <div class="border">
-                        <div class="customer">
-                            <figure>
-                                <img class="customer-img" src="images/customer-img.jpg" alt="Person image">
-                                <figcaption>
-                                    <span itemprop="author">SAGAR KUMAR SAPKOTA</span>
-                                    <div class="rateYo" itemprop="ratingValue"></div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="customer-review">
-                            <p itemprop="description">
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- End of Others talk -->
-    <section id="publicaciones" style="background-color: rgb(221, 221, 221);">
+    <!-- INIT GALERÍA -->
+    <section id="publicaciones" style="background-color:white;">
         <section class="page-heading">
             <div class="container">
-                <h2>Otras publicaciones</h2>
+                <h2>Galería</h2>
             </div>
         </section>
         <section class="gallery-images-section" itemprop="image" itemscope>
@@ -592,9 +612,9 @@
             <br/><br/><br/>
         </section>
     </section>
+    <!-- FINISH GALERÍA -->
 
-
-    <!-- Latest News CLosed -->
+    <!-- INIT FOOTER -->
     <footer id="footer" class="page-footer" itemprop="footer" itemscope>
         <div class="footer-first-section">
             <div class="container">
@@ -657,7 +677,11 @@
                     Geovanny</a></p>
             </div>
         </div>
+        <a href="https://www.flaticon.es/iconos-animados-gratis/" style="color: #0c1923">Íconos animados creados por
+            Freepik - Flaticon</a>
+
     </footer>
+    <!-- FINISH FOOTER -->
 
 </div>
 <script type="text/javascript" src="js/index.js"></script>
@@ -669,15 +693,13 @@
 <script type="text/javascript" src="js/owl.carousel.js"></script>
 <script type="text/javascript" src="js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="js/jquery.rateyo.js"></script>
-<!-- <script type="text/javascript" src="js/jquery.mmenu.all.js"></script> -->
-<!-- <script type="text/javascript" src="js/jquery.meanmenu.min.js"></script> -->
+
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/jquery.backtotop.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/cardslider.js"></script>
 <script type="text/javascript" src="js/email.js"></script>
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
-
 </body>
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
 

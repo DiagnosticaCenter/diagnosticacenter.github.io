@@ -1038,7 +1038,7 @@ ul > li {
 .learn-courses .learn-desining-banner,
 .course-listing-page .grid-item .learn-desining-banner-course,
 .recent-course-single .grid-item .learn-desining-banner-course {
-    position: absolute;
+    position: relative;
     left: 5%;
     top: 44%;
     /*background: #009450;*/

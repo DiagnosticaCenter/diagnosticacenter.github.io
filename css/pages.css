@@ -1,19 +1,19 @@
 .containerTitle h1,
 .containerTitle h2 {
-	color: white;
-	/* Letras blancas */
-	text-shadow: 1px 1px 2px black;
-	/* Sombra */
-	padding: 10px;
-	/* Espaciado interno */
-	text-align: center;
-	/* Alineación centrada del texto */
-	margin: 0;
-	/* Eliminar márgenes por defecto */
+    color: white;
+    /* Letras blancas */
+    text-shadow: 1px 1px 2px black;
+    /* Sombra */
+    padding: 10px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Alineación centrada del texto */
+    margin: 0;
+    /* Eliminar márgenes por defecto */
 }
- 
- /* Estilos para la sección "email" */
- .warning {
+
+/* Estilos para la sección "email" */
+.warning {
     color: red;
     font-size: 14px;
     margin-top: 5px;
@@ -25,9 +25,9 @@
 }
 
 
- /*MEDIA*/
+/*MEDIA*/
 
- .containerMedia {
+.containerMedia {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 10px;
@@ -57,9 +57,9 @@
 }
 
 
- /*MENÚ PANTALLA GRANDE*/
+/*MENÚ PANTALLA GRANDE*/
 
- .menu-list {
+.menu-list {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -70,7 +70,8 @@
 .menu-list li {
     margin: 0 0 1px;
 }
-.menu-parent-span{
+
+.menu-parent-span {
     color: white;
     font-size: 22px;
     font-weight: bold;
@@ -83,10 +84,12 @@
     opacity: 0.8;
     gap: 0px;
 }
+
 .menu-parent-span:hover {
     background-color: #333;
     /* Cambia el color de fondo al pasar el mouse sobre el enlace */
 }
+
 .menu-list li a {
     font-size: 22px;
     font-weight: bold;
@@ -133,7 +136,8 @@
     margin-bottom: 15px;
 
 }
-.menu-parent-mobile-span{
+
+.menu-parent-mobile-span {
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -146,11 +150,13 @@
     opacity: 0.8;
     cursor: pointer;
 }
+
 .menu-parent-mobile-span:hover {
     background-color: #333;
     /* Cambia el color de fondo al pasar el mouse sobre el enlace */
 }
-.menu-parent-mobile-li{
+
+.menu-parent-mobile-li {
     color: white;
     font-size: 15px;
     font-weight: bold;
@@ -165,6 +171,7 @@
     cursor: pointer; /* Agregamos la propiedad cursor para cambiar el cursor a una "manita" */
 
 }
+
 /* Establecer la posición y el z-index para el submenú */
 #sub-menu-mobile {
     display: none;
@@ -175,6 +182,7 @@
     padding: 15px 10px; /* Agregar espacio vertical entre los elementos del submenú */
 
 }
+
 /* Establecer la posición y el z-index para el submenú */
 
 /* Ajustar el espacio entre los elementos <li> del submenú */
@@ -230,9 +238,10 @@
     /* Cambiar el color de fondo al pasar el mouse sobre el botón */
     color: black;
     /* Cambiar el color del texto al pasar el mouse sobre el botón */
+    border: 2px solid black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
 
     /* Mostrar el menú desplegable en pantallas pequeñas */
     .nav-mobile {
@@ -264,7 +273,7 @@
 }
 
 /* Estilos para pantallas grandes */
-@media (min-width: 769px) {
+@media (min-width: 1090px) {
 
     .nav-mobile {
         display: none;
@@ -282,4 +291,267 @@
     }
 
 }
+
+
+.container-action {
+    width: 90vw;
+    margin: 50px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 15% 60% 25%;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    /*   background-color: #F0F8FF; */
+}
+
+/* .box{
+        border: 2px solid black;
+        background-color: rgb(228, 188, 228);
+        padding: 23px;
+} */
+
+
+.main {
+    grid-row: 2;
+    grid-column: 2/3;
+    font-family: "Abril Fatface", cursive;
+    font-size: 5.2vw;
+    padding-left: 1em;
+    /*   background-color: #5F9EA0; */
+}
+
+.misc {
+    grid-row: 2;
+    grid-column: 3/-1;
+    padding: 1em;
+    padding-right: 40%;
+}
+
+.misc h5 {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: .9vw;
+    color: black;
+    line-height: 1.6;
+}
+
+.line {
+    width: 5em;
+    height: 4px;
+    background-color: #ff4e4e;
+    margin: 20px 0;
+}
+
+.cart {
+    grid-column: 1/2;
+}
+
+.carticon img {
+    width: 40%;
+    display: none;
+}
+
+.cart button {
+    width: 9em;
+    height: 3em;
+    background-color: #ff4e4e;
+    display: block;
+    border-radius: 50px;
+    margin: 0px 10px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    color: white;
+    border: none;
+}
+
+.cart button:hover {
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.24), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+}
+
+.navicon img {
+    width: 50%;
+    display: none;
+}
+
+.menu {
+    grid-column: 2/5;
+    grid-row: 3/-1;
+    /*   background-color: #A9A9A9; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+    padding-top: 5%;
+}
+
+.cardView {
+    background-color: #fff;
+    border-radius: 9%;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.cardView:hover {
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+.cardViewhn {
+    background-color: #fff;
+    border-radius: 9%;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.cardViewhn:hover {
+    background-color: #e6e6e6;
+}
+
+.item img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    display: block;
+    margin: 10% auto;
+}
+
+.name h4 {
+    text-align: center;
+    color: #000;
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    padding-top: 15%;
+}
+
+/* ============================================ */
+/* ============================================ */
+/* ============================================ */
+/* MEDIA QUERIES */
+/* ============================================ */
+/* ============================================ */
+/* ============================================ */
+@media screen and (max-width: 800px) {
+    .container-action {
+        width: 90vw;
+        margin: 50px auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px;
+        /*     background-color: #f0f8ff; */
+    }
+
+
+    .nav {
+        display: none;
+        /*   background-color: lightblue; */
+    }
+
+    .navicon {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        /*     background-color: #faebd5; */
+    }
+
+    .navicon img {
+        display: inline-block;
+        width: 70%;
+        height: 90%;
+    }
+
+    .cart {
+        display: none;
+    }
+
+    .carticon {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        /*     background-color: #faebd5; */
+    }
+
+    .carticon img {
+        display: inline-block;
+        width: 70%;
+        height: 90%;
+    }
+
+    .main {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        font-family: "Abril Fatface", cursive;
+        font-size: 7vw;
+        padding: 1em 2.5em 1em 0em;
+        /*   background-color: #5F9EA0; */
+    }
+
+    .menu {
+        grid-column: 1/4;
+        grid-row: 3/5;
+        /*   background-color: #A9A9A9; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 3em;
+        padding: 5%;
+        max-height: 98vw;
+        overflow: hidden;
+    }
+
+    .cardView {
+        background-color: #fff;
+        border-radius: 9%;
+        padding: 5%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+    }
+
+    .cardView:hover {
+        background-color: #e6e6e6;
+        cursor: pointer;
+    }
+
+    .item img {
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        display: block;
+        margin: 10% auto;
+    }
+
+    .name h4 {
+        text-align: center;
+        color: #000;
+        font-size: 1.5rem;
+        font-family: "Inter", sans-serif;
+        padding-top: 15%;
+    }
+
+    .misc {
+        grid-row: 5/-1;
+        grid-column: 1/4;
+        padding: 10% 1.3em;
+    }
+
+    .misc h5 {
+        font-family: "Inter", sans-serif;
+        font-weight: 200;
+        font-size: 4vw;
+        color: black;
+        line-height: 1.6;
+    }
+
+    .line {
+        width: 9em;
+        height: 4px;
+        background-color: #ff4e4e;
+        margin: 20px 0;
+    }
+}
+
 

@@ -48,3 +48,30 @@ function gotoSection(sections) {
         console.error('La sección de ' + sections + ' no existe.');
     }
 }
+
+function sendMessage(action) {
+    let message;
+    // Crea el enlace de WhatsApp
+    let whatsappLink = `https://api.whatsapp.com/send?phone=%2B593982922239&text=`;
+
+    switch (action) {
+        case 'cita':
+            // Mensaje predefinido
+            message = ("¡Hola! Estoy interesado en agendar una cita.");
+            break;
+        case 'cotizar':
+            message = ("¡Hola! Estoy interesado en cotizar unos exámenes.");
+            break;
+        case 'resultados':
+            message = ("¡Hola! Estoy interesado en los resultados de los exámenes");
+            break;
+        case 'factira':
+            message = ("¡Hola! Estoy interesado en mis comprobbantes de pago.");
+            break;
+        default:
+            break;
+    }
+    whatsappLink = whatsappLink + message;
+    // Abre una nueva ventana o pestaña con el enlace de WhatsApp
+    window.open(whatsappLink, "_blank");
+}

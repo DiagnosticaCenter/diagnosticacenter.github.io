@@ -36,7 +36,9 @@ function toggleMenu() {
     var navMobile = document.querySelector(".nav-mobile");
     if (navMobile.style.display === "block") {
         navMobile.style.display = "none";
+
     } else {
         navMobile.style.display = "block";
+
     }
 }

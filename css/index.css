@@ -48,10 +48,10 @@
      width: 150%;
      height: 500px;
      /* Ajusta esta altura según tus necesidades */
-     /* object-fit: cover;
-     object-position: center;
-     display: block;
-     margin: 0 auto; */
+     /* object-fit: cover;*/
+     /*object-position: center;*/
+     /*display: block;*/
+     /*margin: 0 auto;*/
      /* Centrar verticalmente las imágenes */
  }
 
@@ -75,6 +75,7 @@
     overflow: auto; /* Agregar barra de desplazamiento cuando sea necesario */
     padding: 20px; /* Agregar un espacio interno al contenedor */
   }
+
   /* Estilos para la barra de desplazamiento */
 .main-container::-webkit-scrollbar {
     width: 10px; /* Ancho de la barra de desplazamiento */
