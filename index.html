@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap4.5.2.css">
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/lightbox.css">
@@ -149,13 +150,13 @@
             <div class="container">
                 <h2>ACCIONES</h2>
                 <div class="menu">
-                    <div class="cardView" onclick="sendMessage('cita')">
+                    <div class="cardView" onclick="sendMessage('turno')">
                         <div class="item">
                             <img src="gif/cuaderno.gif">
                         </div>
                         <div class="name">
                             <h4>
-                                Agendar cita
+                                Separar turno
                             </h4>
                         </div>
                     </div>
@@ -205,30 +206,27 @@
                 <h2>ACTIVIDADES</h2>
             </div>
         </div>
-        <!-- Popular courses End -->
+
         <div class="learn-courses">
             <div class="container">
                 <div class="courses">
                     <div class="owl-one owl-carousel">
-                        <div class="box-wrap" itemprop="event" itemscope>
+
+                        <div class="box-wrap" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                             data-content="content1">
                             <div class="img-wrap" itemprop="image">
-                                <a href="images/certi.jpg" data-lightbox="certificado"
-                                   data-title="Certificado">
-                                    <img src="gif/historial-medico.gif" alt="gallery-images">
-                                </a>
+                                <img src="gif/historial-medico.gif" alt="Convenio con médicos." class="img-fluid">
                             </div>
                             <span class="learn-desining-banner spanbold" itemprop="name">Convenio con médicos</span>
-                            <!--                            <div class="box-body" itemprop="description">-->
-                            <!--                                <p class="p">Sí eres médico está información podría interesarte</p>-->
-                            <!--                            </div>-->
                         </div>
 
-                        <div class="box-wrap" itemprop="event" itemscope>
+                        <div class="box-wrap" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                             data-content="content2">
                             <div class="img-wrap" itemprop="image">
-                                <a href="images/certi.jpg" data-lightbox="certificado"
-                                   data-title="Certificado">
-                                    <img src="gif/fabrica.gif" alt="gallery-images">
-                                </a>
+                                <!--                                <a href="images/certi.jpg" data-lightbox="certificado"-->
+                                <!--                                data-title="Certificado">-->
+                                <img src="gif/fabrica.gif" alt="gallery-images">
+                                <!--                                </a>-->
                             </div>
                             <span class="learn-desining-banner spanbold" itemprop="name">Convenios coportativos</span>
                             <!--                            <div class="box-body" itemprop="description">-->
@@ -236,12 +234,13 @@
                             <!--                            </div>-->
                         </div>
 
-                        <div class="box-wrap" itemprop="event" itemscope>
+                        <div class="box-wrap" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                             data-content="content3">
                             <div class="img-wrap" itemprop="image">
-                                <a href="images/certi.jpg" data-lightbox="certificado"
-                                   data-title="Certificado">
-                                    <img src="gif/oficina.gif" alt="gallery-images">
-                                </a>
+                                <!--                                <a href="images/certi.jpg" data-lightbox="certificado"-->
+                                <!--                                   data-title="Certificado">-->
+                                <img src="gif/hotel.gif" alt="gallery-images">
+                                <!--                                </a>-->
                             </div>
                             <span class="learn-desining-banner spanbold" itemprop="name">Alquiler de consultorios</span>
                             <!--                            <div class="box-body" itemprop="description">-->
@@ -250,12 +249,13 @@
                             <!--                            </div>-->
                         </div>
 
-                        <div class="box-wrap" itemprop="event" itemscope>
+                        <div class="box-wrap" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                             data-content="content4">
                             <div class="img-wrap" itemprop="image">
-                                <a href="images/certi.jpg" data-lightbox="certificado"
-                                   data-title="Certificado">
-                                    <img src="gif/ultrasonido-embarazo.gif" alt="gallery-images">
-                                </a>
+                                <!--                                <a href="images/certi.jpg" data-lightbox="certificado"-->
+                                <!--                                data-title="Certificado">-->
+                                <img src="gif/ultrasonido-embarazo.gif" alt="gallery-images">
+                                <!--                                </a>-->
                             </div>
                             <span class="learn-desining-banner spanbold" itemprop="name">Ecografía</span>
                             <!--                            <div class="box-body" itemprop="description">-->
@@ -264,12 +264,13 @@
                             <!--                            </div>-->
                         </div>
 
-                        <div class="box-wrap" itemprop="event" itemscope>
+                        <div class="box-wrap" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                             data-content="content5">
                             <div class="img-wrap" itemprop="image">
-                                <a href="images/certi.jpg" data-lightbox="certificado"
-                                   data-title="Certificado">
-                                    <img src="gif/farmacia.gif" alt="gallery-images">
-                                </a>
+                                <!--                                <a href="images/certi.jpg" data-lightbox="certificado"-->
+                                <!--                                data-title="Certificado">-->
+                                <img src="gif/farmacia.gif" alt="gallery-images">
+                                <!--                                </a>-->
                             </div>
                             <span class="learn-desining-banner spanbold" itemprop="name">Farmacia</span>
                             <!--                            <div class="box-body" itemprop="description">-->
@@ -679,13 +680,34 @@
                     Geovanny</a></p>
             </div>
         </div>
-        <a href="https://www.flaticon.es/iconos-animados-gratis/" style="color: #0c1923">Íconos animados creados por
+        <a href="https://www.flaticon.es/iconos-animados" style="color: #0c1923">Íconos animados creados por
             Freepik - Flaticon</a>
 
     </footer>
     <!-- FINISH FOOTER -->
-
 </div>
+
+<!-- INIT MODAL -->
+<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="dynamicContent">
+                <!-- Contenido del modal -->
+            </div>
+            <div class="modal-footer">
+                <!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FINISH MODAL -->
+
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -696,6 +718,8 @@
 <script type="text/javascript" src="js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="js/jquery.rateyo.js"></script>
 
+<script type="text/javascript" src="js/bootstrap4.5.2.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/jquery.backtotop.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
@@ -703,6 +727,7 @@
 <script type="text/javascript" src="js/email.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MZ9WH2R5Z"></script>
 <script type="text/javascript" src="js/gtag.js"></script>
+
 
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
 </body>

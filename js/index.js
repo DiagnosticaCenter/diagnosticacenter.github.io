@@ -55,9 +55,9 @@ function sendMessage(action) {
     let whatsappLink = `https://api.whatsapp.com/send?phone=%2B593982922239&text=`;
 
     switch (action) {
-        case 'cita':
+        case 'turno':
             // Mensaje predefinido
-            message = ("¡Hola! Estoy interesado en agendar una cita.");
+            message = ("¡Hola! Estoy interesado en separar un turno.");
             break;
         case 'cotizar':
             message = ("¡Hola! Estoy interesado en cotizar unos exámenes.");
