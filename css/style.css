@@ -717,8 +717,7 @@ a:active {
 }
 
 .top-header-right {
-    display: flex;
-    flex-flow: row wrap;
+
 }
 
 .top-header-right ul,
@@ -3010,8 +3009,7 @@ RESPONSIVE STYLESHEET
     }
 
     .top-header .top-header-right {
-        margin-left: auto;
-        margin-right: auto;
+
     }
 
     .top-header-right .social-block {
@@ -3415,7 +3413,7 @@ RESPONSIVE STYLESHEET
     }
 
     .top-header-right .social-list li {
-        margin-right: 40px;
+        margin-right: 20px;
     }
 
     .top-header-right .social-list li:nth-last-child(n+3) {

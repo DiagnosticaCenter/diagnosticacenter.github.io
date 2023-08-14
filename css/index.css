@@ -91,5 +91,26 @@
     background-color: #002559; /* Color del "pulgar" de la barra de desplazamiento cuando el cursor esté sobre él */
   }
 
+ /* Actividades*/
+ #actividades {
+     display: block;
+ }
+
+ /* Estilos para versión móvil */
+ #actividades-movil {
+     display: none;
+ }
+
+ /* Media Query para pantallas de tamaño máximo de 768px (tamaño de pantalla típico de móvil) */
+ @media (max-width: 768px) {
+     #actividades {
+         display: none;
+     }
+
+     #actividades-movil {
+         display: block;
+     }
+ }
+
 
   
