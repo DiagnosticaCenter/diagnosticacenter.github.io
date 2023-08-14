@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css"/>
     <link rel="stylesheet" type="text/css" href="css/inner-page-style.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/cardslider.css">
     <link rel="stylesheet" type="text/css" href="css/about.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/pages.css">
@@ -62,10 +63,26 @@
                     <ul class="menu-list-mobile">
                         <li><a href="index.html">Inicio</a></li>
                         <!-- BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  -->
-                        <li><a href="services.html">Acerca de nosotros</a></li>
+                        <li><a href="services.html">Servicios</a></li>
                         <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN -->
-                        <li><a href="installation.html">Trabaja con nosotros</a></li>
+                        <li><a href="installation.html">Instalaciones</a></li>
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
+                        <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>
+                            <ul class="sub-menu" id="sub-menu-mobile">
+                                <li onclick="gotoSection('acciones')" class="menu-parent-mobile-li">
+                                    <a>Acciones</a></li>
+                                <li onclick="gotoSection('actividades')" class="menu-parent-mobile-li">
+                                    <a>Actividades</a>
+                                </li>
+                                <li onclick="gotoSection('examenes')" class="menu-parent-mobile-li">
+                                    <a>Exámenes</a>
+                                </li>
+                                <li onclick="gotoSection('ubicacion')" class="menu-parent-mobile-li">
+                                    <a>Ubicación</a>
+                                </li>
+                                <!--                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>-->
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
 
@@ -73,10 +90,20 @@
                     <ul class="menu-list">
                         <li><a href="index.html">Inicio</a></li>
                         <!-- BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  -->
-                        <li><a href="services.html">Acerca de nosotros</a></li>
+                        <li><a href="services.html">Servicios</a></li>
                         <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN -->
-                        <li><a href="installation.html">Trabaja con nosotros</a></li>
+                        <li><a href="installation.html">Instalaciones</a></li>
+                        <!--                        <li><a href="contact.html">Instalaciones</a></li>-->
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
+                        <li class="menu-parent"><span class="menu-parent-span">Más</span>
+                            <ul class="sub-menu" id="sub-menu-desktop">
+                                <li><a href="#acciones">Acciones</a></li>
+                                <li><a href="#actividades">Actividades</a></li>
+                                <li><a href="#examenes">Exámenes</a></li>
+                                <li><a href="#ubicacion">Ubicación</a></li>
+                                <!--                                <li><a href="#footer">Pié de página</a></li>-->
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -104,6 +131,7 @@
 
         <div id="owl-four-nav" class="owl-nav"></div>
     </div>
+
     <div class="main-header">
         <div class="containerImg">
             <div class="logo-wrap">
@@ -249,8 +277,120 @@
     </section>
     <!-- Team Members Closed  -->
 
+    <!-- INIT GALERÍA -->
+    <section id="publicaciones" style="background-color:white;">
+        <section class="page-heading">
+            <div class="container">
+                <h2>Galería</h2>
+            </div>
+        </section>
+        <section class="gallery-images-section" itemprop="image" itemscope>
 
-    <!-- End of Query Section -->
+            <div class="main-container">
+                <div id="gallery" class="container-fluid">
+                    <a href="images/galeria0.jpg" data-lightbox="publicaciones" data-title="Publicación 1">
+                        <img class="img-responsive" src=" images/galeria0.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria1.jpg" data-lightbox="publicaciones" data-title="Publicación 1">
+                        <img class="img-responsive" src=" images/galeria1.jpg" alt="gallery-images">
+                    </a>
+                    <video class="vid" controls>
+                        <source src="videos/video1.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                    <a href="images/galeria2.jpg" data-lightbox="publicaciones" data-title="Publicación 2">
+                        <img class="img-responsive" src=" images/galeria2.jpg" alt="gallery-images">
+                    </a>
+                    <video class="vid" controls>
+                        <source src="videos/video2.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                    <a href="images/galeria3.jpg" data-lightbox="publicaciones" data-title="Publicación 3">
+                        <img class="img-responsive" src=" images/galeria3.jpg" alt="gallery-images">
+                    </a>
+                    <video class="vid" controls>
+                        <source src="videos/video3.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                    <a href="images/galeria4.jpg" data-lightbox="publicaciones" data-title="Publicación 4">
+                        <img class="img-responsive" src=" images/galeria4.jpg" alt="gallery-images">
+                    </a>
+                    <video class="vid" controls>
+                        <source src="videos/video4.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                    <a href="images/galeria5.jpg" data-lightbox="publicaciones" data-title="Publicación 5">
+                        <img class="img-responsive" src="images/galeria5.jpg" alt="gallery-images">
+                    </a>
+                    <video class="vid" controls>
+                        <source src="videos/video5.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                    <a href="images/galeria6.jpg" data-lightbox="publicaciones" data-title="Publicación 6">
+                        <img class="img-responsive" src=" images/galeria6.jpg" alt="gallery-images">
+                    </a>
+                    <video class="vid" controls>
+                        <source src="videos/video6.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                    <a href="images/galeria7.jpg" data-lightbox="publicaciones" data-title="Publicación 7">
+                        <img class="img-responsive" src=" images/galeria7.jpg" alt="gallery-images">
+                    </a>
+                    <video class="vid" controls>
+                        <source src="videos/video7.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                    <a href="images/galeria8.jpg" data-lightbox="publicaciones" data-title="Publicación 8">
+                        <img class="img-responsive" src="images/galeria8.jpg" alt="gallery-images">
+                    </a>
+                    <video class="vid" controls>
+                        <source src="videos/video8.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                    <a href="images/galeria9.jpg" data-lightbox="publicaciones" data-title="Publicación 9">
+                        <img class="img-responsive" src="images/galeria9.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria10.jpg" data-lightbox="publicaciones" data-title="Publicación 10">
+                        <img class="img-responsive" src="images/galeria10.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria11.jpg" data-lightbox="publicaciones" data-title="Publicación 11">
+                        <img class="img-responsive" src="images/galeria11.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria12.jpg" data-lightbox="publicaciones" data-title="Publicación 12">
+                        <img class="img-responsive" src="images/galeria12.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria13.jpg" data-lightbox="publicaciones" data-title="Publicación 12">
+                        <img class="img-responsive" src="images/galeria13.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria14.jpg" data-lightbox="publicaciones" data-title="Publicación 12">
+                        <img class="img-responsive" src="images/galeria14.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria15.jpg" data-lightbox="publicaciones" data-title="Publicación 12">
+                        <img class="img-responsive" src="images/galeria15.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria16.jpg" data-lightbox="publicaciones" data-title="Publicación 12">
+                        <img class="img-responsive" src="images/galeria16.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria17.jpg" data-lightbox="publicaciones" data-title="Publicación 12">
+                        <img class="img-responsive" src="images/galeria17.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria18.jpg" data-lightbox="publicaciones" data-title="Publicación 12">
+                        <img class="img-responsive" src="images/galeria18.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria19.jpg" data-lightbox="publicaciones" data-title="Publicación 12">
+                        <img class="img-responsive" src="images/galeria19.jpg" alt="gallery-images">
+                    </a>
+                    <a href="images/galeria20.jpg" data-lightbox="publicaciones" data-title="Publicación 12">
+                        <img class="img-responsive" src="images/galeria20.jpg" alt="gallery-images">
+                    </a>
+                </div>
+            </div>
+            <br/><br/><br/>
+        </section>
+    </section>
+    <!-- FINISH GALERÍA -->
+
+    <!-- INIT FOOTER -->
     <footer class="page-footer" itemprop="footer" itemscope>
         <div class="footer-first-section">
             <div class="container">
@@ -263,6 +403,7 @@
                         a domicilio, servicio de ecografía.</p>
 
                     <h4><a href="tel:=593 98 292 2239"><i class="fas fa-phone"></i> 098 292 2239</a></h4>
+                    <h4><a href="tel:+593 96 927 2967"><i class="fas fa-phone"></i> 096 927 2967</a></h4>
 
                     <h4><a href="mailto:labdiagnostica@outlook.com"><i class="fas fa-envelope"></i>
                         labdiagnostica@outlook.com </a></h4>
@@ -311,10 +452,9 @@
             </div>
         </div>
     </footer>
-
+    <!-- FINISH FOOTER -->
 </div>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -326,6 +466,8 @@
 <script type="text/javascript" src="js/jquery.rateyo.js"></script>
 <script type="text/javascript" src="js/jquery.mmenu.all.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+
+<script type="text/javascript" src="js/cardslider.js"></script>
 <script type="text/javascript" src="js/email.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MZ9WH2R5Z"></script>
 <script type="text/javascript" src="js/gtag.js"></script>

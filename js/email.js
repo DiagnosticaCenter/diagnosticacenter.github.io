@@ -18,7 +18,6 @@ function validateAndSubmit() {
 
     if (isEmailValid && isMessageValid) {
         // Aquí puedes agregar la lógica para enviar el formulario
-        // Por ejemplo, podrías hacer una llamada AJAX o realizar otras acciones.
         const subject = "Consulta desde página web";
         const body = `${encodeURIComponent(message)}%0A%0AContactar al siguiente correo: ${email}`;
         const recipients = "labdiagnostica@outlook.com,centerdiagnostica@gmail.com";

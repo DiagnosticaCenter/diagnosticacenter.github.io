@@ -1027,6 +1027,11 @@ ul > li {
 .recent-course-single .grid-item {
     position: relative;
     margin-bottom: 30px;
+    cursor: pointer; /* Cambia el cursor a la forma de una mano */
+}
+
+.box-wrap:hover {
+    background-color: rgba(77, 73, 73, 0.81); /* Cambia el color de fondo al pasar el mouse */
 }
 
 .learn-courses .box-wrap .img-wrap,
@@ -1141,61 +1146,62 @@ ul > li {
 
 #sync1 {
 
-.item {
-    background: #0c83e7;
-    padding: 80px 0px;
-    margin: 5px;
-    color: #FFF;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    text-align: center;
-}
+    .item {
+        background: #0c83e7;
+        padding: 80px 0px;
+        margin: 5px;
+        color: #FFF;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        text-align: center;
+    }
 
 }
 
 #sync2 {
 
-.item {
-    background: #C9C9C9;
-    padding: 10px 0px;
-    margin: 5px;
-    color: #FFF;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    text-align: center;
-    cursor: pointer;
+    .item {
+        background: #C9C9C9;
+        padding: 10px 0px;
+        margin: 5px;
+        color: #FFF;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        text-align: center;
+        cursor: pointer;
 
-h1 {
-    font-size: 18px;
-}
+        h1 {
+            font-size: 18px;
+        }
 
-}
+    }
 
-.current .item {
-    background: #0c83e7;
-}
+    .current .item {
+        background: #0c83e7;
+    }
 
 }
 
 
 .what-other-say .owl-theme {
 
-.owl-nav {
+    .owl-nav {
 
-/*default owl-theme theme reset .disabled:hover links */
-[class*='owl-'] {
-    transition: all .3s ease;
+        /*default owl-theme theme reset .disabled:hover links */
 
-&
-.disabled:hover {
-    background-color: #D6D6D6;
-}
+        [class*='owl-'] {
+            transition: all .3s ease;
 
-}
+            &
+            .disabled:hover {
+                background-color: #D6D6D6;
+            }
 
-}
+        }
+
+    }
 }
 
 /
@@ -1204,22 +1210,22 @@ arrows on first carousel
 #sync1.owl-theme {
     position: relative;
 
-.owl-next,
-.owl-prev {
-    width: 22px;
-    height: 40px;
-    margin-top: -20px;
-    position: absolute;
-    top: 50%;
-}
+    .owl-next,
+    .owl-prev {
+        width: 22px;
+        height: 40px;
+        margin-top: -20px;
+        position: absolute;
+        top: 50%;
+    }
 
-.what-other-say .owl-prev {
-    left: 10px;
-}
+    .what-other-say .owl-prev {
+        left: 10px;
+    }
 
-.what-other-say .owl-next {
-    right: 10px;
-}
+    .what-other-say .owl-next {
+        right: 10px;
+    }
 
 }
 

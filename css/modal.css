@@ -1,0 +1,33 @@
+.label-modal {
+    font-size: large;
+    text-align: left;
+
+}
+
+.div-span-center {
+    text-align: center;
+}
+
+.span-modal {
+    font-size: large;
+    font-weight: bold;
+}
+
+.text-modal {
+    font-size: large;
+    text-align: left;
+
+}
+
+.btn-modal {
+    font-size: 17px;
+    padding: 5px 7px;
+    width: 100%; /* Asegura que los botones tengan el mismo ancho */
+
+}
+
+.warning {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

@@ -61,10 +61,26 @@
                     <ul class="menu-list-mobile">
                         <li><a href="index.html">Inicio</a></li>
                         <!-- BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  -->
-                        <li><a href="services.html">Acerca de nosotros</a></li>
+                        <li><a href="services.html">Servicios</a></li>
                         <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN -->
-                        <li><a href="installation.html">Trabaja con nosotros</a></li>
+                        <li><a href="installation.html">Instalaciones</a></li>
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
+                        <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>
+                            <ul class="sub-menu" id="sub-menu-mobile">
+                                <li onclick="gotoSection('acciones')" class="menu-parent-mobile-li">
+                                    <a>Acciones</a></li>
+                                <li onclick="gotoSection('actividades')" class="menu-parent-mobile-li">
+                                    <a>Actividades</a>
+                                </li>
+                                <li onclick="gotoSection('examenes')" class="menu-parent-mobile-li">
+                                    <a>Exámenes</a>
+                                </li>
+                                <li onclick="gotoSection('ubicacion')" class="menu-parent-mobile-li">
+                                    <a>Ubicación</a>
+                                </li>
+                                <!--                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>-->
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
 
@@ -72,10 +88,20 @@
                     <ul class="menu-list">
                         <li><a href="index.html">Inicio</a></li>
                         <!-- BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  -->
-                        <li><a href="services.html">Acerca de nosotros</a></li>
+                        <li><a href="services.html">Servicios</a></li>
                         <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN -->
-                        <li><a href="installation.html">Trabaja con nosotros</a></li>
+                        <li><a href="installation.html">Instalaciones</a></li>
+                        <!--                        <li><a href="contact.html">Instalaciones</a></li>-->
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
+                        <li class="menu-parent"><span class="menu-parent-span">Más</span>
+                            <ul class="sub-menu" id="sub-menu-desktop">
+                                <li><a href="#acciones">Acciones</a></li>
+                                <li><a href="#actividades">Actividades</a></li>
+                                <li><a href="#examenes">Exámenes</a></li>
+                                <li><a href="#ubicacion">Ubicación</a></li>
+                                <!--                                <li><a href="#footer">Pié de página</a></li>-->
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -166,7 +192,7 @@
         </div>
     </section>
 
-    <!-- End of Query Section -->
+    <!-- INIT FOOTER -->
     <footer class="page-footer" itemprop="footer" itemscope>
         <div class="footer-first-section">
             <div class="container">
@@ -179,6 +205,7 @@
                         a domicilio, servicio de ecografía.</p>
 
                     <h4><a href="tel:=593 98 292 2239"><i class="fas fa-phone"></i> 098 292 2239</a></h4>
+                    <h4><a href="tel:+593 96 927 2967"><i class="fas fa-phone"></i> 096 927 2967</a></h4>
 
                     <h4><a href="mailto:labdiagnostica@outlook.com"><i class="fas fa-envelope"></i>
                         labdiagnostica@outlook.com </a></h4>
@@ -218,8 +245,6 @@
             </div>
         </div>
 
-        <!-- End of box-Wrap -->
-
         <div class="footer-last-section">
             <div class="container">
                 <p>Copyright 2023 &copy;<span> | </span> Desarolloado por: <a
@@ -227,7 +252,7 @@
             </div>
         </div>
     </footer>
-
+    <!-- FINISH FOOTER -->
 
 </div>
 </div>
