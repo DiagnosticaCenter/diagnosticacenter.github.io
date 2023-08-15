@@ -1029,7 +1029,7 @@ ul > li {
     cursor: pointer; /* Cambia el cursor a la forma de una mano */
 }
 
-.box-wrap:hover {
+.box-wrap-hover:hover {
     background-color: rgba(77, 73, 73, 0.81); /* Cambia el color de fondo al pasar el mouse */
 }
 
