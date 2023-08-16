@@ -1,0 +1,123 @@
+
+.main-header {
+    background-color: white;
+    padding: 40px 0; /* Ajustar el espacio vertical aquí */
+    text-align: center; /* Centrar el contenido horizontalmente */
+}
+
+.logo-wrap {
+    display: inline-block; /* Convertir el contenedor en bloque en línea */
+}
+
+.mainContentofPage {
+    background-color: white;
+    /*padding: 40px 0;*/
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /*padding: 20px;*/
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-size: 25px; /* Ajusta el tamaño de fuente aquí */
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+
+}
+
+.h2-especial{
+    margin-top: 60px; /* Ajusta el valor según sea necesario */
+    margin-bottom: 60px; /* Ajusta el valor según sea necesario */
+
+}
+.mission, .vision {
+    flex: 0 0 calc(50% - 20px);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 20px; /* Ajusta el tamaño de fuente aquí */
+
+}
+
+.mission p, .vision p {
+    text-align: justify;
+}
+
+.mission {
+    /*background-color: rgb(221, 221, 221);*/
+}
+
+.vision {
+    /*background-color: rgb(221, 221, 221);*/
+}
+
+.img-m-v {
+    width: 70px;
+    text-align: center;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .mission, .vision {
+        flex: 1;
+        font-size: 17px; /* Ajusta el tamaño de fuente aquí */
+
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+.purposeSection, .objectivesSection {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.purposeSection p, .objectivesSection p {
+    font-size: 18px; /* Ajusta el tamaño de fuente aquí */
+    text-align: justify;
+}
+
+
+.purposeSection h2, .objectivesSection h2 {
+    text-align: center;
+}
+
+.purposeSection .content, .objectivesSection .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.objectivesSection ul {
+    font-size: 18px; /* Ajusta el tamaño de fuente aquí */
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.objectivesSection li {
+    margin-bottom: 10px;
+}

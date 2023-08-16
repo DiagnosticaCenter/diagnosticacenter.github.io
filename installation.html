@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css"/>
     <link rel="stylesheet" type="text/css" href="css/inner-page-style.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/installation.css">
     <link rel="stylesheet" type="text/css" href="css/pages.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
@@ -67,17 +69,10 @@
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
                         <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>
                             <ul class="sub-menu" id="sub-menu-mobile">
-                                <li onclick="gotoSection('acciones')" class="menu-parent-mobile-li">
-                                    <a>Acciones</a></li>
-                                <li onclick="gotoSection('actividades')" class="menu-parent-mobile-li">
-                                    <a>Actividades</a>
-                                </li>
-                                <li onclick="gotoSection('examenes')" class="menu-parent-mobile-li">
-                                    <a>Exámenes</a>
-                                </li>
                                 <li onclick="gotoSection('ubicacion')" class="menu-parent-mobile-li">
                                     <a>Ubicación</a>
                                 </li>
+
                                 <!--                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>-->
                             </ul>
                         </li>
@@ -95,9 +90,6 @@
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
                         <li class="menu-parent"><span class="menu-parent-span">Más</span>
                             <ul class="sub-menu" id="sub-menu-desktop">
-                                <li><a href="#acciones">Acciones</a></li>
-                                <li><a href="#actividades">Actividades</a></li>
-                                <li><a href="#examenes">Exámenes</a></li>
                                 <li><a href="#ubicacion">Ubicación</a></li>
                                 <!--                                <li><a href="#footer">Pié de página</a></li>-->
                             </ul>
@@ -106,26 +98,6 @@
                 </nav>
             </div>
         </div>
-
-        <!-- <div class="owl-four owl-carousel" itemscope>
-            <figure itemprop="associatedMedia" itemscope>
-                <img class="imgcarousel" id="imagebanner1" src="" alt="Banner 1" itemprop="contentUrl">
-                <meta itemprop="description" content="Banner image 1">
-            </figure>
-            <figure itemprop="associatedMedia" itemscope>
-                <img class="imgcarousel" id="imagebanner2" src="" alt="Banner 2" itemprop="contentUrl">
-                <meta itemprop="description" content="Banner image 2">
-            </figure>
-            <figure itemprop="associatedMedia" itemscope>
-                <img class="imgcarousel" id="imagebanner3" src="" alt="Banner 3" itemprop="contentUrl">
-                <meta itemprop="description" content="Banner image 3">
-            </figure>
-        </div> -->
-
-        <!-- <section class="containerTitle" itemprop="description">
-            <h1>Centro Clínico Diagnóstica</h1>
-            <h2>Exámenes de calidad en los que puedes confiar</h2>
-        </section> -->
 
         <div id="owl-four-nav" class="owl-nav"></div>
     </div>
@@ -136,61 +108,49 @@
             </div>
         </div>
     </div>
-    <section class="contact-page-section">
+
+    <!-- INIT UBICACIONES -->
+    <section id="ubicacion" style="background-color: rgb(221, 221, 221)" class="page-heading">
         <div class="container">
-            <div class="people-info-wrap">
-                <h2>leave us your info</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur.</p>
-                <form>
-						<span>
-							<input type="text" placeholder="Full Name*" class="input- name">
-							<input type="email" placeholder="Email*" class="input- email">
-						</span>
-                    <input type="text" placeholder="Subject*" class="input- subject">
-                    <textarea placeholder="Messages*" class="input-">
-
-						</textarea>
-                    <input type="submit" value="submit now">
-                </form>
-            </div>
-
-            <div class="contact-info">
-                <h2>contact info</h2>
-                <ul class="contact-list">
-                    <li><i class="fas fa-location-arrow"></i>
-                        <span>
-								<p>Gongabu, Kathmandu, Nepal</p>
-								<p>(Opposite to Aatmagyan Prachar sangh)</p>
-							</span>
-                    </li>
-                    <li><i class="fas fa-phone"></i>
-                        <span>
-								<p>Phone: 016204888, Mobile: 9813639131</p>
-								<p>Fax:7838478387</p>
-							</span>
-                    </li>
-                    <li><i class="fas fa-envelope"></i>
-                        <span>
-								<p>info@labtheme.com</p>
-							</span>
-                    </li>
-                </ul>
-                <ul class="contact-social">
-                    <li><a href=""><i class="fab fa-viber"></i></a></li>
-                    <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href=""><i class="fab fa-facebook-messenger"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fab fa-skype"></i></a></li>
-                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
-                </ul>
-            </div>
+            <h2>UBICACIÓN</h2>
         </div>
     </section>
+    <section style="background-color: rgb(221, 221, 221)" class="events-section" itemprop="event" itemscope>
+        <div class="container">
+            <div class="event-wrap">
+                <div class="img-wrap" itemprop="image">
+
+                    <a href="images/croquis.jpg" data-lightbox="example-set"
+                       data-title="Click the right half of the image to move forward.">
+                        <img src="images/croquis.jpg" alt="gallery-images">
+                    </a>
+                </div>
+
+                <div class="details" id="detailsMap">
+                    <a>
+                        <h3 itemprop="name">¿Cómo llegar?</h3>
+                    </a>
+                    <p itemprop="description">Parroquia 7 de Octubre y calle Guayacanes, Frente a la puerta del
+                        Hospital Sagrado Corazón de Jesús</p>
+                    <h5 itemprop="location"><i class="fas fa-map-marker-alt"></i> Quevedo - Los Ríos - Ecuador</h5>
+                </div>
+            </div>
+            <div class="event-wrap wrap-map">
+                <iframe id="mapgoogle"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8161778.633113632!2d-80.72475949273321!3d-2.7440427352620547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902b4ffa039fbe2b%3A0x8e5b3a7a260ad558!2sDiagn%C3%B3stica%20Laboratorio%20Cl%C3%ADnico!5e0!3m2!1ses!2sec!4v1689927949079!5m2!1ses!2sec"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <!-- <iframe id="mapgoogle"
+                    src="https://www.google.com/maps/dir//Diagn%C3%B3stica+Laboratorio+Cl%C3%ADnico+PARROQUIA+7+DE+OCTUBRE+Y+Calle+Guayacanes+Quevedo/@-1.0390979,-79.49795,13.54z/data=!4m8!4m7!1m0!1m5!1m1!1s0x902b4ffa039fbe2b:0x8e5b3a7a260ad558!2m2!1d-79.4727655!2d-1.0375971?entry=ttu"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="">
+                </iframe> -->
+            </div>
+        </div>
+
+    </section>
+    <!-- FINISH UBICACIONES -->
 
     <!-- INIT FOOTER -->
     <footer class="page-footer" itemprop="footer" itemscope>
@@ -266,6 +226,7 @@
 <script type="text/javascript" src="js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="js/jquery.rateyo.js"></script>
 <script type="text/javascript" src="js/jquery.mmenu.all.js"></script>
+<script type="text/javascript" src="js/jquery.backtotop.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/email.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MZ9WH2R5Z"></script>

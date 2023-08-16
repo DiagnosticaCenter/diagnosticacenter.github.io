@@ -7,19 +7,22 @@
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.rateyo.css"/>
     <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css"/>
     <link rel="stylesheet" type="text/css" href="css/inner-page-style.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/cardslider.css">
-    <link rel="stylesheet" type="text/css" href="css/about.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/pages.css">
+    <link rel="stylesheet" type="text/css" href="css/cardslider.css">
+    <link rel="stylesheet" type="text/css" href="css/services.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/horario.css">
 
 </head>
 
@@ -53,7 +56,6 @@
     <!-- Header Close -->
 
     <div class="banner">
-
         <div class="main-header">
             <div class="container">
 
@@ -69,16 +71,22 @@
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
                         <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>
                             <ul class="sub-menu" id="sub-menu-mobile">
-                                <li onclick="gotoSection('acciones')" class="menu-parent-mobile-li">
-                                    <a>Acciones</a></li>
-                                <li onclick="gotoSection('actividades')" class="menu-parent-mobile-li">
-                                    <a>Actividades</a>
+                                <li onclick="gotoSection('proposito')" class="menu-parent-mobile-li">
+                                    <a>Propósito</a></li>
+                                <li onclick="gotoSection('misionvision')" class="menu-parent-mobile-li">
+                                    <a>Misión-Visión</a>
+                                </li>
+                                <li onclick="gotoSection('objetivo')" class="menu-parent-mobile-li">
+                                    <a>Objetivos</a>
+                                </li>
+                                <li onclick="gotoSection('horario')" class="menu-parent-mobile-li">
+                                    <a>Horario</a>
                                 </li>
                                 <li onclick="gotoSection('examenes')" class="menu-parent-mobile-li">
                                     <a>Exámenes</a>
                                 </li>
-                                <li onclick="gotoSection('ubicacion')" class="menu-parent-mobile-li">
-                                    <a>Ubicación</a>
+                                <li onclick="gotoSection('galeria')" class="menu-parent-mobile-li">
+                                    <a>Galería</a>
                                 </li>
                                 <!--                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>-->
                             </ul>
@@ -97,10 +105,13 @@
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
                         <li class="menu-parent"><span class="menu-parent-span">Más</span>
                             <ul class="sub-menu" id="sub-menu-desktop">
-                                <li><a href="#acciones">Acciones</a></li>
-                                <li><a href="#actividades">Actividades</a></li>
+                                <li><a href="#proposito">Propósito</a></li>
+                                <li><a href="#misionvision">Misión-Visión</a></li>
+                                <li><a href="#objetivo">Objetivos</a></li>
+                                <li><a href="#horario">Horario</a></li>
                                 <li><a href="#examenes">Exámenes</a></li>
-                                <li><a href="#ubicacion">Ubicación</a></li>
+                                <li><a href="#galeria">Galería</a></li>
+
                                 <!--                                <li><a href="#footer">Pié de página</a></li>-->
                             </ul>
                         </li>
@@ -140,152 +151,393 @@
         </div>
     </div>
 
-    <section class="about-upper-section" itemprop="mainContentofPage">
+    <!-- INIT PROPÓSITO -->
+    <section id="proposito" style="background-color: rgb(221, 221, 221)" class="purposeSection">
         <div class="container">
-            <article class="who-we-are">
-                <h2 class="top-heading">who we are</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="header">
+                <h2>Nuestro Propósito</h2>
+                <div class="image-container">
+                    <img class="img-m-v" src="images/enfocar.png" alt="Icono de Misión">
+                </div>
+                <div class="content">
+                    <p>En Diagnóstica, nuestro propósito fundamental es proporcionar soluciones de salud integral a
+                        través
+                        de servicios de diagnóstico médico de vanguardia. A través de nuestra dedicación a la
+                        precisión, la
+                        innovación y el cuidado centrado en el paciente, buscamos empoderar a profesionales de la
+                        salud y
+                        pacientes con información médica confiable y oportuna. Nuestra pasión radica en mejorar la
+                        calidad
+                        de vida al brindar resultados de diagnóstico precisos y contribuir al bienestar general de
+                        las
+                        comunidades que servimos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FINISH PROPÓSITO -->
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
-            </article>
-            <div class="our-story">
-                <h2 class="top-heading">our story</h2>
+    <!-- INIT MISIÓN VISIÓN -->
+    <section id="misionvision" style="background-color: white" class="mainContentofPage">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="mission">
+
+                    <h2>Misión</h2>
+                    <img class="img-m-v" src="images/mision.png" alt="Icono de Misión">
+
+                    <p>En Diagnóstica, nuestra misión es proporcionar servicios de diagnóstico médico de la más alta
+                        calidad
+                        a través de un enfoque integral que abarca laboratorio clínico, ecografía y farmacia. Estamos
+                        comprometidos con la precisión, la eficiencia y la atención centrada en el paciente, con el
+                        objetivo
+                        de contribuir al bienestar de nuestras comunidades al proporcionar información médica precisa y
+                        oportuna.</p>
+                </div>
+                <div class="vision">
+                    <h2>Visión</h2>
+                    <img class="img-m-v" src="images/ojo.png" alt="Icono de Visión">
+
+                    <p>Nuestra visión en Diagnóstica es ser líderes reconocidos en la industria de la salud, destacando
+                        por
+                        la excelencia en nuestros servicios de diagnóstico. Buscamos expandir y fortalecer nuestra
+                        presencia
+                        en el campo del laboratorio clínico, ecografía y farmacia, aportando innovación constante a
+                        nuestras
+                        prácticas y tecnologías. Aspiramos a ser el recurso confiable al que profesionales de la salud y
+                        pacientes acudan en busca de diagnósticos precisos que impulsen la toma de decisiones informadas
+                        y
+                        la mejora de la calidad de vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FINISH  MISIÓN VISIÓN -->
+
+    <!-- INIT OBJETIVO  -->
+    <section id="objetivo" style="background-color: rgb(221, 221, 221)" class="objectivesSection">
+        <div class="container">
+            <div class="header">
+                <h2>Objetivos</h2>
+                <div class="image-container">
+                    <img class="img-m-v" src="images/objetivo.png" alt="Icono de Objetivo">
+                </div>
+            </div>
+            <div class="content">
                 <ul>
-                    <li><i class="fas fa-chalkboard-teacher"></i> <a href="#">60+ certified teachers</a></li>
-                    <li><i class="fas fa-graduation-cap"></i> <a href="#">600+ students enrolled</a></li>
-                    <li><i class="fas fa-book-open"></i> <a href="#">50+ courses completed</a></li>
-                    <li><i class="fas fa-users"></i> <a href="#">10000+ foreign followers</a></li>
-
-                    <!-- For None link use below -->
-                    <!-- <li><i class="fas fa-chalkboard-teacher"></i> <p>60+ certified teachers</p></li>
-                    <li><i class="fas fa-graduation-cap"></i>  <p>600+ students enrolled</p></li>
-                    <li><i class="fas fa-book-open"></i>  <p>50+ courses completed</p></li>
-                    <li><i class="fas fa-users"></i>  <p>10000+ foreign followers</p></li> -->
+                    <li>- Excelencia en Diagnósticos mediante tecnologías avanzadas y profesionales capacitados.</li>
+                    <li>- Mejora Continua para garantizar resultados de diagnóstico de alta calidad y eficiencia.</li>
+                    <li>- Atención Centrada en el Paciente con un enfoque en la experiencia y comunicación.</li>
+                    <li>- Innovación Tecnológica para mantenernos a la vanguardia en diagnóstico médico.</li>
+                    <li>- Colaboración con Profesionales de la Salud para un enfoque multidisciplinario.</li>
                 </ul>
             </div>
         </div>
     </section>
+    <!-- FINISH OBJETIVO -->
 
-    <section class="team-members" itemprop="contributor">
-        <div class="container">
-            <h2 class="top-heading">meet our team</h2>
-            <article class="developer-grid">
-                <div class="developer-wrap">
-                    <img src="images/developer-img.jpg" alt="developer images">
-                    <h3>Bibek Basnet</h3>
-                    <p>Web Developer</p>
-                    <ul>
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
+    <!-- INIT HORARIO -->
+    <section id="horario" style="background-color: white">
+        <br><br>
+        <h2>Horario de atención</h2>
+        <div class="table-container">
+            <table class="cal">
+                <thead>
+                <tr>
+                    <th class="Tecno "></th>
+                    <th class="Tecno lunes">Lunes</th>
+                    <th class="Tecno martes">Martes</th>
+                    <th class="Tecno miercoles">Miercoles</th>
+                    <th class="Tecno jueves">Jueves</th>
+                    <th class="Tecno viernes">Viernes</th>
+                    <th class="Tecno sabado">Sábado</th>
+                    <th class="Tecno domingo">Domingo</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="horas">Laboratório</td>
+                    <td class="Mates">07:30 - 18:00</td>
+                    <td class="Mates">07:30 - 18:00</td>
+                    <td class="Mates">07:30 - 18:00</td>
+                    <td class="Mates">07:30 - 18:00</td>
+                    <td class="Mates">07:30 - 18:00</td>
+                    <td class="Mates">07:30 - 17:00</td>
+                    <td class="Mates">08:00 - 13:00</td>
+                </tr>
+                <tr>
+                    <td class="horas">Ecografía</td>
+                    <td class="Musica">08:00 - 17:00</td>
+                    <td class="Musica">08:00 - 17:00</td>
+                    <td class="Musica">08:00 - 17:00</td>
+                    <td class="Musica">08:00 - 17:00</td>
+                    <td class="Musica">08:00 - 17:00</td>
+                    <td class="Musica">08:00 - 17:00</td>
+                    <td class="Musica"></td>
 
-                <div class="developer-wrap">
-                    <img src="images/developer-img.jpg" alt="developer images">
-                    <h3>Bibek Basnet</h3>
-                    <p>Web Developer</p>
-                    <ul>
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
+                </tr>
+                <tr>
+                    <td class="horas">Farmacia</td>
+                    <td class="Lengua">07:30 - 20:00</td>
+                    <td class="Lengua">07:30 - 20:00</td>
+                    <td class="Lengua">07:30 - 20:00</td>
+                    <td class="Lengua">07:30 - 20:00</td>
+                    <td class="Lengua">07:30 - 20:00</td>
+                    <td class="Lengua">07:30 - 19:00</td>
+                    <td class="Lengua">08:00 - 14:00</td>
+                </tr>
 
-                <div class="developer-wrap">
-                    <img src="images/developer-img.jpg" alt="developer images">
-                    <h3>Bibek Basnet</h3>
-                    <p>Web Developer</p>
-                    <ul>
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
+                </tbody>
 
-                <div class="developer-wrap">
-                    <img src="images/developer-img.jpg" alt="developer images">
-                    <h3>Bibek Basnet</h3>
-                    <p>Web Developer</p>
-                    <ul>
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="developer-wrap">
-                    <img src="images/developer-img.jpg" alt="developer images">
-                    <h3>Bibek Basnet</h3>
-                    <p>Web Developer</p>
-                    <ul>
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="developer-wrap">
-                    <img src="images/developer-img.jpg" alt="developer images">
-                    <h3>Bibek Basnet</h3>
-                    <p>Web Developer</p>
-                    <ul>
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="developer-wrap">
-                    <img src="images/developer-img.jpg" alt="developer images">
-                    <h3>Bibek Basnet</h3>
-                    <p>Web Developer</p>
-                    <ul>
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="developer-wrap">
-                    <img src="images/developer-img.jpg" alt="developer images">
-                    <h3>Bibek Basnet</h3>
-                    <p>Web Developer</p>
-                    <ul>
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
-            </article>
+            </table>
         </div>
     </section>
-    <!-- Team Members Closed  -->
+    <!-- FINISH HORARIO -->
+
+    <!-- INIT PROMOCIONES - EXÁMENES -->
+    <section style="background-color: rgb(221, 221, 221)">
+        <br>
+        <section id="examenes" class="page-heading">
+            <h2 class="h2-especial">EXÁMENES</h2>
+        </section>
+        <section style="background-color: rgb(221, 221, 221)" class="latest-news">
+            <div class="container" itemprop="event" itemscope>
+                <div class="owl-two owl-carousel">
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo0.jpg" data-lightbox="Promo" data-title="Promo 1">
+                                <img class="shadowimg" src="images/promo0.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <!--                <div class="news-wrap" itemprop="event">-->
+                    <!--                    <div class="news-img-wrap" itemprop="image">-->
+                    <!--                        <a href="images/promo1.jpg" data-lightbox="Promo" data-title="Promo 2">-->
+                    <!--                            <img class="shadowimg" src="images/promo1.jpg" alt="gallery-images">-->
+                    <!--                        </a>-->
+                    <!--                    </div>-->
+                    <!--                </div>-->
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo2.jpg" data-lightbox="Promo" data-title="Promo 3">
+                                <img class="shadowimg" src="images/promo2.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo3.jpg" data-lightbox="Promo" data-title="Promo 4">
+                                <img class="shadowimg" src="images/promo3.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo4.jpg" data-lightbox="Promot" data-title="Promo 5">
+                                <img class="shadowimg" src="images/promo4.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo5.jpg" data-lightbox="Promo" data-title="Promo 6">
+                                <img class="shadowimg" src="images/promo5.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo6.jpg" data-lightbox="Promo" data-title="Promo 7">
+                                <img class="shadowimg" src="images/promo6.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo7.jpg" data-lightbox="Promo" data-title="Promo 8">
+                                <img class="shadowimg" src="images/promo7.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo8.jpg" data-lightbox="Promo" data-title="Promo 9">
+                                <img class="shadowimg" src="images/promo8.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo9.jpg" data-lightbox="Promo" data-title="Promo 10">
+                                <img class="shadowimg" src="images/promo9.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo10.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo10.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo11.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo11.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo12.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo12.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo13.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo13.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo14.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo14.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo15.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo15.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo16.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo16.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo17.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo17.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo18.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo18.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo19.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo19.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo20.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo20.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo21.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo21.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-wrap" itemprop="event">
+                        <div class="news-img-wrap" itemprop="image">
+                            <a href="images/promo22.jpg" data-lightbox="Promo" data-title="Promo 11">
+                                <img class="shadowimg" src="images/promo22.jpg" alt="gallery-images">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </section>
+    </section>
+
+    <!-- FINISH PROMOCIONES - EXÁMENES -->
+
+    <!-- INIT EQUIPO -->
+    <!--    <section  id="colaboradores"  style="background-color: rgb(221, 221, 221)" class="team-members" -->
+    <!--        <div class="container">-->
+    <!--            <h2 class="top-heading">equipo de trabajo</h2>-->
+    <!--            <article class="developer-grid">-->
+    <!--                <div class="developer-wrap">-->
+    <!--                    <img src="images/usuario.png" alt="developer images">-->
+    <!--                    <h3>Angelo Bolivar Cedeño Reyes</h3>-->
+    <!--                    <p>Fundador</p>-->
+    <!--                    <ul>-->
+    <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
+    <!--                    </ul>-->
+    <!--                </div>-->
+
+    <!--                <div class="developer-wrap">-->
+    <!--                    <img src="images/usuario.png" alt="developer images">-->
+    <!--                    <h3>Gema Yolanda Brito Casanova</h3>-->
+    <!--                    <p>Fundador</p>-->
+    <!--                    <ul>-->
+    <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
+    <!--                    </ul>-->
+    <!--                </div>-->
+
+    <!--                <div class="developer-wrap">-->
+    <!--                    <img src="images/usuario.png" alt="developer images">-->
+    <!--                    <h3>Geovanny José Brito Casanova</h3>-->
+    <!--                    <p>Desarollador</p>-->
+    <!--                    <ul>-->
+    <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
+    <!--                    </ul>-->
+    <!--                </div>-->
+
+    <!--                <div class="developer-wrap">-->
+    <!--                    <img src="images/usuario.png" alt="developer images">-->
+    <!--                    <h3>Javier Javico Peñafiel Reyes</h3>-->
+    <!--                    <p>Guardia</p>-->
+    <!--                    <ul>-->
+    <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
+    <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
+    <!--                    </ul>-->
+    <!--                </div>-->
+
+    <!--            </article>-->
+    <!--        </div>-->
+    <!--    </section>-->
+    <!-- FINISH EQUIPO -->
 
     <!-- INIT GALERÍA -->
-    <section id="publicaciones" style="background-color:white;">
+    <section id="galeria" style="background-color:  white">
         <section class="page-heading">
             <div class="container">
                 <h2>Galería</h2>
             </div>
         </section>
         <section class="gallery-images-section" itemprop="image" itemscope>
-
             <div class="main-container">
                 <div id="gallery" class="container-fluid">
                     <a href="images/galeria0.jpg" data-lightbox="publicaciones" data-title="Publicación 1">
@@ -407,6 +659,8 @@
 
                     <h4><a href="mailto:labdiagnostica@outlook.com"><i class="fas fa-envelope"></i>
                         labdiagnostica@outlook.com </a></h4>
+                    <h4><a href="mailto:centerdiagnostica@gmail.com"><i class="fas fa-envelope"></i>
+                        centerdiagnostica@gmail.com </a></h4>
                     <h4><a href="https://goo.gl/maps/5WX1BunaXwsfxUdZ9"><i
                             class="fas fa-map-marker-alt"></i>Quevedo,
                         Los Rios, Ecuador</a></h4>
@@ -455,20 +709,22 @@
     <!-- FINISH FOOTER -->
 </div>
 
+
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/lightbox.js"></script>
 <script type="text/javascript" src="js/all.js"></script>
 <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
-<script type="text/javascript" src="js/owl.carousel.js"></script>
 <script type="text/javascript" src="js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="js/jquery.rateyo.js"></script>
 <script type="text/javascript" src="js/jquery.mmenu.all.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
-
+<script type="text/javascript" src="js/jquery.backtotop.js"></script>
 <script type="text/javascript" src="js/cardslider.js"></script>
 <script type="text/javascript" src="js/email.js"></script>
+<script type="text/javascript" src="js/horario.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MZ9WH2R5Z"></script>
 <script type="text/javascript" src="js/gtag.js"></script>
 

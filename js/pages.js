@@ -4,6 +4,7 @@ window.onchange = changeImageBasedOnScreenWidth;
 window.onresize = changeImageBasedOnScreenWidth;
 
 function changeImageBasedOnScreenWidth() {
+    try {
     var image1 = document.getElementById('imagebanner1');
     var mobileImagePath1 = 'images/page-banner-m.jpg';
     var desktopImagePath1 = 'images/page-banner.jpg';
@@ -29,6 +30,8 @@ function changeImageBasedOnScreenWidth() {
         image2.src = desktopImagePath2;
         image3.src = desktopImagePath3;
      }
+    }catch (e) {
+    }
 }
 
 
