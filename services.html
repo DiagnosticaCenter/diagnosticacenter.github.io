@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap4.5.2.css">
     <link rel="stylesheet" type="text/css" href="css/flexslider.css">
     <link rel="stylesheet" type="text/css" href="css/lightbox.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
@@ -23,11 +24,13 @@
     <link rel="stylesheet" type="text/css" href="css/services.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/horario.css">
+    <link rel="stylesheet" type="text/css" href="css/acordeon.css">
 
 </head>
 
 <body id="top">
 <div id="page" class="site">
+    <!-- INIT HEADER -->
     <header class="site-header">
         <div class="top-header">
             <div class="containerMedia">
@@ -53,8 +56,9 @@
             </div>
         </div>
     </header>
-    <!-- Header Close -->
+    <!-- FINSIH HEADER -->
 
+    <!-- INIT BANNER -->
     <div class="banner">
         <div class="main-header">
             <div class="container">
@@ -71,6 +75,18 @@
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
                         <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>
                             <ul class="sub-menu" id="sub-menu-mobile">
+                                <li onclick="gotoSection('horario')" class="menu-parent-mobile-li">
+                                    <a>Horario</a>
+                                </li>
+                                <li onclick="gotoSection('cotizar')" class="menu-parent-mobile-li">
+                                    <a>Cotizador</a>
+                                </li>
+                                <li onclick="gotoSection('examenes')" class="menu-parent-mobile-li">
+                                    <a>Exámenes</a>
+                                </li>
+                                <li onclick="gotoSection('galeria')" class="menu-parent-mobile-li">
+                                    <a>Galería</a>
+                                </li>
                                 <li onclick="gotoSection('proposito')" class="menu-parent-mobile-li">
                                     <a>Propósito</a></li>
                                 <li onclick="gotoSection('misionvision')" class="menu-parent-mobile-li">
@@ -78,15 +94,6 @@
                                 </li>
                                 <li onclick="gotoSection('objetivo')" class="menu-parent-mobile-li">
                                     <a>Objetivos</a>
-                                </li>
-                                <li onclick="gotoSection('horario')" class="menu-parent-mobile-li">
-                                    <a>Horario</a>
-                                </li>
-                                <li onclick="gotoSection('examenes')" class="menu-parent-mobile-li">
-                                    <a>Exámenes</a>
-                                </li>
-                                <li onclick="gotoSection('galeria')" class="menu-parent-mobile-li">
-                                    <a>Galería</a>
                                 </li>
                                 <!--                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>-->
                             </ul>
@@ -105,13 +112,13 @@
                         <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
                         <li class="menu-parent"><span class="menu-parent-span">Más</span>
                             <ul class="sub-menu" id="sub-menu-desktop">
+                                <li><a href="#horario">Horario</a></li>
+                                <li><a href="#cotizar">Cotizador</a></li>
+                                <li><a href="#examenes">Exámenes</a></li>
+                                <li><a href="#galeria">Galería</a></li>
                                 <li><a href="#proposito">Propósito</a></li>
                                 <li><a href="#misionvision">Misión-Visión</a></li>
                                 <li><a href="#objetivo">Objetivos</a></li>
-                                <li><a href="#horario">Horario</a></li>
-                                <li><a href="#examenes">Exámenes</a></li>
-                                <li><a href="#galeria">Galería</a></li>
-
                                 <!--                                <li><a href="#footer">Pié de página</a></li>-->
                             </ul>
                         </li>
@@ -142,7 +149,9 @@
 
         <div id="owl-four-nav" class="owl-nav"></div>
     </div>
+    <!-- FINSIH BANNER -->
 
+    <!-- INIT LOGO -->
     <div class="main-header">
         <div class="containerImg">
             <div class="logo-wrap">
@@ -150,94 +159,10 @@
             </div>
         </div>
     </div>
-
-    <!-- INIT PROPÓSITO -->
-    <section id="proposito" style="background-color: rgb(221, 221, 221)" class="purposeSection">
-        <div class="container">
-            <div class="header">
-                <h2>Nuestro Propósito</h2>
-                <div class="image-container">
-                    <img class="img-m-v" src="images/enfocar.png" alt="Icono de Misión">
-                </div>
-                <div class="content">
-                    <p>En Diagnóstica, nuestro propósito fundamental es proporcionar soluciones de salud integral a
-                        través
-                        de servicios de diagnóstico médico de vanguardia. A través de nuestra dedicación a la
-                        precisión, la
-                        innovación y el cuidado centrado en el paciente, buscamos empoderar a profesionales de la
-                        salud y
-                        pacientes con información médica confiable y oportuna. Nuestra pasión radica en mejorar la
-                        calidad
-                        de vida al brindar resultados de diagnóstico precisos y contribuir al bienestar general de
-                        las
-                        comunidades que servimos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FINISH PROPÓSITO -->
-
-    <!-- INIT MISIÓN VISIÓN -->
-    <section id="misionvision" style="background-color: white" class="mainContentofPage">
-        <div class="container">
-            <div class="content-wrapper">
-                <div class="mission">
-
-                    <h2>Misión</h2>
-                    <img class="img-m-v" src="images/mision.png" alt="Icono de Misión">
-
-                    <p>En Diagnóstica, nuestra misión es proporcionar servicios de diagnóstico médico de la más alta
-                        calidad
-                        a través de un enfoque integral que abarca laboratorio clínico, ecografía y farmacia. Estamos
-                        comprometidos con la precisión, la eficiencia y la atención centrada en el paciente, con el
-                        objetivo
-                        de contribuir al bienestar de nuestras comunidades al proporcionar información médica precisa y
-                        oportuna.</p>
-                </div>
-                <div class="vision">
-                    <h2>Visión</h2>
-                    <img class="img-m-v" src="images/ojo.png" alt="Icono de Visión">
-
-                    <p>Nuestra visión en Diagnóstica es ser líderes reconocidos en la industria de la salud, destacando
-                        por
-                        la excelencia en nuestros servicios de diagnóstico. Buscamos expandir y fortalecer nuestra
-                        presencia
-                        en el campo del laboratorio clínico, ecografía y farmacia, aportando innovación constante a
-                        nuestras
-                        prácticas y tecnologías. Aspiramos a ser el recurso confiable al que profesionales de la salud y
-                        pacientes acudan en busca de diagnósticos precisos que impulsen la toma de decisiones informadas
-                        y
-                        la mejora de la calidad de vida.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FINISH  MISIÓN VISIÓN -->
-
-    <!-- INIT OBJETIVO  -->
-    <section id="objetivo" style="background-color: rgb(221, 221, 221)" class="objectivesSection">
-        <div class="container">
-            <div class="header">
-                <h2>Objetivos</h2>
-                <div class="image-container">
-                    <img class="img-m-v" src="images/objetivo.png" alt="Icono de Objetivo">
-                </div>
-            </div>
-            <div class="content">
-                <ul>
-                    <li>- Excelencia en Diagnósticos mediante tecnologías avanzadas y profesionales capacitados.</li>
-                    <li>- Mejora Continua para garantizar resultados de diagnóstico de alta calidad y eficiencia.</li>
-                    <li>- Atención Centrada en el Paciente con un enfoque en la experiencia y comunicación.</li>
-                    <li>- Innovación Tecnológica para mantenernos a la vanguardia en diagnóstico médico.</li>
-                    <li>- Colaboración con Profesionales de la Salud para un enfoque multidisciplinario.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- FINISH OBJETIVO -->
+    <!-- FINSIH LOGO -->
 
     <!-- INIT HORARIO -->
-    <section id="horario" style="background-color: white">
+    <section id="horario" style="background-color: rgb(221, 221, 221)">
         <br><br>
         <h2>Horario de atención</h2>
         <div class="table-container">
@@ -256,7 +181,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td class="horas">Laboratório</td>
+                    <td class="horas">Laboratorio</td>
                     <td class="Mates">07:30 - 18:00</td>
                     <td class="Mates">07:30 - 18:00</td>
                     <td class="Mates">07:30 - 18:00</td>
@@ -293,6 +218,248 @@
         </div>
     </section>
     <!-- FINISH HORARIO -->
+
+    <!-- INIT COTIZADOR -->
+    <section id="cotizar" style="background-color: white">
+        <br><br>
+        <h2>Cotizador</h2>
+        <table>
+            <thead>
+            <tr></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span class="acordeon-supercabecera">CONJUNTO EXAMENES 1
+                        <span class="select-exam">(<span class="contador-checks">0</span>)</span>
+                    </span>
+                    <div class="acordeon">
+                        <div class="acordeon-cabecera">Exámenes A</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 1.1
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content1"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 1.2
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content1"></i>
+                            </label>
+                        </div>
+                        <div class="acordeon-cabecera">Exámenes B</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 2.1
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content2"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 2.2
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content2"></i>
+                            </label>
+                        </div>
+                        <div class="acordeon-cabecera">Exámenes C</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 3.1
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content3"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 3.2
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content3"></i>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                      <span class="acordeon-supercabecera">CONJUNTO EXAMENES 2
+                        <span class="select-exam">(<span class="contador-checks">0</span>)</span>
+                    </span>
+                    <div class="acordeon">
+                        <div class="acordeon-cabecera">Exámenes D</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 1.3
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content1"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 1.4
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content1"></i>
+                            </label>
+                        </div>
+                        <div class="acordeon-cabecera">Exámenes E</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 2.3
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content2"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 2.4
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content2"></i>
+                            </label>
+                        </div>
+                        <div class="acordeon-cabecera">Exámenes F</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 3.3
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content3"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 3.4
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content3"></i>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                      <span class="acordeon-supercabecera">CONJUNTO EXAMENES 3
+                        <span class="select-exam">(<span class="contador-checks">0</span>)</span>
+                    </span>
+                    <div class="acordeon">
+                        <div class="acordeon-cabecera">Exámenes G</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 1.5
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content1"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 1.6
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content1"></i>
+                            </label>
+                        </div>
+                        <div class="acordeon-cabecera">Exámenes H</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 2.5
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content2"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 2.6
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content2"></i>
+                            </label>
+                        </div>
+                        <div class="acordeon-cabecera">Exámenes I</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 3.5
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content3"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 3.6
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content3"></i>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                       <span class="acordeon-supercabecera">CONJUNTO EXAMENES 4
+                        <span class="select-exam">(<span class="contador-checks">0</span>)</span>
+                    </span>
+                    <div class="acordeon">
+                        <div class="acordeon-cabecera">Exámenes J</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 1.7
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content1"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 1.8
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content1"></i>
+                            </label>
+                        </div>
+                        <div class="acordeon-cabecera">Exámenes K</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 2.7
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content2"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 2.8
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content2"></i>
+                            </label>
+                        </div>
+                        <div class="acordeon-cabecera">Exámenes L</div>
+                        <div class="acordeon-contenido">
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 3.7
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content3"></i>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" data-value="12.13">
+                                Exámenes 3.8
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                   data-target="#largeModal" data-content="content3"></i>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="total-container">
+            <b>Total:</b> $<span id="totalValue">0.00</span><br>
+            <span class="precio-referencial"><b>Precio referencial:</b>
+                El valor indicado no contiene descuentos y/o promociones.
+            </span><br>
+            <button id="btnImprimir" class="btn btn-primary btn-imprimir" disabled>
+                <i class="fas fa-print"></i> Imprimir
+            </button>
+            <button id="btnWhatsapp" class="btn btn-success btn-imprimir" disabled>
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+
+            <div id="logo" class="d-none">
+                <img src="images/site-logo.jpg" alt="Logo Image">
+            </div>
+        </div>
+    </section>
+    <!-- FINISH COTIZADOR -->
 
     <!-- INIT PROMOCIONES - EXÁMENES -->
     <section style="background-color: rgb(221, 221, 221)">
@@ -469,65 +636,66 @@
             <br>
         </section>
     </section>
-
     <!-- FINISH PROMOCIONES - EXÁMENES -->
 
     <!-- INIT EQUIPO -->
-    <!--    <section  id="colaboradores"  style="background-color: rgb(221, 221, 221)" class="team-members" -->
-    <!--        <div class="container">-->
-    <!--            <h2 class="top-heading">equipo de trabajo</h2>-->
-    <!--            <article class="developer-grid">-->
-    <!--                <div class="developer-wrap">-->
-    <!--                    <img src="images/usuario.png" alt="developer images">-->
-    <!--                    <h3>Angelo Bolivar Cedeño Reyes</h3>-->
-    <!--                    <p>Fundador</p>-->
-    <!--                    <ul>-->
-    <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
-    <!--                    </ul>-->
-    <!--                </div>-->
+    <div>
+        <!--    <section  id="colaboradores"  style="background-color: rgb(221, 221, 221)" class="team-members" -->
+        <!--        <div class="container">-->
+        <!--            <h2 class="top-heading">equipo de trabajo</h2>-->
+        <!--            <article class="developer-grid">-->
+        <!--                <div class="developer-wrap">-->
+        <!--                    <img src="images/usuario.png" alt="developer images">-->
+        <!--                    <h3>Angelo Bolivar Cedeño Reyes</h3>-->
+        <!--                    <p>Fundador</p>-->
+        <!--                    <ul>-->
+        <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
+        <!--                    </ul>-->
+        <!--                </div>-->
 
-    <!--                <div class="developer-wrap">-->
-    <!--                    <img src="images/usuario.png" alt="developer images">-->
-    <!--                    <h3>Gema Yolanda Brito Casanova</h3>-->
-    <!--                    <p>Fundador</p>-->
-    <!--                    <ul>-->
-    <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
-    <!--                    </ul>-->
-    <!--                </div>-->
+        <!--                <div class="developer-wrap">-->
+        <!--                    <img src="images/usuario.png" alt="developer images">-->
+        <!--                    <h3>Gema Yolanda Brito Casanova</h3>-->
+        <!--                    <p>Fundador</p>-->
+        <!--                    <ul>-->
+        <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
+        <!--                    </ul>-->
+        <!--                </div>-->
 
-    <!--                <div class="developer-wrap">-->
-    <!--                    <img src="images/usuario.png" alt="developer images">-->
-    <!--                    <h3>Geovanny José Brito Casanova</h3>-->
-    <!--                    <p>Desarollador</p>-->
-    <!--                    <ul>-->
-    <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
-    <!--                    </ul>-->
-    <!--                </div>-->
+        <!--                <div class="developer-wrap">-->
+        <!--                    <img src="images/usuario.png" alt="developer images">-->
+        <!--                    <h3>Geovanny José Brito Casanova</h3>-->
+        <!--                    <p>Desarollador</p>-->
+        <!--                    <ul>-->
+        <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
+        <!--                    </ul>-->
+        <!--                </div>-->
 
-    <!--                <div class="developer-wrap">-->
-    <!--                    <img src="images/usuario.png" alt="developer images">-->
-    <!--                    <h3>Javier Javico Peñafiel Reyes</h3>-->
-    <!--                    <p>Guardia</p>-->
-    <!--                    <ul>-->
-    <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
-    <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
-    <!--                    </ul>-->
-    <!--                </div>-->
+        <!--                <div class="developer-wrap">-->
+        <!--                    <img src="images/usuario.png" alt="developer images">-->
+        <!--                    <h3>Javier Javico Peñafiel Reyes</h3>-->
+        <!--                    <p>Guardia</p>-->
+        <!--                    <ul>-->
+        <!--                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-instagram"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-twitter"></i></a></li>-->
+        <!--                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>-->
+        <!--                    </ul>-->
+        <!--                </div>-->
 
-    <!--            </article>-->
-    <!--        </div>-->
-    <!--    </section>-->
+        <!--            </article>-->
+        <!--        </div>-->
+        <!--    </section>-->
+    </div>
     <!-- FINISH EQUIPO -->
 
     <!-- INIT GALERÍA -->
@@ -642,6 +810,91 @@
     </section>
     <!-- FINISH GALERÍA -->
 
+    <!-- INIT PROPÓSITO -->
+    <section id="proposito" style="background-color: rgb(221, 221, 221)" class="purposeSection">
+        <div class="container">
+            <div class="header">
+                <h2>Nuestro Propósito</h2>
+                <div class="image-container">
+                    <img class="img-m-v" src="images/enfocar.png" alt="Icono de Misión">
+                </div>
+                <div class="content">
+                    <p>En Diagnóstica, nuestro propósito fundamental es proporcionar soluciones de salud integral a
+                        través
+                        de servicios de diagnóstico médico de vanguardia. A través de nuestra dedicación a la
+                        precisión, la
+                        innovación y el cuidado centrado en el paciente, buscamos empoderar a profesionales de la
+                        salud y
+                        pacientes con información médica confiable y oportuna. Nuestra pasión radica en mejorar la
+                        calidad
+                        de vida al brindar resultados de diagnóstico precisos y contribuir al bienestar general de
+                        las
+                        comunidades que servimos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FINISH PROPÓSITO -->
+
+    <!-- INIT MISIÓN VISIÓN -->
+    <section id="misionvision" style="background-color: white" class="mainContentofPage">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="mission">
+
+                    <h2>Misión</h2>
+                    <img class="img-m-v" src="images/mision.png" alt="Icono de Misión">
+
+                    <p>En Diagnóstica, nuestra misión es proporcionar servicios de diagnóstico médico de la más alta
+                        calidad
+                        a través de un enfoque integral que abarca laboratorio clínico, ecografía y farmacia. Estamos
+                        comprometidos con la precisión, la eficiencia y la atención centrada en el paciente, con el
+                        objetivo
+                        de contribuir al bienestar de nuestras comunidades al proporcionar información médica precisa y
+                        oportuna.</p>
+                </div>
+                <div class="vision">
+                    <h2>Visión</h2>
+                    <img class="img-m-v" src="images/ojo.png" alt="Icono de Visión">
+
+                    <p>Nuestra visión en Diagnóstica es ser líderes reconocidos en la industria de la salud, destacando
+                        por
+                        la excelencia en nuestros servicios de diagnóstico. Buscamos expandir y fortalecer nuestra
+                        presencia
+                        en el campo del laboratorio clínico, ecografía y farmacia, aportando innovación constante a
+                        nuestras
+                        prácticas y tecnologías. Aspiramos a ser el recurso confiable al que profesionales de la salud y
+                        pacientes acudan en busca de diagnósticos precisos que impulsen la toma de decisiones informadas
+                        y
+                        la mejora de la calidad de vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FINISH  MISIÓN VISIÓN -->
+
+    <!-- INIT OBJETIVO  -->
+    <section id="objetivo" style="background-color: rgb(221, 221, 221)" class="objectivesSection">
+        <div class="container">
+            <div class="header">
+                <h2>Objetivos</h2>
+                <div class="image-container">
+                    <img class="img-m-v" src="images/objetivo.png" alt="Icono de Objetivo">
+                </div>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>- Excelencia en Diagnósticos mediante tecnologías avanzadas y profesionales capacitados.</li>
+                    <li>- Mejora Continua para garantizar resultados de diagnóstico de alta calidad y eficiencia.</li>
+                    <li>- Atención Centrada en el Paciente con un enfoque en la experiencia y comunicación.</li>
+                    <li>- Innovación Tecnológica para mantenernos a la vanguardia en diagnóstico médico.</li>
+                    <li>- Colaboración con Profesionales de la Salud para un enfoque multidisciplinario.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- FINISH OBJETIVO -->
+
     <!-- INIT FOOTER -->
     <footer class="page-footer" itemprop="footer" itemscope>
         <div class="footer-first-section">
@@ -707,6 +960,29 @@
         </div>
     </footer>
     <!-- FINISH FOOTER -->
+
+    <!-- INIT MODAL -->
+    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="info-modal">Información</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="dynamicContent">
+                    <!-- Contenido del modal -->
+                </div>
+                <div class="modal-footer">
+                    <!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FINISH MODAL -->
+
 </div>
 
 
@@ -722,9 +998,11 @@
 <script type="text/javascript" src="js/owl.carousel.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/jquery.backtotop.js"></script>
+<script type="text/javascript" src="js/bootstrap4.5.2.js"></script>
 <script type="text/javascript" src="js/cardslider.js"></script>
 <script type="text/javascript" src="js/email.js"></script>
 <script type="text/javascript" src="js/horario.js"></script>
+<script type="text/javascript" src="js/acordeon.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MZ9WH2R5Z"></script>
 <script type="text/javascript" src="js/gtag.js"></script>
 

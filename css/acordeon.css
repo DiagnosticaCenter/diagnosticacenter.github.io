@@ -1,0 +1,116 @@
+
+.acordeon {
+    max-width: 400px;
+    /*background: white;*/
+    margin: 0 auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.acordeon-supercabecera {
+    /*border-bottom: 1px solid #DDE0E7;*/
+    /*background:#f6f7f9;*/
+    color: #222222;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1.5rem;
+    font-size: 20px;
+    text-align: center;
+}
+
+.acordeon-cabecera {
+    /*border-bottom: 1px solid #DDE0E7;*/
+    /*background:#f6f7f9;*/
+    color: #222222;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1.5rem;
+    font-size: 20px;
+
+}
+
+.acordeon-cabecera:hover {
+    background: #cff1e7;
+}
+
+.acordeon-cabecera.active {
+    /*background-color: #fdf8d7;*/
+}
+
+.acordeon-contenido {
+    display: none;
+    /*border-bottom: 1px solid #DDE0E7;*/
+    /*background: #fff;*/
+    padding: 1.4rem;
+    /*color: #4a5666;*/
+    font-size: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.info-button {
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    font-size: 14px;
+    border-radius: 50%; /* Agregamos esto para hacer el botón redondeado */
+}
+
+.info-icon {
+    font-size: 24px;
+    color: black; /* Cambiamos el color a negro */
+    margin-left: 5px; /* Agregamos margen izquierdo */
+    cursor: pointer;
+
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.third {
+    width: 33.33%;
+}
+
+.total-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.precio-referencial {
+    text-align: center;
+    font-size: 20px;
+    color: red;
+}
+
+.info-modal {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p-descripcion {
+    font-size: 20px;
+}
+
+.btn-imprimir {
+    font-size: 25px;
+}
+
+.select-exam{
+    color: red;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+}
