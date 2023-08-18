@@ -19,10 +19,12 @@
     <link rel="stylesheet" type="text/css" href="css/installation.css">
     <link rel="stylesheet" type="text/css" href="css/pages.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
 
 </head>
 
 <body id="top">
+
 <div id="page" class="site">
     <header class="site-header">
         <div class="top-header">
@@ -50,60 +52,115 @@
             </div>
         </div>
     </header>
-    <!-- Header Close -->
 
-    <div class="banner">
-
-        <div class="main-header">
-            <div class="container">
-
-                <button class="toggle-menu-btn" onclick="toggleMenu()">☰</button>
-
-                <nav class="nav-mobile">
-                    <ul class="menu-list-mobile">
-                        <li><a href="index.html">Inicio</a></li>
-                        <!-- BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  -->
-                        <li><a href="services.html">Servicios</a></li>
-                        <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN -->
-                        <li><a href="installation.html">Instalaciones</a></li>
-                        <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
-                        <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>
-                            <ul class="sub-menu" id="sub-menu-mobile">
-                                <li onclick="gotoSection('ubicacion')" class="menu-parent-mobile-li">
-                                    <a>Ubicación</a>
-                                </li>
-
-                                <!--                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>-->
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-
-                <nav class="nav-desktop">
-                    <ul class="menu-list">
-                        <li><a href="index.html">Inicio</a></li>
-                        <!-- BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  -->
-                        <li><a href="services.html">Servicios</a></li>
-                        <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN -->
-                        <li><a href="installation.html">Instalaciones</a></li>
-                        <!--                        <li><a href="contact.html">Instalaciones</a></li>-->
-                        <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
-                        <li class="menu-parent"><span class="menu-parent-span">Más</span>
-                            <ul class="sub-menu" id="sub-menu-desktop">
-                                <li><a href="#ubicacion">Ubicación</a></li>
-                                <!--                                <li><a href="#footer">Pié de página</a></li>-->
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+    <nav id="bardesk" class='sidebar sidebar-menu-collapsed principal-nav'>
+        <a href='#' id='justify-icon'>
+            <span class="fas fa-bars bar-menu"></span>
+        </a>
+        <ul class="menu-desk-hamburguer">
+            <li>
+                <a class='expandable' href='index.html' title='Inicio'>
+                    <span class="fas fa-home"></span>
+                    <span class='expanded-element'>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a class='expandable' href='services.html' title='Servicios'>
+                    <span class="fas fa-tools"></span>
+                    <span class='expanded-element'>Servicios</span>
+                </a>
+            </li>
+            <li class='active'>
+                <a class='expandable' href='installation.html' title='Instalaciones'>
+                    <span class="fas fa-building"></span>
+                    <span class='expanded-element'>Instalaciones</span>
+                </a>
+            </li>
+            <li>
+                <a class='expandable' href='#' title='Más'>
+                    <span class="fas fa-plus"></span>
+                    <span class='expanded-element'>Más</span>
+                </a>
+            </li>
+        </ul>
+        <!--    <a href='#' id='logout-icon' title='Logout'>-->
+        <!--        <span class='glyphicon glyphicon-off'></span>-->
+        <!--    </a>-->
+    </nav>
+    <nav id="barmobile" class="nav">
+        <div class="hamburger-container">
+            <ul class="hamburger">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
+        <ul id="menu" class="menu-mobile-hamburguer">
+            <li class="hamburger-li"><a href="index.html"> <span class="fas fa-home"></span> Inicio</a></li>
+            <li  class="hamburger-li"><a href="services.html">  <span class="fas fa-tools"></span> Servicios</a></li>
+            <li  class="hamburger-li active"><a href="installation.html">   <span class="fas fa-building"></span> Instalaciones</a></li>
+            <li  class="hamburger-li"><a href="#">  <span class="fas fa-plus"></span> Más</a></li>
+        </ul>
+    </nav>
 
-        <div id="owl-four-nav" class="owl-nav"></div>
+    <div>
+        <!-- Header Close -->
+
+        <!--    <div class="banner">-->
+
+        <!--        <div class="main-header">-->
+        <!--            <div class="container">-->
+
+        <!--                <button class="toggle-menu-btn" onclick="toggleMenu()">☰</button>-->
+
+        <!--                <nav class="nav-mobile">-->
+        <!--                    <ul class="menu-list-mobile">-->
+        <!--                        <li><a href="index.html">Inicio</a></li>-->
+        <!--                        &lt;!&ndash; BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  &ndash;&gt;-->
+        <!--                        <li><a href="services.html">Servicios</a></li>-->
+        <!--                        &lt;!&ndash; CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN &ndash;&gt;-->
+        <!--                        <li><a href="installation.html">Instalaciones</a></li>-->
+        <!--                        &lt;!&ndash; ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE &ndash;&gt;-->
+        <!--                        <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>-->
+        <!--                            <ul class="sub-menu" id="sub-menu-mobile">-->
+        <!--                                <li onclick="gotoSection('ubicacion')" class="menu-parent-mobile-li">-->
+        <!--                                    <a>Ubicación</a>-->
+        <!--                                </li>-->
+
+        <!--                                &lt;!&ndash;                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>&ndash;&gt;-->
+        <!--                            </ul>-->
+        <!--                        </li>-->
+        <!--                    </ul>-->
+        <!--                </nav>-->
+
+        <!--                <nav class="nav-desktop">-->
+        <!--                    <ul class="menu-list">-->
+        <!--                        <li><a href="index.html">Inicio</a></li>-->
+        <!--                        &lt;!&ndash; BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  &ndash;&gt;-->
+        <!--                        <li><a href="services.html">Servicios</a></li>-->
+        <!--                        &lt;!&ndash; CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN &ndash;&gt;-->
+        <!--                        <li><a href="installation.html">Instalaciones</a></li>-->
+        <!--                        &lt;!&ndash;                        <li><a href="contact.html">Instalaciones</a></li>&ndash;&gt;-->
+        <!--                        &lt;!&ndash; ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE &ndash;&gt;-->
+        <!--                        <li class="menu-parent"><span class="menu-parent-span">Más</span>-->
+        <!--                            <ul class="sub-menu" id="sub-menu-desktop">-->
+        <!--                                <li><a href="#ubicacion">Ubicación</a></li>-->
+        <!--                                &lt;!&ndash;                                <li><a href="#footer">Pié de página</a></li>&ndash;&gt;-->
+        <!--                            </ul>-->
+        <!--                        </li>-->
+        <!--                    </ul>-->
+        <!--                </nav>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <!--        <div id="owl-four-nav" class="owl-nav"></div>-->
+        <!--    </div>-->
     </div>
+
     <div class="main-header">
         <div class="containerImg">
             <div class="logo-wrap">
+                <br>
                 <img src="images/site-logo.jpg" alt="Logo Image">
             </div>
         </div>
@@ -215,7 +272,6 @@
     <!-- FINISH FOOTER -->
 
 </div>
-</div>
 <script type="text/javascript" src="js/contact.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -231,6 +287,7 @@
 <script type="text/javascript" src="js/email.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MZ9WH2R5Z"></script>
 <script type="text/javascript" src="js/gtag.js"></script>
+<script type="text/javascript" src="js/sidebar.js"></script>
 
 </body>
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>

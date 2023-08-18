@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
     <title>Diagnóstica - Inicio</title>
@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/pages.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
 </head>
 
@@ -58,63 +59,116 @@
     </header>
     <!-- FINISH HEADER -->
 
+    <!-- INIT NAV -->
+    <nav id="bardesk" class='sidebar sidebar-menu-collapsed principal-nav'>
+        <a href='#' id='justify-icon'>
+            <span class="fas fa-bars bar-menu"></span>
+        </a>
+        <ul class="menu-desk-hamburguer">
+            <li class='active'>
+                <a class='expandable' href='index.html' title='Inicio'>
+                    <span class="fas fa-home"></span>
+                    <span class='expanded-element'>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a class='expandable' href='services.html' title='Servicios'>
+                    <span class="fas fa-tools"></span>
+                    <span class='expanded-element'>Servicios</span>
+                </a>
+            </li>
+            <li>
+                <a class='expandable' href='installation.html' title='Instalaciones'>
+                    <span class="fas fa-building"></span>
+                    <span class='expanded-element'>Instalaciones</span>
+                </a>
+            </li>
+            <li>
+                <a class='expandable' href='#' title='Más'>
+                    <span class="fas fa-plus"></span>
+                    <span class='expanded-element'>Más</span>
+                </a>
+            </li>
+        </ul>
+        <!--    <a href='#' id='logout-icon' title='Logout'>-->
+        <!--        <span class='glyphicon glyphicon-off'></span>-->
+        <!--    </a>-->
+    </nav>
+    <nav id="barmobile" class="nav">
+        <div class="hamburger-container">
+            <ul class="hamburger">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <ul id="menu" class="menu-mobile-hamburguer">
+            <li class="hamburger-li active"><a href="index.html"> <span class="fas fa-home"></span>
+                Inicio</a></li>
+            <li class="hamburger-li"><a href="services.html"> <span class="fas fa-tools"></span>
+                Servicios</a></li>
+            <li class="hamburger-li"><a href="installation.html"> <span class="fas fa-building"></span>
+                Instalaciones</a></li>
+            <li class="hamburger-li"><a href="#"> <span class="fas fa-plus"></span>
+                Más</a></li>
+        </ul>
+    </nav>
+    <!-- FINISH NAV -->
+
     <!-- INIT BANNER -->
     <div class="banner">
-
         <div class="main-header">
-            <div class="container">
+            <!--            <div class="container">-->
+            <!--&lt;!&ndash;                <button class="toggle-menu-btn" style="border: 2px solid black" onclick="toggleMenu()">☰</button>&ndash;&gt;-->
+            <!--&lt;!&ndash;                <nav class="nav-mobile">&ndash;&gt;-->
+            <!--&lt;!&ndash;                    <ul class="menu-list-mobile">&ndash;&gt;-->
+            <!--&lt;!&ndash;                        <li><a href="/">Inicio</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                        &lt;!&ndash; BANNER - ACCIONES - ACTIVIDADES - EXAMENES - UBICACION - PIE  &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;                        <li><a href="services.html">Servicios</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                        &lt;!&ndash; PROPÓSITO - MISIÓN/VISIÓN - OBJETIVO - EXAMAENES - GALERÍA -   &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;                        <li><a href="installation.html">Instalaciones</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                        &lt;!&ndash; CONSULTORIOS QUE CUENTA (eco, farm, consult) - ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;                        <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;                            <ul class="sub-menu" id="sub-menu-mobile">&ndash;&gt;-->
+            <!--&lt;!&ndash;                                <li onclick="gotoSection('acciones')" class="menu-parent-mobile-li">&ndash;&gt;-->
+            <!--&lt;!&ndash;                                    <a>Acciones</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                <li onclick="gotoSection('actividades')" class="menu-parent-mobile-li">&ndash;&gt;-->
+            <!--&lt;!&ndash;                                    <a>Actividades</a>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                </li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                <li onclick="gotoSection('examenes')" class="menu-parent-mobile-li">&ndash;&gt;-->
+            <!--&lt;!&ndash;                                    <a>Exámenes</a>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                </li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                <li onclick="gotoSection('ubicacion')" class="menu-parent-mobile-li">&ndash;&gt;-->
+            <!--&lt;!&ndash;                                    <a>Ubicación</a>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                </li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                &lt;!&ndash;                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;                            </ul>&ndash;&gt;-->
+            <!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                    </ul>&ndash;&gt;-->
+            <!--&lt;!&ndash;                </nav>&ndash;&gt;-->
 
-                <button class="toggle-menu-btn" style="border: 2px solid black" onclick="toggleMenu()">☰</button>
+            <!--&lt;!&ndash;                <nav class="nav-desktop">&ndash;&gt;-->
+            <!--&lt;!&ndash;                    <ul class="menu-list">&ndash;&gt;-->
+            <!--&lt;!&ndash;                        <li><a href="/">Inicio</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                        &lt;!&ndash; BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;                        <li><a href="services.html">Servicios</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                        &lt;!&ndash; CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;                        <li><a href="installation.html">Instalaciones</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                        &lt;!&ndash;                        <li><a href="contact.html">Instalaciones</a></li>&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;                        &lt;!&ndash; ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;                        <li class="menu-parent"><span class="menu-parent-span">Más</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;                            <ul class="sub-menu" id="sub-menu-desktop">&ndash;&gt;-->
+            <!--&lt;!&ndash;                                <li><a href="#acciones">Acciones</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                <li><a href="#actividades">Actividades</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                <li><a href="#examenes">Exámenes</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                <li><a href="#ubicacion">Ubicación</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                                &lt;!&ndash;                                <li><a href="#footer">Pié de página</a></li>&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;                            </ul>&ndash;&gt;-->
+            <!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+            <!--&lt;!&ndash;                    </ul>&ndash;&gt;-->
+            <!--&lt;!&ndash;                </nav>&ndash;&gt;-->
 
-                <nav class="nav-mobile">
-                    <ul class="menu-list-mobile">
-                        <li><a href="/">Inicio</a></li>
-                        <!-- BANNER - ACCIONES - ACTIVIDADES - EXAMENES - UBICACION - PIE  -->
-                        <li><a href="services.html">Servicios</a></li>
-                        <!-- PROPÓSITO - MISIÓN/VISIÓN - OBJETIVO - EXAMAENES - GALERÍA -   -->
-                        <li><a href="installation.html">Instalaciones</a></li>
-                        <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
-                        <li class="menu-parent"><span class="menu-parent-mobile-span">Más</span>
-                            <ul class="sub-menu" id="sub-menu-mobile">
-                                <li onclick="gotoSection('acciones')" class="menu-parent-mobile-li">
-                                    <a>Acciones</a></li>
-                                <li onclick="gotoSection('actividades')" class="menu-parent-mobile-li">
-                                    <a>Actividades</a>
-                                </li>
-                                <li onclick="gotoSection('examenes')" class="menu-parent-mobile-li">
-                                    <a>Exámenes</a>
-                                </li>
-                                <li onclick="gotoSection('ubicacion')" class="menu-parent-mobile-li">
-                                    <a>Ubicación</a>
-                                </li>
-                                <!--                                <li class="menu-parent-mobile-li"><a href="#footer">Pié de página</a></li>-->
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-
-                <nav class="nav-desktop">
-                    <ul class="menu-list">
-                        <li><a href="/">Inicio</a></li>
-                        <!-- BANNER - PROMOCIONES - UBICACIÓN - CERTIFICADOS - GALERÍA - PIE  -->
-                        <li><a href="services.html">Servicios</a></li>
-                        <!-- CONSULTORIOS QUE CUENTA (eco, farm, consult) - MISIÓN/VISIÓN -->
-                        <li><a href="installation.html">Instalaciones</a></li>
-                        <!--                        <li><a href="contact.html">Instalaciones</a></li>-->
-                        <!-- ALQUILAR - FOTOS CONSULTORIOS - VIDEO - UBICACIÓN - QUE POSEE -->
-                        <li class="menu-parent"><span class="menu-parent-span">Más</span>
-                            <ul class="sub-menu" id="sub-menu-desktop">
-                                <li><a href="#acciones">Acciones</a></li>
-                                <li><a href="#actividades">Actividades</a></li>
-                                <li><a href="#examenes">Exámenes</a></li>
-                                <li><a href="#ubicacion">Ubicación</a></li>
-                                <!--                                <li><a href="#footer">Pié de página</a></li>-->
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-
-            </div>
+            <!--            </div>-->
         </div>
 
         <div class="owl-four owl-carousel" itemscope>
@@ -209,7 +263,8 @@
                 <div class="courses">
                     <div class="owl-one owl-carousel">
 
-                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal"
+                             data-target="#largeModal"
                              data-content="content1">
                             <div class="img-wrap" itemprop="image">
                                 <img src="gif/historial-medico.gif" alt="Convenios con médicos." class="img-fluid">
@@ -217,7 +272,8 @@
                             <span class="learn-desining-banner spanbold" itemprop="name">Convenios con médicos</span>
                         </div>
 
-                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal"
+                             data-target="#largeModal"
                              data-content="content2">
                             <div class="img-wrap" itemprop="image">
                                 <!--                                <a href="images/certi.jpg" data-lightbox="certificado"-->
@@ -231,7 +287,8 @@
                             <!--                            </div>-->
                         </div>
 
-                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal"
+                             data-target="#largeModal"
                              data-content="content3">
                             <div class="img-wrap" itemprop="image">
                                 <!--                                <a href="images/certi.jpg" data-lightbox="certificado"-->
@@ -246,7 +303,8 @@
                             <!--                            </div>-->
                         </div>
 
-                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal"
+                             data-target="#largeModal"
                              data-content="content4">
                             <div class="img-wrap" itemprop="image">
                                 <!--                                <a href="images/certi.jpg" data-lightbox="certificado"-->
@@ -276,7 +334,8 @@
                         <!--                            &lt;!&ndash;                            </div>&ndash;&gt;-->
                         <!--                        </div>-->
 
-                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal" data-target="#largeModal"
+                        <div class="box-wrap box-wrap-hover" itemprop="event" itemscope data-toggle="modal"
+                             data-target="#largeModal"
                              data-content="content6">
                             <div class="img-wrap" itemprop="image">
                                 <!--                                <a href="images/certi.jpg" data-lightbox="certificado"-->
@@ -354,7 +413,7 @@
                     <!--                    <div class="cardView" data-toggle="modal" data-target="#largeModal"-->
                     <!--                         data-content="content5">-->
                     <!--                        <div class="item">-->
-<!--                                                <img src="gif/rayos-x.gif">-->
+                    <!--                                                <img src="gif/rayos-x.gif">-->
                     <!--                        </div>-->
                     <!--                        <div class="name">-->
                     <!--                            <h4>-->
@@ -398,13 +457,13 @@
                         </a>
                     </div>
                 </div>
-<!--                <div class="news-wrap" itemprop="event">-->
-<!--                    <div class="news-img-wrap" itemprop="image">-->
-<!--                        <a href="images/promo1.jpg" data-lightbox="Promo" data-title="Promo 2">-->
-<!--                            <img class="shadowimg" src="images/promo1.jpg" alt="gallery-images">-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="news-wrap" itemprop="event">-->
+                <!--                    <div class="news-img-wrap" itemprop="image">-->
+                <!--                        <a href="images/promo1.jpg" data-lightbox="Promo" data-title="Promo 2">-->
+                <!--                            <img class="shadowimg" src="images/promo1.jpg" alt="gallery-images">-->
+                <!--                        </a>-->
+                <!--                    </div>-->
+                <!--                </div>-->
                 <div class="news-wrap" itemprop="event">
                     <div class="news-img-wrap" itemprop="image">
                         <a href="images/promo2.jpg" data-lightbox="Promo" data-title="Promo 3">
@@ -711,6 +770,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MZ9WH2R5Z"></script>
 <script type="text/javascript" src="js/gtag.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/sidebar.js"></script>
 
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
 </body>
