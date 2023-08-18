@@ -130,14 +130,14 @@ $('#btnImprimir').on('click', function () {
     }, 1000); // Cambia el tiempo según sea necesario
 });
 
-$('#btnWhatsapp').on('click', function() {
+$('#btnWhatsapp').on('click', function () {
     var total = 0;
     var examenesSeleccionados = [];
 
-    $('.checkbox-label input[type="checkbox"]:checked').each(function() {
+    $('.checkbox-label input[type="checkbox"]:checked').each(function () {
         var precio = parseFloat($(this).data('value'));
         if (!isNaN(precio) && precio !== 0) {
-            var examen = $(this).parent().contents().filter(function() {
+            var examen = $(this).parent().contents().filter(function () {
                 return this.nodeType === 3;
             }).text().trim();
             examenesSeleccionados.push(examen + " - Precio: " + precio);
@@ -161,7 +161,7 @@ $('#btnWhatsapp').on('click', function() {
 });
 
 // Evento cuando se cambia un checkbox
-$('.checkbox-label input[type="checkbox"]').on('change', function() {
+$('.checkbox-label input[type="checkbox"]').on('change', function () {
     actualizarBotones();
 });
 
@@ -169,8 +169,103 @@ $('.checkbox-label input[type="checkbox"]').on('change', function() {
 function actualizarBotones() {
     var totalChecksSeleccionados = $('.checkbox-label input[type="checkbox"]:checked').length;
     if (totalChecksSeleccionados > 0) {
-        $('#btnImprimir, #btnWhatsapp').prop('disabled', false);
+        $('#btnImprimir, #btnWhatsapp, #btnCorreo').prop('disabled', false);
     } else {
-        $('#btnImprimir, #btnWhatsapp').prop('disabled', true);
+        $('#btnImprimir, #btnWhatsapp, #btnCorreo').prop('disabled', true);
     }
 }
+
+//MAIL
+//https://dashboard.emailjs.com/admin
+// Reemplaza 'TU_USER_ID' con tu clave pública de EmailJS
+const userID = 'dTY_6DJGYwHUSzal2';
+// Reemplaza 'TU_TEMPLATE_ID' con el ID de la plantilla que quieras utilizar
+const templateID = 'template_ww8km0k';
+document.getElementById('btnEnviar').addEventListener('click', () => {
+    const datanombre = document.getElementById('nombre').value;
+    const datacorreo = document.getElementById('correo').value;
+
+    if (!datanombre.trim()) {
+        Toastify({
+            text: "Este campo no puede estar vació",
+            duration: 3000,
+            close: true, // Muestra el botón de cierre
+            gravity: "bottom", // Posición: "top", "center", "bottom"
+            stopOnFocus: true, // Detiene el temporizador al hacer clic en el toast
+            backgroundColor: "linear-gradient(to right, #5e0210, #cc19be)",
+        }).showToast();
+        return;
+    }
+
+    if (!validateEmail(datacorreo)) {
+        Toastify({
+            text: "Debe ingresar un correo válido",
+            duration: 3000,
+            close: true, // Muestra el botón de cierre
+            gravity: "bottom", // Posición: "top", "center", "bottom"
+            stopOnFocus: true, // Detiene el temporizador al hacer clic en el toast
+            backgroundColor: "linear-gradient(to right, #5e0210, #cc19be)",
+        }).showToast();
+        return;
+    }
+
+    var total = 0;
+    var examenesSeleccionados = [];
+
+    $('.checkbox-label input[type="checkbox"]:checked').each(function () {
+        var precio = parseFloat($(this).data('value'));
+        if (!isNaN(precio) && precio !== 0) {
+            var examen = $(this).parent().contents().filter(function () {
+                return this.nodeType === 3;
+            }).text().trim();
+            examenesSeleccionados.push(examen + " - Precio: " + precio);
+            total += precio;
+        }
+    });
+
+    var mensaje = "Saludos. Los exámenes que ha cotizado en la página web son los siguientes \n\n" + examenesSeleccionados.join("\n");
+    if (total > 0) {
+        mensaje += "\n\nTotal: " + total.toFixed(2);
+    }
+    mensaje += "\n\nRecuerde que el valor indicado no contiene descuentos y/o promociones, por ende está sujeto a cambios. Gracias"
+    var email = datacorreo;
+    var nombre = datanombre;
+
+    enviarCorreo(nombre, email, mensaje);
+
+    // Cerrar el modal
+    $('#correoModal').modal('hide');
+});
+
+// Función para validar el formato de correo electrónico
+function validateEmail(email) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+const enviarCorreo = async (nombre, email, mensaje) => {
+
+    const data = {
+        from_name: 'Centro Clínico Diagnóstica',
+        reply_to: 'centerdiagnostica@gmail.com',// responder a
+        to_email: email,// quien envía
+        to_name: nombre,// nombre de quien envía
+        message: mensaje,
+        "content-type": "text/html",
+    };
+    try {
+        const response = await emailjs.send('service_suh75ru', templateID, data, userID);
+        console.info(response);
+        Toastify({
+            text: "El correo se envió correctamente.",
+            duration: 3000,
+            close: true, // Muestra el botón de cierre
+            gravity: "bottom", // Posición: "top", "center", "bottom"
+            stopOnFocus: true, // Detiene el temporizador al hacer clic en el toast
+            backgroundColor: "linear-gradient(to right, #021a5e, #42418a)",
+        }).showToast();
+    } catch (error) {
+        console.error(error);
+    }
+};
+

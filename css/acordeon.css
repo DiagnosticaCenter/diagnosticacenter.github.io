@@ -106,11 +106,27 @@ th, td {
 
 .btn-imprimir {
     font-size: 25px;
+    color: white;
 }
 
-.select-exam{
+.select-exam {
     color: red;
     font-size: 17px;
     text-align: center;
     font-weight: bold;
+}
+
+/* Ajusta el tamaño de fuente y otros estilos del modal */
+.modal-content {
+    font-size: 16px;
+}
+
+/* Ajusta el tamaño de fuente de los campos de entrada */
+.modal-content input {
+    font-size: 16px;
+}
+
+/* Ajusta el tamaño de fuente del botón */
+.modal-content button {
+    font-size: 16px;
 }

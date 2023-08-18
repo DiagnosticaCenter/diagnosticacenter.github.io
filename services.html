@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/horario.css">
     <link rel="stylesheet" type="text/css" href="css/acordeon.css">
+    <link rel="stylesheet" type="text/css" href="css/toastify.css">
 
 </head>
 
@@ -192,12 +193,12 @@
                 </tr>
                 <tr>
                     <td class="horas">Ecografía</td>
-                    <td class="Musica">08:00 - 17:00</td>
-                    <td class="Musica">08:00 - 17:00</td>
-                    <td class="Musica">08:00 - 17:00</td>
-                    <td class="Musica">08:00 - 17:00</td>
-                    <td class="Musica">08:00 - 17:00</td>
-                    <td class="Musica">08:00 - 17:00</td>
+                    <td class="Musica">08:30 - 17:30</td>
+                    <td class="Musica">08:30 - 17:30</td>
+                    <td class="Musica">08:30 - 17:30</td>
+                    <td class="Musica">08:30 - 17:30</td>
+                    <td class="Musica">08:30 - 17:30</td>
+                    <td class="Musica">08:00 - 16:00</td>
                     <td class="Musica"></td>
 
                 </tr>
@@ -445,13 +446,16 @@
         <div class="total-container">
             <b>Total:</b> $<span id="totalValue">0.00</span><br>
             <span class="precio-referencial"><b>Precio referencial:</b>
-                El valor indicado no contiene descuentos y/o promociones.
+                El valor indicado no contiene descuentos y/o promociones, por ende está sujeto a cambios.
             </span><br>
             <button id="btnImprimir" class="btn btn-primary btn-imprimir" disabled>
                 <i class="fas fa-print"></i> Imprimir
             </button>
             <button id="btnWhatsapp" class="btn btn-success btn-imprimir" disabled>
                 <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+            <button id="btnCorreo" class="btn btn-info btn-imprimir" disabled data-toggle="modal" data-target="#correoModal">
+                <i class="far fa-envelope"></i> Correo Electrónico
             </button>
 
             <div id="logo" class="d-none">
@@ -961,7 +965,7 @@
     </footer>
     <!-- FINISH FOOTER -->
 
-    <!-- INIT MODAL -->
+    <!-- INIT MODAL INFO -->
     <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -981,10 +985,42 @@
             </div>
         </div>
     </div>
-    <!-- FINISH MODAL -->
-
+    <!-- FINISH MODAL INFO-->
 </div>
 
+<!-- INIT MODAL FORM-->
+<div class="modal fade" id="correoModal" tabindex="-1" role="dialog" aria-labelledby="correoModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="correoModalLabel">Datos para envío</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="correoForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button id="btnEnviar" type="button" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FINISH MODAL FORM-->
+
+<script type="text/javascript" src=""></script>
 
 <script type="text/javascript" src="js/about.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
@@ -1005,6 +1041,8 @@
 <script type="text/javascript" src="js/acordeon.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MZ9WH2R5Z"></script>
 <script type="text/javascript" src="js/gtag.js"></script>
+<script type="text/javascript" src="js/emailjs.js"></script>
+<script type="text/javascript" src="js/toastify.js"></script>
 
 </body>
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
