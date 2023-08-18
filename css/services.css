@@ -1,4 +1,10 @@
-
+h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+}
 .main-header {
     background-color: white;
     padding: 40px 0; /* Ajustar el espacio vertical aquí */
