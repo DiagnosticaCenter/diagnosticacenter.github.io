@@ -31,20 +31,13 @@
     flex-wrap: wrap;
 }
 
-h2 {
-    font-size: 25px; /* Ajusta el tamaño de fuente aquí */
-    text-transform: uppercase;
-    color: black;
-    text-align: center;
-    font-weight: bold;
 
-}
-
-.h2-especial{
+.h2-especial {
     margin-top: 60px; /* Ajusta el valor según sea necesario */
     margin-bottom: 60px; /* Ajusta el valor según sea necesario */
 
 }
+
 .mission, .vision {
     flex: 0 0 calc(50% - 20px);
     padding: 20px;
@@ -123,3 +116,4 @@ h2 {
 .objectivesSection li {
     margin-bottom: 10px;
 }
+
