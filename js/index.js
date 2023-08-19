@@ -12,27 +12,27 @@ document.addEventListener('DOMContentLoaded', function () {
     try {
         const menuParent = document.querySelector('.menu-parent');
         const subMenu = menuParent.querySelector('.sub-menu');
-    // Agregar evento click al elemento con la clase "menu-parent"
-    menuParent.addEventListener('click', function (event) {
-        event.stopPropagation(); // Evitar que el clic en "Más" cierre el submenú
+        // Agregar evento click al elemento con la clase "menu-parent"
+        menuParent.addEventListener('click', function (event) {
+            event.stopPropagation(); // Evitar que el clic en "Más" cierre el submenú
 
-        // Alternar la visibilidad del submenú al hacer clic en "menu-parent"
-        if (subMenu.style.display === 'block') {
-            subMenu.style.display = 'none';
-        } else {
-            subMenu.style.display = 'block';
-        }
-    });
+            // Alternar la visibilidad del submenú al hacer clic en "menu-parent"
+            if (subMenu.style.display === 'block') {
+                subMenu.style.display = 'none';
+            } else {
+                subMenu.style.display = 'block';
+            }
+        });
 
-    // Agregar evento click para cerrar el submenú "Más" al hacer clic en cualquier otro lugar de la página
-    document.addEventListener('click', function (event) {
-        const target = event.target;
+        // Agregar evento click para cerrar el submenú "Más" al hacer clic en cualquier otro lugar de la página
+        document.addEventListener('click', function (event) {
+            const target = event.target;
 
-        if (!menuParent.contains(target)) {
-            subMenu.style.display = 'none';
-        }
-    });
-    }catch (e) {
+            if (!menuParent.contains(target)) {
+                subMenu.style.display = 'none';
+            }
+        });
+    } catch (e) {
 
     }
 });
@@ -80,4 +80,21 @@ function sendMessage(action) {
     whatsappLink = whatsappLink + message;
     // Abre una nueva ventana o pestaña con el enlace de WhatsApp
     window.open(whatsappLink, "_blank");
+}
+
+function sendSection(action) {
+    let message = "";
+    // Crea el enlace de WhatsApp
+    let urlSection = `services.html#`;
+
+    switch (action) {
+
+        case 'cotizar':
+            urlSection += "cotizar";
+            break;
+        default:
+            break;
+    }
+    // Abre una nueva ventana o pestaña con el enlace de WhatsApp
+    window.open(urlSection, "_blank");
 }

@@ -147,6 +147,10 @@ $('#largeModal').on('show.bs.modal', function (event) {
 <!--             <label id="alertWarning" class="warning" style="display: none;">-->
 <!--             Faltan datos por completar, o hay infomación incorrecta.-->
 <!--             </label>-->
+             <a class="btn-modal text-blue" href="installation.html#alquiler" target="_blank">
+               Más información
+             <i class="fas fa-info-circle"></i></a>
+             
              <button type="button" class="btn btn-primary btn-modal text-white" 
              onclick="enviarMotivo('Alquiler de consultorio', 'email', 'laboratorio')">
                 Enviar Correo 
@@ -263,7 +267,7 @@ $('#largeModal').on('show.bs.modal', function (event) {
                     </div>
                 </div>
             `;
-    }else if (contentId === 'content6') {
+    } else if (contentId === 'content6') {
         dynamicContent = `
                 <div class="row">
                     <div class="col-md-9">
@@ -359,14 +363,23 @@ function enviarMotivo(motivoConsulta, redSocial, departamento) {
     if (isNameValid && isEmailValid && isPhoneValid && isMessageValid) {
         // Aquí puedes agregar la lógica para enviar el formulario
         if (redSocial === 'email') {
-            const subject = `Consulta de ${motivo}`;
-            const body = `Saludos soy ${nombre}, estoy interesado en obtener más información sobre el ${motivo}. %0A%0A${encodeURIComponent(mensaje)}%0A%0ADatos de contacto: ${email}%0A${telefono}`;
+            const subject = `Consulta de ${motivo} desde la página web`;
+            // const body = `Saludos, soy ${nombre}, estoy interesado en obtener más información sobre el ${motivo}. %0A%0A${encodeURIComponent(mensaje)}%0A%0ADatos de contacto: ${email}%0A${telefono}`;
+            const body = `El Sr(a) ${nombre}, está interesado en obtener más información sobre el ${motivo}. \n\n${(mensaje)}\nDatos de contacto: ${email}\n${telefono}`;
+
             // const recipients = "labdiagnostica@outlook.com,centerdiagnostica@gmail.com";
-            const mailtoLink = `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${body}`;
-            window.open(mailtoLink, '_blank');
+            // const mailtoLink = `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${body}`;
+            // window.open(mailtoLink, '_blank');
+            enviarCorreo(subject, 'Centro Clínico Diagnóstica', email, recipients, '', email, body);
+
         } else if (redSocial === 'whatsapp') {
-            const subject = `Saludos soy ${nombre}, estoy interesado en obtener más información sobre el asunto de ${motivo}.`;
+            const subject = `Saludos, soy ${nombre}, estoy interesado en obtener más información sobre el asunto de ${motivo}.`;
             const body = `${(mensaje)}`;
+            const subject2 = `Consulta de ${motivo} por Whatsapp desde la página web`;
+
+            const body2 = `El Sr(a) ${nombre}, está interesado en obtener más información sobre el asunto de ${motivo}. \n\n${(mensaje)}\nDatos de contacto: ${email}\n${telefono}`;
+            enviarCorreo(subject2, 'Centro Clínico Diagnóstica', email, recipients, '', email, body2);
+
             const contact = `Datos de contacto: ${email} - ${telefono}`;
 
             const mensajeWhatsapp = `${encodeURIComponent(subject)}%0A%0A${encodeURIComponent(body)}%0A%0A${encodeURIComponent(contact)}`;
