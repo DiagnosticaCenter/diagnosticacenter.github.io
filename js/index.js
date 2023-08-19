@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const menuParent = document.querySelector('.menu-parent');
-    const subMenu = menuParent.querySelector('.sub-menu');
-
+    try {
+        const menuParent = document.querySelector('.menu-parent');
+        const subMenu = menuParent.querySelector('.sub-menu');
     // Agregar evento click al elemento con la clase "menu-parent"
     menuParent.addEventListener('click', function (event) {
         event.stopPropagation(); // Evitar que el clic en "Más" cierre el submenú
@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
             subMenu.style.display = 'none';
         }
     });
+    }catch (e) {
+
+    }
 });
 
 

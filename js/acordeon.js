@@ -133,6 +133,7 @@ $('#btnImprimir').on('click', function () {
 $('#btnWhatsapp').on('click', function () {
     var total = 0;
     var examenesSeleccionados = [];
+    var examenesSeleccionados2 = [];
 
     $('.checkbox-label input[type="checkbox"]:checked').each(function () {
         var precio = parseFloat($(this).data('value'));
@@ -140,18 +141,29 @@ $('#btnWhatsapp').on('click', function () {
             var examen = $(this).parent().contents().filter(function () {
                 return this.nodeType === 3;
             }).text().trim();
-            examenesSeleccionados.push(examen + " - Precio: " + precio);
+            examenesSeleccionados.push(examen);
+            examenesSeleccionados2.push(examen + " - Precio: " + precio);
             total += precio;
         }
     });
-
+    let codigoOrden = generarCodigoAleatorio();
     var mensaje = "Saludos, he cotizado desde su página web los siguientes exámenes\n\n" + examenesSeleccionados.join("\n");
+    var mensaje2 = "Se ha cotizado desde la página web los siguientes exámenes\n\n" + examenesSeleccionados2.join("\n");
+
     if (total > 0) {
         mensaje += "\n\nTotal: " + total.toFixed(2);
     }
-    mensaje += "\n\nMe ayuda con la confirmación. Gracias"
+    mensaje += "\n\nPerteneciente a la orden digital " + codigoOrden + "\n\nMe ayuda con la confirmación e información detallada. Gracias";
+    mensaje2 += "\n\nPerteneciente a la orden digital" + codigoOrden + "\n\nNo se olvide responder en Whatsapp.";
+
     // Codificar el mensaje para usarlo en la URL
     var encodedMensaje = encodeURIComponent(mensaje);
+    var encodedMensaje2 = (mensaje2);
+
+    var subject = 'Cotización por whatsapp desde página web';
+    const recipients = "labdiagnostica@outlook.com,centerdiagnostica@gmail.com";
+    const email = "centerdiagnostica@gmail.com";
+    enviarCorreo(subject, 'Centro Clínico Diagnóstica', email, recipients, '', '', encodedMensaje2);
 
     // Generar el enlace de WhatsApp con el número y el mensaje
     var whatsappLink = "https://wa.me/593982922239?text=" + encodedMensaje;
@@ -159,6 +171,22 @@ $('#btnWhatsapp').on('click', function () {
     // Abrir el enlace en una nueva ventana
     window.open(whatsappLink, "_blank");
 });
+
+function generarCodigoAleatorio() {
+    const fechaActual = new Date();
+
+    const año = fechaActual.getFullYear().toString().slice(-2); // Obtener los últimos dos dígitos del año
+    const mes = fechaActual.getMonth() + 1;
+    const dia = fechaActual.getDate();
+    const hora = fechaActual.getHours();
+    const minutos = fechaActual.getMinutes();
+    const segundos = fechaActual.getSeconds();
+    const milisegundos = fechaActual.getMilliseconds();
+
+    const codigo = `${año}${mes}${dia}${hora}${minutos}${segundos}${milisegundos}`;
+    return codigo;
+}
+
 
 // Evento cuando se cambia un checkbox
 $('.checkbox-label input[type="checkbox"]').on('change', function () {
@@ -178,34 +206,24 @@ function actualizarBotones() {
 //MAIL
 //https://dashboard.emailjs.com/admin
 // Reemplaza 'TU_USER_ID' con tu clave pública de EmailJS
-const userID = 'dTY_6DJGYwHUSzal2';
-// Reemplaza 'TU_TEMPLATE_ID' con el ID de la plantilla que quieras utilizar
-const templateID = 'template_ww8km0k';
+// const userID = 'dTY_6DJGYwHUSzal2';
+// // Reemplaza 'TU_TEMPLATE_ID' con el ID de la plantilla que quieras utilizar
+// const templateID = 'template_ww8km0k';
 document.getElementById('btnEnviar').addEventListener('click', () => {
     const datanombre = document.getElementById('nombre').value;
     const datacorreo = document.getElementById('correo').value;
 
     if (!datanombre.trim()) {
-        Toastify({
-            text: "Este campo no puede estar vació",
-            duration: 3000,
-            close: true, // Muestra el botón de cierre
-            gravity: "bottom", // Posición: "top", "center", "bottom"
-            stopOnFocus: true, // Detiene el temporizador al hacer clic en el toast
-            backgroundColor: "linear-gradient(to right, #5e0210, #cc19be)",
-        }).showToast();
+        sendToastify("Este campo no puede estar vació.", 3000,
+            true, "bottom", true,
+            "linear-gradient(to right, #5e0210, #cc19be)");
         return;
     }
 
     if (!validateEmail(datacorreo)) {
-        Toastify({
-            text: "Debe ingresar un correo válido",
-            duration: 3000,
-            close: true, // Muestra el botón de cierre
-            gravity: "bottom", // Posición: "top", "center", "bottom"
-            stopOnFocus: true, // Detiene el temporizador al hacer clic en el toast
-            backgroundColor: "linear-gradient(to right, #5e0210, #cc19be)",
-        }).showToast();
+        sendToastify("Debe ingresar un correo válido.", 3000,
+            true, "bottom", true,
+            "linear-gradient(to right, #5e0210, #cc19be)");
         return;
     }
 
@@ -222,16 +240,20 @@ document.getElementById('btnEnviar').addEventListener('click', () => {
             total += precio;
         }
     });
-
-    var mensaje = "Saludos. Los exámenes que ha cotizado en la página web son los siguientes \n\n" + examenesSeleccionados.join("\n");
+    let codigoOrden = generarCodigoAleatorio();
+    var mensaje = "Los exámenes que ha cotizado en la página web son los siguientes \n\n" + examenesSeleccionados.join("\n");
     if (total > 0) {
         mensaje += "\n\nTotal: " + total.toFixed(2);
     }
+    mensaje += "\n\nPerteneciente a la orden digital " + codigoOrden;
     mensaje += "\n\nRecuerde que el valor indicado no contiene descuentos y/o promociones, por ende está sujeto a cambios. Gracias"
     var email = datacorreo;
     var nombre = datanombre;
-
+    var asunto = 'Cotización desde la página web'
+    var my_email = "centerdiagnostica@gmail.com";
+    var cc_email = "labdiagnostica@outlook.com";
     enviarCorreo(nombre, email, mensaje);
+    enviarCorreo(asunto, 'Centro Clínico Diagnóstica', my_email, email, nombre, cc_email, mensaje);
 
     // Cerrar el modal
     $('#correoModal').modal('hide');
@@ -243,29 +265,45 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-const enviarCorreo = async (nombre, email, mensaje) => {
+// const enviarCorreo = async (to_subject, from_name, reply_to, to_email, to_name, to_cc, message) => {
+//
+//     const data = {
+//         to_subject: to_subject,
+//         from_name: from_name,
+//         reply_to: reply_to,// responder a
+//         to_email: to_email,// quien envía
+//         to_name: to_name,// nombre de quien envía,
+//         to_cc: to_cc,
+//         message: message,
+//         "content-type": "text/html",
+//     };
+//     try {
+//         const response = await emailjs.send('service_suh75ru', templateID, data, userID);
+//         console.info(response);
+//         if (response.status === 200) {
+//             sendToastify("El correo se envió correctamente.", 3000,
+//                 true, "bottom", true,
+//                 "linear-gradient(to right, #021a5e, #42418a)");
+//         } else {
+//             sendToastify("No sé pudo enviar, intente otra forma.", 3000,
+//                 true, "bottom", true,
+//                 "linear-gradient(to right, #5e0210, #cc19be)");
+//         }
+//     } catch (error) {
+//         sendToastify("Error al enviar, intente otra forma.", 3000,
+//             true, "bottom", true,
+//             "linear-gradient(to right, #5e0210, #cc19be)");
+//         console.error(error);
+//     }
+// };
 
-    const data = {
-        from_name: 'Centro Clínico Diagnóstica',
-        reply_to: 'centerdiagnostica@gmail.com',// responder a
-        to_email: email,// quien envía
-        to_name: nombre,// nombre de quien envía
-        message: mensaje,
-        "content-type": "text/html",
-    };
-    try {
-        const response = await emailjs.send('service_suh75ru', templateID, data, userID);
-        console.info(response);
-        Toastify({
-            text: "El correo se envió correctamente.",
-            duration: 3000,
-            close: true, // Muestra el botón de cierre
-            gravity: "bottom", // Posición: "top", "center", "bottom"
-            stopOnFocus: true, // Detiene el temporizador al hacer clic en el toast
-            backgroundColor: "linear-gradient(to right, #021a5e, #42418a)",
-        }).showToast();
-    } catch (error) {
-        console.error(error);
-    }
-};
-
+// function sendToastify(text, duration, tfclose, gravity, stopOnFocus, backgroundColor) {
+//     Toastify({
+//         text: text,
+//         duration: duration,
+//         close: tfclose, // Muestra el botón de cierre
+//         gravity: gravity, // Posición: "top", "center", "bottom"
+//         stopOnFocus: stopOnFocus, // Detiene el temporizador al hacer clic en el toast
+//         backgroundColor: backgroundColor,
+//     }).showToast();
+// }
