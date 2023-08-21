@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     var today = new Date();
     var dayOfWeek = today.getDay(); // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado
 
@@ -6,20 +6,23 @@ document.addEventListener("DOMContentLoaded", function() {
     var rows = Array.from(table.querySelectorAll("tr"));
 
     // Mover las columnas de la tabla para que el día actual sea la segunda columna
-    rows.forEach(function(row, rowIndex) {
+    rows.forEach(function (row, rowIndex) {
         var cells = Array.from(row.querySelectorAll("th, td"));
-        var dayCell = cells.splice(dayOfWeek, 1)[0]; // Obtener la celda del día actual
-
+        if (dayOfWeek === 0) {
+            var dayCell = cells.splice((dayOfWeek + 7), 1)[0]; // Obtener la celda del día actual
+        } else {
+            var dayCell = cells.splice(dayOfWeek, 1)[0]; // Obtener la celda del día actual
+        }
         // Reorganizar las celdas en el nuevo orden
         cells.splice(1, 0, dayCell); // Insertar la celda del día actual en la segunda posición
 
         // Remover todas las celdas de la fila
-        cells.forEach(function(cell) {
+        cells.forEach(function (cell) {
             row.removeChild(cell);
         });
 
         // Agregar celdas nuevamente en el nuevo orden
-        cells.forEach(function(cell, columnIndex) {
+        cells.forEach(function (cell, columnIndex) {
             row.appendChild(cell);
 
             // Agregar la clase de sombreado al día actual
