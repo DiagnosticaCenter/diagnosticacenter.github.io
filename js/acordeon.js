@@ -154,7 +154,7 @@ $('#btnWhatsapp').on('click', function () {
         mensaje += "\n\nTotal: " + total.toFixed(2);
     }
     mensaje += "\n\nPerteneciente a la orden digital " + codigoOrden + "\n\nMe ayuda con la confirmación e información detallada. Gracias";
-    mensaje2 += "\n\nPerteneciente a la orden digital" + codigoOrden + "\n\nNo se olvide responder en Whatsapp.";
+    mensaje2 += "\n\nPerteneciente a la orden digital " + codigoOrden + "\n\nNo se olvide responder en Whatsapp.";
 
     // Codificar el mensaje para usarlo en la URL
     var encodedMensaje = encodeURIComponent(mensaje);

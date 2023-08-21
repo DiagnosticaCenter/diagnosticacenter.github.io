@@ -899,6 +899,19 @@ ul > li {
     top: 40%;
     left: 0;
     z-index: 8;
+    padding: 100px;
+}
+
+@media (max-width: 768px) {
+
+    .banner #owl-four-nav {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        z-index: 8;
+        padding: 0px;
+
+    }
 }
 
 /*====For Video=====*/
