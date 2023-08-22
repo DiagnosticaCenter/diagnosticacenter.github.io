@@ -522,7 +522,7 @@
         grid-auto-rows: auto;
         grid-gap: 3em;
         padding: 5%;
-        max-height: 98vw;
+        /*max-height: 98vw;*/
         overflow: hidden;
     }
 
@@ -535,7 +535,7 @@
         grid-auto-rows: auto;
         grid-gap: 3em;
         padding: 5%;
-        max-height: 98vw;
+        /*max-height: 98vw;*/
         overflow: hidden;
     }
 
