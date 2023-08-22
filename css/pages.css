@@ -1,3 +1,7 @@
+.active-hamburguer {
+    background-color: black !important;
+}
+
 .containerTitle h1,
 .containerTitle h2 {
     color: white;
@@ -62,6 +66,7 @@
         margin: 0;
         justify-content: flex-end;
     }
+
     .top-header-right {
         justify-content: left;
         /* Alineamos el social-block a la derecha */
@@ -291,10 +296,12 @@
         height: 50vh; /* Ajusta la altura según tus necesidades */
         max-height: 300px; /* Establece un alto máximo */
     }
-    .wrap-map{
+
+    .wrap-map {
         height: 40px;
     }
 }
+
 /* Estilos para pantallas grandes */
 @media (min-width: 1090px) {
 
