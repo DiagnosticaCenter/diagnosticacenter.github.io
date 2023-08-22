@@ -45,6 +45,15 @@
     font-size: 20px;
 }
 
+.acordeon-contenido-more {
+    display: none;
+    /*border-bottom: 1px solid #DDE0E7;*/
+    /*background: #fff;*/
+    padding: 1.4rem;
+    /*color: #4a5666;*/
+    font-size: 20px;
+}
+
 .checkbox-label {
     display: flex;
     align-items: center;

@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="css/pages.css">
     <link rel="stylesheet" type="text/css" href="css/sidebar.css">
     <link rel="stylesheet" type="text/css" href="css/toastify.css">
+    <!--    <link rel="stylesheet" type="text/css" href="css/acordeon.css">-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
 </head>
 
@@ -90,16 +91,43 @@
                     <span class='expanded-element'>Instalaciones</span>
                 </a>
             </li>
-            <li>
-                <a class='expandable' href='#' title='Más'>
-                    <span class="fas fa-plus"></span>
-                    <span class='expanded-element'>Más</span>
-                </a>
-            </li>
+            <!--            <li class="acordeon"><a  id="justify-icon-more">-->
+            <!--                    <div class="acordeon-cabecera-more">-->
+            <!--                <span class="fas fa-plus" style="color: white"></span>-->
+            <!--                    </div>-->
+            <!--                    <div class="acordeon-contenido-more">-->
+            <!--                        <label>-->
+            <!--                            Acciones-->
+            <!--                        </label>-->
+            <!--                        <label>-->
+            <!--                            Actividades-->
+            <!--                        </label>-->
+            <!--                        <label>-->
+            <!--                            Actividades-->
+            <!--                        </label>-->
+            <!--                        <label>-->
+            <!--                            Ubicación-->
+            <!--                        </label>-->
+            <!--                    </div>-->
+            <!--            </a>-->
+
+            <!--            </li>-->
+            <!--            <li>-->
+            <!--                <a class='expandable' href='#' title='Mas'>-->
+            <!--                    <span class="fas fa-plus" style="color: white"></span>-->
+            <!--                    <span class='expanded-element'>Más</span>-->
+            <!--                </a>-->
+            <!--                <ul class="submenu" id="submenu" style="display: none;">-->
+            <!--                    <li class="sub-option"><a href="#">- Acciones</a></li>-->
+            <!--                    <li class="sub-option"><a href="#">- Actividades</a></li>-->
+            <!--                    <li class="sub-option"><a href="#">- Exámenes</a></li>-->
+            <!--                    <li class="sub-option"><a href="#">- Ubicación</a></li>-->
+            <!--                </ul>-->
+            <!--            </li>-->
         </ul>
-        <!--    <a href='#' id='logout-icon' title='Logout'>-->
-        <!--        <span class='glyphicon glyphicon-off'></span>-->
-        <!--    </a>-->
+        <!--            <a href='#' id='logout-icon' title='Logout'>-->
+        <!--                <span class='fas fa-power-off'></span>-->
+        <!--            </a>-->
     </nav>
     <nav id="barmobile" class="nav">
         <div class="hamburger-container">
@@ -116,8 +144,9 @@
                 Servicios</a></li>
             <li class="hamburger-li"><a href="installation.html"> <span class="fas fa-building"></span>
                 Instalaciones</a></li>
-            <li class="hamburger-li"><a href="#"> <span class="fas fa-plus"></span>
-                Más</a></li>
+            <!--            <li class="hamburger-li" data-toggle="modal" data-target="#moreModal"><a href="#"> <span-->
+            <!--                    class="fas fa-plus"></span>-->
+            <!--                Más</a></li>-->
         </ul>
     </nav>
     <!-- FINISH NAV -->
@@ -214,7 +243,7 @@
                         </div>
                         <div class="name">
                             <h4>
-                                Separar turno
+                                <b>Separar turno</b>
                             </h4>
                         </div>
                     </div>
@@ -224,7 +253,7 @@
                         </div>
                         <div class="name">
                             <h4>
-                                Cotizar exámenes
+                                <b> Cotizar exámenes</b>
                             </h4>
                         </div>
 
@@ -235,7 +264,7 @@
                         </div>
                         <div class="name">
                             <h4>
-                                Consultar resultados
+                                <b>Consultar resultados</b>
                             </h4>
                         </div>
                     </div>
@@ -245,7 +274,7 @@
                         </div>
                         <div class="name">
                             <h4>
-                                Servicio a domicilio
+                                <b>Servicio a domicilio </b>
                             </h4>
                         </div>
                     </div>
@@ -379,7 +408,7 @@
                         </div>
                         <div class="name">
                             <h4>
-                                Convenios con médicos
+                                <b> Convenios con médicos</b>
                             </h4>
                         </div>
                     </div>
@@ -390,7 +419,7 @@
                         </div>
                         <div class="name">
                             <h4>
-                                Convenios coportativos
+                                <b> Convenios coportativos</b>
                             </h4>
                         </div>
 
@@ -402,7 +431,7 @@
                         </div>
                         <div class="name">
                             <h4>
-                                Alquiler de consultorios
+                                <b>Alquiler de consultorios</b>
                             </h4>
                         </div>
                     </div>
@@ -413,7 +442,7 @@
                         </div>
                         <div class="name">
                             <h4>
-                                Ecografía
+                                <b> Ecografía</b>
                             </h4>
                         </div>
                     </div>
@@ -738,28 +767,54 @@
     </footer>
     <!-- FINISH FOOTER -->
 
-</div>
-
-<!-- INIT MODAL -->
-<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="dynamicContent">
-                <!-- Contenido del modal -->
-            </div>
-            <div class="modal-footer">
-                <!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+    <!-- INIT MODAL -->
+    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="dynamicContent">
+                    <!-- Contenido del modal -->
+                </div>
+                <div class="modal-footer">
+                    <!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>-->
+                </div>
             </div>
         </div>
     </div>
+    <!-- FINISH MODAL -->
+
+    <!--    &lt;!&ndash; INIT MODAL - MÁS &ndash;&gt;-->
+    <!--    <div class="modal fade" id="moreModal" tabindex="-1" role="dialog" aria-labelledby="moreModalLabel"-->
+    <!--         aria-hidden="true">-->
+    <!--        <div class="modal-dialog" role="document">-->
+    <!--            <div class="modal-content">-->
+    <!--                <div class="modal-header">-->
+    <!--                    <h3 class="modal-title" id="moreModalLabel"><b>Secciones: </b>></h3>-->
+    <!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">-->
+    <!--                        <span aria-hidden="true">&times;</span>-->
+    <!--                    </button>-->
+    <!--                </div>-->
+    <!--                <div class="modal-body">-->
+    <!--                    <li class="hamburger-li"><a href="index.html"> <span class="fas fa-home"></span> Inicio</a></li>-->
+    <!--                    <li class="hamburger-li"><a href="services.html"> <span class="fas fa-tools"></span> Servicios</a>-->
+    <!--                    </li>-->
+    <!--                    <li class="hamburger-li active"><a href="installation.html"> <span class="fas fa-building"></span>-->
+    <!--                        Instalaciones</a></li>-->
+    <!--                </div>-->
+    <!--                <div class="modal-footer">-->
+    <!--                    <button type="button" class="btn btn-secondary form-modal" data-dismiss="modal">Cerrar</button>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    &lt;!&ndash; FINISH MODAL - MÁS&ndash;&gt;-->
+
 </div>
-<!-- FINISH MODAL -->
 
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
@@ -782,6 +837,7 @@
 <script type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/toastify.js"></script>
 <script type="text/javascript" src="js/emailjs.js"></script>
+<!--<script type="text/javascript" src="js/acordeon-submenu.js"></script>-->
 
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
 </body>

@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="css/acordeon.css">
     <link rel="stylesheet" type="text/css" href="css/toastify.css">
     <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+
 </head>
 
 <body id="top">
@@ -83,12 +84,12 @@
                     <span class='expanded-element'>Instalaciones</span>
                 </a>
             </li>
-            <li>
-                <a class='expandable' href='#' title='Más'>
-                    <span class="fas fa-plus"></span>
-                    <span class='expanded-element'>Más</span>
-                </a>
-            </li>
+<!--            <li>-->
+<!--                <a class='expandable' href='#' title='Más'>-->
+<!--                    <span class="fas fa-plus"></span>-->
+<!--                    <span class='expanded-element'>Más</span>-->
+<!--                </a>-->
+<!--            </li>-->
         </ul>
         <!--    <a href='#' id='logout-icon' title='Logout'>-->
         <!--        <span class='glyphicon glyphicon-off'></span>-->
@@ -106,7 +107,7 @@
             <li class="hamburger-li"><a href="index.html"> <span class="fas fa-home"></span> Inicio</a></li>
             <li  class="hamburger-li active"><a href="services.html">  <span class="fas fa-tools"></span> Servicios</a></li>
             <li  class="hamburger-li"><a href="installation.html">   <span class="fas fa-building"></span> Instalaciones</a></li>
-            <li  class="hamburger-li"><a href="#">  <span class="fas fa-plus"></span> Más</a></li>
+<!--            <li  class="hamburger-li"><a href="#">  <span class="fas fa-plus"></span> Más</a></li>-->
         </ul>
     </nav>
     <!-- FINISH NAV -->
@@ -1038,41 +1039,39 @@
         </div>
     </div>
     <!-- FINISH MODAL INFO-->
-</div>
 
-<!-- INIT MODAL FORM-->
-<div class="modal fade" id="correoModal" tabindex="-1" role="dialog" aria-labelledby="correoModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title" id="correoModalLabel">Datos para envío</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="correoForm">
-                    <div class="form-group">
-                        <label for="nombre">Nombre y Apellido:</label>
-                        <input type="text" class="form-control" id="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="correo">Correo Electrónico:</label>
-                        <input type="email" class="form-control" id="correo" required>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button id="btnEnviar" type="button" class="btn btn-primary">Enviar</button>
+    <!-- INIT MODAL FORM-->
+    <div class="modal fade" id="correoModal" tabindex="-1" role="dialog" aria-labelledby="correoModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="correoModalLabel">Datos para envío</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="correoForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre y Apellido:</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="correo" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button id="btnEnviar" type="button" class="btn btn-primary">Enviar</button>
+                </div>
             </div>
         </div>
     </div>
+    <!-- FINISH MODAL FORM-->
 </div>
-<!-- FINISH MODAL FORM-->
-
-<script type="text/javascript" src=""></script>
 
 <script type="text/javascript" src="js/service.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>

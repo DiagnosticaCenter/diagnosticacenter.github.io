@@ -1,6 +1,3 @@
-$(".acordeon").on("click", ".acordeon-cabecera", function () {
-    $(this).toggleClass("active").next().slideToggle();
-});
 $('.acordeon').each(function () {
     var contador = $(this).prev('.acordeon-supercabecera').find('.contador-checks');
     var totalCheckboxes = $(this).find('input[type="checkbox"]').length;
@@ -205,16 +202,13 @@ function actualizarBotones() {
 
 //MAIL
 //https://dashboard.emailjs.com/admin
-// Reemplaza 'TU_USER_ID' con tu clave pública de EmailJS
-// const userID = 'dTY_6DJGYwHUSzal2';
-// // Reemplaza 'TU_TEMPLATE_ID' con el ID de la plantilla que quieras utilizar
-// const templateID = 'template_ww8km0k';
 document.getElementById('btnEnviar').addEventListener('click', () => {
+    try {
     const datanombre = document.getElementById('nombre').value;
     const datacorreo = document.getElementById('correo').value;
 
     if (!datanombre.trim()) {
-        sendToastify("Este campo no puede estar vació.", 3000,
+        sendToastify("No se ha llenado todos los datos.", 3000,
             true, "bottom", true,
             "linear-gradient(to right, #5e0210, #cc19be)");
         return;
@@ -252,11 +246,15 @@ document.getElementById('btnEnviar').addEventListener('click', () => {
     var asunto = 'Cotización desde la página web'
     var my_email = "centerdiagnostica@gmail.com";
     var cc_email = "labdiagnostica@outlook.com";
-    enviarCorreo(nombre, email, mensaje);
+
     enviarCorreo(asunto, 'Centro Clínico Diagnóstica', my_email, email, nombre, cc_email, mensaje);
 
     // Cerrar el modal
     $('#correoModal').modal('hide');
+
+    }catch (e) {
+
+    }
 });
 
 // Función para validar el formato de correo electrónico

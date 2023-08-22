@@ -81,12 +81,12 @@
                     <span class='expanded-element'>Instalaciones</span>
                 </a>
             </li>
-            <li>
-                <a class='expandable' href='#' title='Más'>
-                    <span class="fas fa-plus"></span>
-                    <span class='expanded-element'>Más</span>
-                </a>
-            </li>
+<!--            <li>-->
+<!--                <a class='expandable' href='#' title='Más'>-->
+<!--                    <span class="fas fa-plus"></span>-->
+<!--                    <span class='expanded-element'>Más</span>-->
+<!--                </a>-->
+<!--            </li>-->
         </ul>
         <!--    <a href='#' id='logout-icon' title='Logout'>-->
         <!--        <span class='glyphicon glyphicon-off'></span>-->
@@ -105,7 +105,7 @@
             <li class="hamburger-li"><a href="services.html"> <span class="fas fa-tools"></span> Servicios</a></li>
             <li class="hamburger-li active"><a href="installation.html"> <span class="fas fa-building"></span>
                 Instalaciones</a></li>
-            <li class="hamburger-li"><a href="#"> <span class="fas fa-plus"></span> Más</a></li>
+<!--            <li class="hamburger-li"><a href="#"> <span class="fas fa-plus"></span> Más</a></li>-->
         </ul>
     </nav>
     <div>
@@ -314,7 +314,7 @@
                 <div class="card__image-holder">
                     <a href="https://source.unsplash.com/300x225/?water" data-lightbox="example-set"
                        data-title="">
-                    <img class="card__image" src="https://source.unsplash.com/300x225/?water" alt="water"/>
+                        <img class="card__image" src="https://source.unsplash.com/300x225/?water" alt="water"/>
                     </a>
                 </div>
                 <div class="card-title">
@@ -346,7 +346,7 @@
                 <div class="card__image-holder">
                     <a href="https://source.unsplash.com/300x225/?river" data-lightbox="example-set"
                        data-title="">
-                    <img class="card__image" src="https://source.unsplash.com/300x225/?river" alt="river"/>
+                        <img class="card__image" src="https://source.unsplash.com/300x225/?river" alt="river"/>
                     </a>
                 </div>
                 <div class="card-title">
@@ -388,8 +388,8 @@
             <div class="media flex-column flex-md-row">
                 <a href="https://source.unsplash.com/300x225/?sky" data-lightbox="example-set"
                    data-title="">
-                <img src="https://source.unsplash.com/300x225/?sky" class="mr-md-3 mb-3 mb-md-0" alt="Imagen"
-                     style="width: 300px;">
+                    <img src="https://source.unsplash.com/300x225/?sky" class="mr-md-3 mb-3 mb-md-0" alt="Imagen"
+                         style="width: 300px;">
                 </a>
                 <div class="media-body info-media-body">
                     <h5 class="mt-0 info-media-body-h5"><strong>Por hora</strong></h5>
@@ -403,7 +403,8 @@
                     </div>
                     <strong>Solicitar información:</strong>
                     <div class="btn-container mt-3">
-                        <button class="btn btn-primary btn-lg send-email-btn" id="forHourEmail">
+                        <button class="btn btn-primary btn-lg send-email-btn" id="forHourEmail"
+                                data-toggle="modal" data-target="#correoModal">
                             <i class="fas fa-envelope"></i> Correo
                         </button>
                         <button class="btn btn-success btn-lg send-whatsapp-btn" id="forHourWhatsapp">
@@ -417,8 +418,8 @@
             <div class="media flex-column flex-md-row">
                 <a href="https://source.unsplash.com/300x225/?park" data-lightbox="example-set"
                    data-title="">
-                <img src="https://source.unsplash.com/300x225/?park`" class="mr-md-3 mb-3 mb-md-0" alt="Imagen"
-                     style="width: 300px;">
+                    <img src="https://source.unsplash.com/300x225/?park`" class="mr-md-3 mb-3 mb-md-0" alt="Imagen"
+                         style="width: 300px;">
                 </a>
                 <div class="media-body info-media-body">
                     <h5 class="mt-0 info-media-body-h5"><strong>Por paciente</strong></h5>
@@ -432,7 +433,8 @@
                     </div>
                     <strong>Solicitar información:</strong>
                     <div class="btn-container mt-3">
-                        <button class="btn btn-primary btn-lg send-email-btn" id="forPatientEmail">
+                        <button class="btn btn-primary btn-lg send-email-btn" id="forPatientEmail"
+                                data-toggle="modal" data-target="#correoModal">
                             <i class="fas fa-envelope"></i> Correo
                         </button>
                         <button class="btn btn-success btn-lg send-whatsapp-btn" id="forPatientWhatsapp">
@@ -446,8 +448,8 @@
             <div class="media flex-column flex-md-row">
                 <a href="https://source.unsplash.com/300x225/?desert" data-lightbox="example-set"
                    data-title="">
-                <img src="https://source.unsplash.com/300x225/?desert" class="mr-md-3 mb-3 mb-md-0" alt="Imagen"
-                     style="width: 300px;">
+                    <img src="https://source.unsplash.com/300x225/?desert" class="mr-md-3 mb-3 mb-md-0" alt="Imagen"
+                         style="width: 300px;">
                 </a>>
                 <div class="media-body info-media-body">
                     <h5 class="mt-0 info-media-body-h5"><strong>Mensual</strong></h5>
@@ -462,7 +464,8 @@
                     </div>
                     <strong>Solicitar información:</strong>
                     <div class="btn-container mt-3">
-                        <button class="btn btn-primary btn-lg send-email-btn" id="forMonthEmail">
+                        <button class="btn btn-primary btn-lg send-email-btn" id="forMonthEmail"
+                                data-toggle="modal" data-target="#correoModal">
                             <i class="fas fa-envelope"></i> Correo
                         </button>
                         <button class="btn btn-success btn-lg send-whatsapp-btn" id="forMonthWhatsapp">
@@ -473,7 +476,6 @@
             </div>
         </div>
     </section>
-
     <!-- FINISH ALQUILER -->
 
     <!-- INIT UBICACIONES -->
@@ -581,7 +583,42 @@
     </footer>
     <!-- FINISH FOOTER -->
 
+    <!-- INIT MODAL FORM-->
+    <div class="modal fade" id="correoModal" tabindex="-1" role="dialog" aria-labelledby="correoModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="correoModalLabel"><b>Datos para envío</b>></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="correoForm">
+                        <b><h3 class="modal-title" id="asuntoCorreo">Asunto:</h3></b>
+                            <hr>
+                            <div class="form-group">
+                                <label for="nombre" class="form-modal">Nombre y Apellido:</label>
+                                <input type="text" class="form-modal form-control " id="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="correo" class="form-modal">Correo Electrónico:</label>
+                                <input type="email" class="form-modal form-control " id="correo" required>
+                            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary form-modal" data-dismiss="modal">Cerrar</button>
+                    <button id="btnEnviar" type="button" class="btn btn-primary form-modal">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FINISH MODAL FORM-->
+
 </div>
+
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/lightbox.js"></script>

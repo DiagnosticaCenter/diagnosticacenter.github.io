@@ -21,7 +21,6 @@ function changeImageBasedOnScreenWidth() {
         var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
         // Establecer la ruta de la imagen en función del ancho de la ventana
-        console.log(windowWidth)
         if (windowWidth <= 768) {
             image1.src = mobileImagePath1;
             image2.src = mobileImagePath2;
