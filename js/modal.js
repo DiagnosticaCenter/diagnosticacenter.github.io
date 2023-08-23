@@ -271,6 +271,58 @@ $('#largeModal').on('show.bs.modal', function (event) {
         dynamicContent = `
                 <div class="row">
                     <div class="col-md-9">
+                        <img src="images/promo-odontologia.jpg" alt="Odontología" class="img-fluid">
+                    </div>
+    <div class="col-md-3">
+                    <div class="div-span-center">
+                       <span class="span-modal" >SÍ QUIERES MÁS INFORMACIÓN
+                       ENVÍANOS TUS DATOS
+                       </span>                
+                    </div>
+                     <br/>       
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label label-modal" >Nombre y Apellido:</label>
+                <input type="text" class="form-control text-modal" id="nombre" name="nombre" required>
+                <label id="nameWarning" class="warning" style="display: none;">Esta información es requerida.</label>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label label-modal">Correo Electrónico:</label>
+                <input type="email" class="form-control text-modal" id="email" name="email" required>
+                  <label id="email2Warning" class="warning" style="display: none;">Correo electrónico válido.</label>
+
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label label-modal">Télefono:</label>
+                <input type="tel" class="form-control text-modal" id="phone" name="phone" required>
+                <label id="phoneWarning" class="warning" style="display: none;">Esta información es requerida.</label>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label label-modal">Mensaje:</label>
+                <textarea class="form-control text-modal" id="mensaje" name="mensaje" rows="2" required></textarea>
+                <label id="mensajeWarning" class="warning" style="display: none;">El mensaje debe tener al
+                    menos 3 palabras.</label>
+            </div>         
+            <br/>
+<!--             <label id="alertWarning" class="warning" style="display: none;">-->
+<!--             Faltan datos por completar, o hay infomación incorrecta.-->
+<!--             </label>-->
+             <button type="button" class="btn btn-primary btn-modal text-white" 
+             onclick="enviarMotivo('Odontología', 'email', 'odontologia')">
+                Enviar Correo 
+             <i class="fas fa-envelope"></i></button>
+            <button type="button"  class="btn btn-success btn-modal text-white" 
+            onclick="enviarMotivo('Odontología', 'whatsapp', 'odontologia')">
+                Enviar WhatsApp <i class="fab fa-whatsapp"></i>
+            </button>
+        </form>
+                    </div>
+                </div>
+            `;
+    } else if (contentId === 'content7') {
+        dynamicContent = `
+                <div class="row">
+                    <div class="col-md-9">
                         <img src="images/promo-farmacia.jpg" alt="Farmacia" class="img-fluid">
                     </div>
     <div class="col-md-3">
@@ -320,7 +372,6 @@ $('#largeModal').on('show.bs.modal', function (event) {
                 </div>
             `;
     }
-
     $('#dynamicContent').html(dynamicContent);
 });
 
@@ -354,6 +405,10 @@ function enviarMotivo(motivoConsulta, redSocial, departamento) {
         numeroDepartamento = "593982922239";
         recipients = "labdiagnostica@outlook.com,centerdiagnostica@gmail.com";
 
+    } else if (departamento === 'odontologia') {
+        numeroDepartamento = "593988609248";
+        recipients = "celybc-10@hotmail.com";
+
     } else if (departamento === 'farmacia') {
         numeroDepartamento = "593978900409";
         recipients = "fr_hospitalsagradocorazondejesus@sanasanafr.com,geovannybricex@hotmail.com";
@@ -378,7 +433,7 @@ function enviarMotivo(motivoConsulta, redSocial, departamento) {
             const subject2 = `Consulta de ${motivo} por Whatsapp desde la página web`;
 
             const body2 = `El Sr(a) ${nombre}, está interesado en obtener más información sobre el asunto de ${motivo}. \n\n${(mensaje)}\nDatos de contacto: ${email}\n${telefono}`;
-            enviarCorreo(subject2, 'Centro Clínico Diagnóstica', email, recipients, '', email, body2);
+            // enviarCorreo(subject2, 'Centro Clínico Diagnóstica', email, recipients, '', email, body2);
 
             const contact = `Datos de contacto: ${email} - ${telefono}`;
 

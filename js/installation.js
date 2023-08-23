@@ -1,14 +1,12 @@
 $(document).ready(function () {
     var zindex = 10;
 
-    $("div.card").click(function (e) {
+    $("div.card .toggle-info").click(function (e) {
         e.preventDefault();
+        e.stopPropagation();
 
-        var isShowing = false;
-
-        if ($(this).hasClass("show")) {
-            isShowing = true
-        }
+        var card = $(this).closest(".card");
+        var isShowing = card.hasClass("show");
 
         if ($("div.cards").hasClass("showing")) {
             // a card is already in view
@@ -21,27 +19,35 @@ $(document).ready(function () {
                     .removeClass("showing");
             } else {
                 // this card isn't showing - get in with it
-                $(this)
+                card
                     .css({zIndex: zindex})
                     .addClass("show");
 
+                zindex++;
             }
-
-            zindex++;
-
         } else {
             // no cards in view
             $("div.cards")
                 .addClass("showing");
-            $(this)
+            card
                 .css({zIndex: zindex})
                 .addClass("show");
 
             zindex++;
         }
+    });
 
+    // Cerrar tarjetas cuando se hace clic fuera de ellas
+    $(document).click(function (e) {
+        if (!$(e.target).closest('.card').length) {
+            $("div.card.show")
+                .removeClass("show");
+            $("div.cards")
+                .removeClass("showing");
+        }
     });
 });
+
 var asuntoEnviar = "";
 document.addEventListener("DOMContentLoaded", function () {
     var forHourEmail = document.getElementById("forHourEmail");
@@ -137,3 +143,59 @@ function validateEmail(email) {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
 }
+
+$('#largeModal').on('show.bs.modal', function (event) {
+
+    var button = $(event.relatedTarget);
+    var contentId = button.data('content');
+
+    var dynamicContent = '';
+    if (contentId === 'content1') {
+        dynamicContent = `
+                <div>
+                        <p class="p-descripcion">  La ecografía es una técnica de diagnóstico médico que emplea ondas de ultrasonido para crear
+                        imágenes internas del cuerpo. Se utiliza en diversas áreas médicas para examinar órganos,
+                        tejidos y estructuras, facilitando evaluaciones precisas y no invasivas.</p>
+                </div>
+            `;
+    } else if (contentId === 'content2') {
+        dynamicContent = `
+                <div >
+                        <p class="p-descripcion">Nuestra farmacia es tu fuente confiable de medicamentos y productos de salud. Ofrecemos una
+                        amplia selección de medicamentos y brindamos asesoramiento personalizado para asegurarnos de que
+                        recibas la atención que necesitas. Aprovecha nuestros descuentos especialmente los Lunes y
+                        Jueves. Con envío a domicilio.</p>
+                </div>
+            `;
+    } else if (contentId === 'content3') {
+        dynamicContent = `
+                <div >
+                        <p class="p-descripcion">Cuidamos de tu salud bucal con pasión y profesionalismo. Ofrecemos una variedad de servicios
+                        odontológicos, que van desde limpiezas, blanqueamientos, tratamientos restaurativos, ortodoncia,
+                        cirugía, etc. Tu sonrisa es nuestra prioridad, y nos esforzamos por brindarte una atención
+                        dental de calidad para que puedas lucir y sentirte mejor.</p>
+                </div>
+            `;
+    } else if (contentId === 'content4') {
+        dynamicContent = `
+                <div >
+                        <p class="p-descripcion"></p>
+                </div>
+            `;
+    } else if (contentId === 'content5') {
+        dynamicContent = `
+                <div >
+                        <p class="p-descripcion"></p>
+                </div>
+            `;
+    } else if (contentId === 'content6') {
+        dynamicContent = `
+                <div >
+                        <p class="p-descripcion"></p>
+                </div>
+            `;
+    }
+
+    $('#dynamicContent').html(dynamicContent);
+
+});

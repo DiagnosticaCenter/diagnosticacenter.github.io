@@ -138,13 +138,23 @@ div.card div.card-title h2 small {
 div.card div.card-description {
     padding: 0 15px 10px;
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: justify;
 }
 
 div.card div.card-actions {
     box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
     padding: 10px 15px 20px;
     text-align: center;
+}
+
+.card-actions a {
+    font-size: 12px;
+    color: white;
+}
+
+.card-actions a:hover {
+    color: rgba(255, 255, 255, 0.57);
 }
 
 div.card div.card-flap {
@@ -223,7 +233,37 @@ div.card.show div.flap2 {
     padding-bottom: 0;
 }
 
-.p-media{
+.p-media {
     text-align: justify;
 }
 
+.redes-sociales {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.redes-sociales i {
+    margin-right: 10px;
+    width: 200px; /* Ajusta el ancho del ícono según lo necesites */
+}
+
+/*Modal Info*/
+.p-descripcion {
+    text-align: justify;
+    font-size: 20px;
+}
+
+.info-modal {
+    font-size: 20px;
+    font-weight: bold;
+}
