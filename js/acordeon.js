@@ -5,19 +5,34 @@ $('.acordeon').each(function () {
 });
 
 // Escuchar el cambio en los checkboxes dentro de los conjuntos
-$('.acordeon-contenido input[type="checkbox"]').on('change', function () {
-    var conjunto = $(this).closest('.acordeon'); // Obtener el conjunto de exámenes
-    var contador = conjunto.prev('.acordeon-supercabecera').find('.contador-checks'); // Obtener el contador
-    var selectedCheckboxes = conjunto.find('input[type="checkbox"]:checked').length; // Contar los checkboxes seleccionados
-    var totalCheckboxes = conjunto.find('input[type="checkbox"]').length; // Obtener el total de checkboxes en el conjunto
-    contador.text(selectedCheckboxes + "/" + totalCheckboxes); // Actualizar el contador
 
-    // Habilitar o deshabilitar el botón de imprimir
-    var btnImprimir = $('#btnImprimir');
-    if (selectedCheckboxes > 0) {
-        btnImprimir.prop('disabled', false);
-    } else {
-        btnImprimir.prop('disabled', true);
+document.addEventListener('DOMContentLoaded', function () {
+    // Desmarcar todas las casillas de verificación al cargar la página
+    const checkboxes = document.querySelectorAll('.acordeon-contenido input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
+
+    const cabeceras = document.querySelectorAll('.acordeon-cabecera');
+
+    cabeceras.forEach(cabecera => {
+        const contador = document.createElement('span');
+        contador.className = 'contador-check';
+        cabecera.appendChild(contador);
+
+        const checkboxes = cabecera.nextElementSibling.querySelectorAll('input[type="checkbox"]');
+        updateCheckboxCount(contador, checkboxes);
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                updateCheckboxCount(contador, checkboxes);
+            });
+        });
+    });
+
+    function updateCheckboxCount(contador, checkboxes) {
+        const checkedCheckboxes = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+        contador.textContent = ` (${checkedCheckboxes.length}/${checkboxes.length})`;
     }
 });
 document.addEventListener("DOMContentLoaded", function () {
@@ -46,24 +61,60 @@ $('.checkbox-label input[type="checkbox"]').on('change', function () {
     $('#btnImprimir').prop('disabled', !anyChecked);
 });
 
-$('#btnImprimir').on('click', function () {
-    var total = 0;
-    var examenesSeleccionados = [];
+function updateCheckboxCount(contador, checkboxes) {
+    const checkedCheckboxes = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+    contador.textContent = `(${checkedCheckboxes.length}/${checkboxes.length})`;
+}
 
-    $('.checkbox-label input[type="checkbox"]:checked').each(function () {
-        var precio = parseFloat($(this).data('value'));
-        if (!isNaN(precio) && precio !== 0) {
-            var examen = $(this).parent().contents().filter(function () {
+$('#btnImprimir').on('click', function () {
+    // MARCAR TODO
+    // const checkboxes = document.querySelectorAll('.acordeon-contenido input[type="checkbox"]');
+    // checkboxes.forEach(checkbox => {
+    //     checkbox.checked = true;
+    // });
+    // updateCheckboxCount(document.querySelector('.contador-check'), checkboxes);
+
+    var total = 0;
+    var seccionesConCheckboxes = [];
+
+    $('.acordeon-cabecera').each(function () {
+        var seccion = $(this).text().trim();
+        var checkboxesMarcados = [];
+
+        $(this).next('.acordeon-contenido').find('input[type="checkbox"]:checked').each(function () {
+            var precio = parseFloat($(this).data('value'));
+            var examenLabel = $(this).closest('.checkbox-label'); // Obtener la etiqueta label
+            var examen = $.trim(examenLabel.contents().filter(function () {
                 return this.nodeType === 3; // Filtrar nodos de texto
-            }).text().trim(); // Obtener el texto del nodo de texto
-            examenesSeleccionados.push("<b>" + examen + "</b>" + " - <b>Precio:<b/> $" + precio);
-            total += precio;
+            }).text()); // Obtener el texto del nodo de texto dentro de la etiqueta label
+
+            if (!isNaN(precio)) {
+                checkboxesMarcados.push(examen + " - Precio: $" + precio.toFixed(2));
+                total += precio;
+            } else {
+                checkboxesMarcados.push(examen);
+            }
+        });
+
+        if (checkboxesMarcados.length > 0) {
+            seccionesConCheckboxes.push({
+                seccion: seccion,
+                checkboxes: checkboxesMarcados
+            });
         }
     });
 
-    var mensaje = "<h1><b>Examenes seleccionados:</b></h1> <br><br>" + examenesSeleccionados.join("<br>");
+    var contenidoImpreso = '';
+    seccionesConCheckboxes.forEach(function (seccion) {
+        var selectSection = seccion.seccion;
+        selectSection =  selectSection.split('(')[0].trim();
+        contenidoImpreso += '<h2 style="font-size: 25px;"><b>' + selectSection + '</b></h2>';
+        contenidoImpreso += seccion.checkboxes.join("<<br>");
+    });
+
+    var mensaje = "<h2 style='font-size: 30px'><b>EXAMENES SELECCIONADOS:</b></h2> <br><br>" + contenidoImpreso;
     if (total > 0) {
-        mensaje += "<br><br><b style='font-size: 30px;'>Total:</b> $" + total.toFixed(2) + ""; // Aumenta el tamaño del texto
+        mensaje += "<br><br><b style='font-size: 30px;'>Total:</b> $" + total.toFixed(2) + "";
         mensaje += "<br><b style='font-size: 15px; color: red'>El valor indicado no contiene descuentos y/o promociones.:</b>";
     }
 
@@ -175,55 +226,55 @@ function actualizarBotones() {
 //https://dashboard.emailjs.com/admin
 document.getElementById('btnEnviar').addEventListener('click', () => {
     try {
-    const datanombre = document.getElementById('nombre').value;
-    const datacorreo = document.getElementById('correo').value;
+        const datanombre = document.getElementById('nombre').value;
+        const datacorreo = document.getElementById('correo').value;
 
-    if (!datanombre.trim()) {
-        sendToastify("No se ha llenado todos los datos.", 3000,
-            true, "bottom", true,
-            "linear-gradient(to right, #5e0210, #cc19be)");
-        return;
-    }
-
-    if (!validateEmail(datacorreo)) {
-        sendToastify("Debe ingresar un correo válido.", 3000,
-            true, "bottom", true,
-            "linear-gradient(to right, #5e0210, #cc19be)");
-        return;
-    }
-
-    var total = 0;
-    var examenesSeleccionados = [];
-
-    $('.checkbox-label input[type="checkbox"]:checked').each(function () {
-        var precio = parseFloat($(this).data('value'));
-        if (!isNaN(precio) && precio !== 0) {
-            var examen = $(this).parent().contents().filter(function () {
-                return this.nodeType === 3;
-            }).text().trim();
-            examenesSeleccionados.push(examen + " - Precio: " + precio);
-            total += precio;
+        if (!datanombre.trim()) {
+            sendToastify("No se ha llenado todos los datos.", 3000,
+                true, "bottom", true,
+                "linear-gradient(to right, #5e0210, #cc19be)");
+            return;
         }
-    });
-    let codigoOrden = generarCodigoAleatorio();
-    var mensaje = "Los exámenes que ha cotizado en la página web son los siguientes \n\n" + examenesSeleccionados.join("\n");
-    if (total > 0) {
-        mensaje += "\n\nTotal: " + total.toFixed(2);
-    }
-    mensaje += "\n\nPerteneciente a la orden digital " + codigoOrden;
-    mensaje += "\n\nRecuerde que el valor indicado no contiene descuentos y/o promociones, por ende está sujeto a cambios. Gracias"
-    var email = datacorreo;
-    var nombre = datanombre;
-    var asunto = 'Cotización desde la página web'
-    var my_email = "centerdiagnostica@gmail.com";
-    var cc_email = "labdiagnostica@outlook.com";
 
-    enviarCorreo(asunto, 'Centro Clínico Diagnóstica', my_email, email, nombre, cc_email, mensaje);
+        if (!validateEmail(datacorreo)) {
+            sendToastify("Debe ingresar un correo válido.", 3000,
+                true, "bottom", true,
+                "linear-gradient(to right, #5e0210, #cc19be)");
+            return;
+        }
 
-    // Cerrar el modal
-    $('#correoModal').modal('hide');
+        var total = 0;
+        var examenesSeleccionados = [];
 
-    }catch (e) {
+        $('.checkbox-label input[type="checkbox"]:checked').each(function () {
+            var precio = parseFloat($(this).data('value'));
+            if (!isNaN(precio) && precio !== 0) {
+                var examen = $(this).parent().contents().filter(function () {
+                    return this.nodeType === 3;
+                }).text().trim();
+                examenesSeleccionados.push(examen + " - Precio: " + precio);
+                total += precio;
+            }
+        });
+        let codigoOrden = generarCodigoAleatorio();
+        var mensaje = "Los exámenes que ha cotizado en la página web son los siguientes \n\n" + examenesSeleccionados.join("\n");
+        if (total > 0) {
+            mensaje += "\n\nTotal: " + total.toFixed(2);
+        }
+        mensaje += "\n\nPerteneciente a la orden digital " + codigoOrden;
+        mensaje += "\n\nRecuerde que el valor indicado no contiene descuentos y/o promociones, por ende está sujeto a cambios. Gracias"
+        var email = datacorreo;
+        var nombre = datanombre;
+        var asunto = 'Cotización desde la página web'
+        var my_email = "centerdiagnostica@gmail.com";
+        var cc_email = "labdiagnostica@outlook.com";
+
+        enviarCorreo(asunto, 'Centro Clínico Diagnóstica', my_email, email, nombre, cc_email, mensaje);
+
+        // Cerrar el modal
+        $('#correoModal').modal('hide');
+
+    } catch (e) {
 
     }
 });

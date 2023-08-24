@@ -139,3 +139,7 @@ th, td {
 .modal-content button {
     font-size: 16px;
 }
+
+.contador-check {
+    color: red;
+}
