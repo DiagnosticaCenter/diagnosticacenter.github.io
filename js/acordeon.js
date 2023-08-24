@@ -67,7 +67,6 @@ function updateCheckboxCount(contador, checkboxes) {
 }
 
 $('#btnImprimir').on('click', function () {
-    // MARCAR TODO
     // const checkboxes = document.querySelectorAll('.acordeon-contenido input[type="checkbox"]');
     // checkboxes.forEach(checkbox => {
     //     checkbox.checked = true;
@@ -89,10 +88,10 @@ $('#btnImprimir').on('click', function () {
             }).text()); // Obtener el texto del nodo de texto dentro de la etiqueta label
 
             if (!isNaN(precio)) {
-                checkboxesMarcados.push(examen + " - Precio: $" + precio.toFixed(2));
+                checkboxesMarcados.push({ nombre: examen, precio: "$" + precio.toFixed(2) });
                 total += precio;
             } else {
-                checkboxesMarcados.push(examen);
+                checkboxesMarcados.push({ nombre: examen, precio: "" });
             }
         });
 
@@ -107,20 +106,29 @@ $('#btnImprimir').on('click', function () {
     var contenidoImpreso = '';
     seccionesConCheckboxes.forEach(function (seccion) {
         var selectSection = seccion.seccion;
-        selectSection =  selectSection.split('(')[0].trim();
-        contenidoImpreso += '<h2 style="font-size: 25px;"><b>' + selectSection + '</b></h2>';
-        contenidoImpreso += seccion.checkboxes.join("<<br>");
+        selectSection = selectSection.split('(')[0].trim();
+        contenidoImpreso += '<h2 style="font-size: 20px;"><b>' + selectSection + '</b></h2>';
+
+        if (seccion.checkboxes.length > 0) {
+            contenidoImpreso += '<table style="width: 100%; border-collapse: collapse; border: 1px solid black;">';
+            contenidoImpreso += '<tr><th style="border: 1px solid black; padding: 10px; font-size: 17px;">Examen</th><th style="border: 1px solid black; padding: 10px; width: 100px; font-size: 17px;">Precio</th></tr>';
+
+            seccion.checkboxes.forEach(function (examen) {
+                contenidoImpreso += '<tr><td style="border: 1px solid black; padding: 10px; font-size: 17px;">' + examen.nombre + '</td><td style="border: 1px solid black; padding: 10px; font-size: 17px;">' + examen.precio + '</td></tr>';
+            });
+
+            contenidoImpreso += '</table>';
+        }
     });
 
-    var mensaje = "<h2 style='font-size: 30px'><b>EXAMENES SELECCIONADOS:</b></h2> <br><br>" + contenidoImpreso;
+    var mensaje = "<h2 style='font-size: 25px'><b>EXAMENES SELECCIONADOS:</b></h2> <br><br>" + contenidoImpreso;
     if (total > 0) {
-        mensaje += "<br><br><b style='font-size: 30px;'>Total:</b> $" + total.toFixed(2) + "";
+        mensaje += "<br><br><b style='font-size: 35px;'>Total:</b> $" + total.toFixed(2) + "";
         mensaje += "<br><b style='font-size: 15px; color: red'>El valor indicado no contiene descuentos y/o promociones.:</b>";
     }
 
     var printWindow = window.open('', '', 'height=400,width=800');
 
-    // Agregar el logo al contenido impreso (primera posición)
     var logoHtml = $('#logo').html();
     var logoStyles = `
     <style>
@@ -135,18 +143,16 @@ $('#btnImprimir').on('click', function () {
     </style>
   `;
     printWindow.document.head.innerHTML += logoStyles;
-    printWindow.document.write(logoHtml); // Agrega el logo al inicio
+    printWindow.document.write(logoHtml);
 
-    // Agregar el mensaje al contenido impreso (segunda posición)
     var mensajeHtml = '<br/> <div style="font-size: 25px; ">' + mensaje + '</div>';
-    printWindow.document.write(mensajeHtml); // Agrega el mensaje después del logo
+    printWindow.document.write(mensajeHtml);
     printWindow.document.close();
 
-    // Imprimir y luego cerrar la ventana emergente
     printWindow.print();
     setTimeout(function () {
         printWindow.close();
-    }, 1000); // Cambia el tiempo según sea necesario
+    }, 1000);
 });
 
 $('#btnWhatsapp').on('click', function () {

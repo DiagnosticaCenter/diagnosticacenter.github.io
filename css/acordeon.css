@@ -143,3 +143,8 @@ th, td {
 .contador-check {
     color: red;
 }
+
+.checkbox-label input[type="checkbox"] {
+    transform: scale(1.5); /* Ajusta el valor para cambiar el tamaño */
+    margin-right: 15px; /* Añade un espacio entre el checkbox y el texto */
+}
