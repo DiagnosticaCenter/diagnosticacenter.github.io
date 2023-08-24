@@ -107,21 +107,29 @@ $('#btnImprimir').on('click', function () {
     seccionesConCheckboxes.forEach(function (seccion) {
         var selectSection = seccion.seccion;
         selectSection = selectSection.split('(')[0].trim();
-        contenidoImpreso += '<h2 style="font-size: 20px;"><b>' + selectSection + '</b></h2>';
+        contenidoImpreso += '<br> <h2 style="font-size: 20px;"><b>' + selectSection + '</b></h2>';
 
         if (seccion.checkboxes.length > 0) {
-            contenidoImpreso += '<table style="width: 100%; border-collapse: collapse; border: 1px solid black;">';
-            contenidoImpreso += '<tr><th style="border: 1px solid black; padding: 10px; font-size: 17px;">Examen</th><th style="border: 1px solid black; padding: 10px; width: 100px; font-size: 17px;">Precio</th></tr>';
+            contenidoImpreso += '<table style="width: 100%; border-collapse: collapse;">';
+            contenidoImpreso += '<tr><th style="border-bottom: 1px solid rgba(0,0,0,0.4); padding: 10px; font-size: 17px;">Examen</th><th style="border-bottom: 1px solid rgba(0,0,0,0.4); padding: 10px; width: 100px; font-size: 17px;">Precio</th></tr>';
 
-            seccion.checkboxes.forEach(function (examen) {
-                contenidoImpreso += '<tr><td style="border: 1px solid black; padding: 10px; font-size: 17px;">' + examen.nombre + '</td><td style="border: 1px solid black; padding: 10px; font-size: 17px;">' + examen.precio + '</td></tr>';
+            seccion.checkboxes.forEach(function (examen, index) {
+                contenidoImpreso += '<tr>';
+                contenidoImpreso += '<td style="padding: 10px; font-size: 17px;">' + examen.nombre + '</td>';
+                contenidoImpreso += '<td style="padding: 10px; font-size: 17px;">' + examen.precio + '</td>';
+                contenidoImpreso += '</tr>';
+
+                // Agregar un borde inferior después de cada fila, excepto la última
+                if (index < seccion.checkboxes.length - 1) {
+                    contenidoImpreso += '<tr><td colspan="2" style="border-bottom: 1px solid #969696; padding: 0;"></td></tr>';
+                }
             });
 
             contenidoImpreso += '</table>';
         }
     });
 
-    var mensaje = "<h2 style='font-size: 25px'><b>EXAMENES SELECCIONADOS:</b></h2> <br><br>" + contenidoImpreso;
+    var mensaje = "<br> <h2 style='font-size: 17px'><b>EXAMENES SELECCIONADOS:</b></h2>" + contenidoImpreso;
     if (total > 0) {
         mensaje += "<br><br><b style='font-size: 35px;'>Total:</b> $" + total.toFixed(2) + "";
         mensaje += "<br><b style='font-size: 15px; color: red'>El valor indicado no contiene descuentos y/o promociones.:</b>";
