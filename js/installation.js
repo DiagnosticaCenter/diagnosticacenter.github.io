@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function sendWhatsapp(asunto) {
-    var mensaje = "Saludos, estoy interesado en obtener más información sobre el " + asunto + "\n que ofrecen en su página web. Gracias\n";
+    var mensaje = "Saludos, estoy interesado en obtener más información sobre el " + asunto + " que ofrecen en su página web. Gracias\n";
 
     var subject = 'Alquiler por whatsapp desde página web';
     const recipients = "labdiagnostica@outlook.com,centerdiagnostica@gmail.com";
@@ -125,7 +125,7 @@ document.getElementById('btnEnviar').addEventListener('click', () => {
         return;
     }
 
-    var mensaje = `Soy ${datanombre} estoy interesando en obtener más información de ${asuntoEnviar}, que ofrecen en su página web \nCorreo Electrónico: ${datacorreo}`;
+    var mensaje = `Soy ${datanombre} estoy interesando en obtener más información de ${asuntoEnviar}. La cual ofrecen en su página web \nCorreo Electrónico: ${datacorreo}`;
 
     var email = datacorreo;
     var nombre = datanombre;

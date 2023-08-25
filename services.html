@@ -1639,19 +1639,19 @@
             <span class="precio-referencial"><b>Precio referencial:</b>
                 El valor indicado no contiene descuentos y/o promociones, por ende está sujeto a cambios.
             </span><br>
-<!--            <button id="btnImprimir" class="btn btn-primary btn-imprimir" disabled>-->
-<!--                <i class="fas fa-print"></i> Imprimir-->
-<!--            </button>-->
-            <button id="btnWhatsapp" class="btn btn-success btn-imprimir" disabled>
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </button>
             <button id="btnCorreo" class="btn btn-info btn-imprimir" disabled data-toggle="modal"
                     data-target="#correoModal">
                 <i class="far fa-envelope"></i> Correo Electrónico
             </button>
-
+            <button id="btnWhatsapp" class="btn btn-success btn-imprimir" disabled data-toggle="modal"
+                    data-target="#whatsappModal">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+<!--            <button id="btnImprimir" class="btn btn-primary btn-imprimir" disabled>-->
+<!--                <i class="fas fa-print"></i> Imprimir-->
+<!--            </button>-->
             <div id="logo" class="d-none">
-                <img src="images/site-logo.jpg" width="300px" alt="Logo Image">
+                <img src="images/site-logo.jpg" width="200px" alt="Logo Image">
             </div>
         </div>
     </section>
@@ -2202,9 +2202,45 @@
                         </div>
                     </form>
                 </div>
+                <div class="modal-footer justify-content-between">
+                    <button id="btnImprimir" type="button" class="btn btn-danger" disabled data-toggle="Una vez enviado el correo, se podrá imprimir.">Imprimir</button>
+                    <div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button id="btnEnviar" type="button" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="whatsappModal" tabindex="-1" role="dialog" aria-labelledby="whatsappModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="whatsappModalLabel">Datos para envío</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="whatsappForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre y Apellido:</label>
+                            <input type="text" class="form-control" id="nombrewhatsapp" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Número de contacto:</label>
+                            <input type="email" class="form-control" id="numerowhatsapp" required>
+                        </div>
+                    </form>
+                </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button id="btnEnviar" type="button" class="btn btn-primary">Enviar</button>
+<!--                    <button id="btnImprimirwhatsapp" type="button" class="btn btn-danger" disabled data-toggle="Una vez enviado el correo, se podrá imprimir.">Imprimir</button>-->
+                    <div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button id="btnEnviarwhatsapp" type="button" class="btn btn-primary">Enviar</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,7 +5,14 @@ $('.acordeon').each(function () {
 });
 
 // Escuchar el cambio en los checkboxes dentro de los conjuntos
+document.addEventListener("DOMContentLoaded", function () {
 
+    document.getElementById("btnImprimir").disabled = true;
+    document.getElementById("btnWhatsapp").disabled = true;
+    document.getElementById("btnEnviar").disabled = true;
+    document.getElementById("btnEnviarwhatsapp").disabled = true;
+    document.getElementById("btnCorreo").disabled = true;
+});
 document.addEventListener('DOMContentLoaded', function () {
     // Desmarcar todas las casillas de verificación al cargar la página
     const checkboxes = document.querySelectorAll('.acordeon-contenido input[type="checkbox"]');
@@ -58,7 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $('.checkbox-label input[type="checkbox"]').on('change', function () {
     var anyChecked = $('.checkbox-label input[type="checkbox"]:checked').length > 0;
-    $('#btnImprimir').prop('disabled', !anyChecked);
+    $('#btnWhatsapp').prop('disabled', !anyChecked);
+    $('#btnEnviar').prop('disabled', !anyChecked);
+    $('#btnEnviarwhatsapp').prop('disabled', !anyChecked);
+    $('#btnCorreo').prop('disabled', !anyChecked);
+
 });
 
 function updateCheckboxCount(contador, checkboxes) {
@@ -66,13 +77,7 @@ function updateCheckboxCount(contador, checkboxes) {
     contador.textContent = `(${checkedCheckboxes.length}/${checkboxes.length})`;
 }
 
-$('#btnImprimir').on('click', function () {
-    // const checkboxes = document.querySelectorAll('.acordeon-contenido input[type="checkbox"]');
-    // checkboxes.forEach(checkbox => {
-    //     checkbox.checked = true;
-    // });
-    // updateCheckboxCount(document.querySelector('.contador-check'), checkboxes);
-
+function printPdf() {
     var total = 0;
     var seccionesConCheckboxes = [];
 
@@ -88,10 +93,10 @@ $('#btnImprimir').on('click', function () {
             }).text()); // Obtener el texto del nodo de texto dentro de la etiqueta label
 
             if (!isNaN(precio)) {
-                checkboxesMarcados.push({ nombre: examen, precio: "$" + precio.toFixed(2) });
+                checkboxesMarcados.push({nombre: examen, precio: "$" + precio.toFixed(2)});
                 total += precio;
             } else {
-                checkboxesMarcados.push({ nombre: examen, precio: "" });
+                checkboxesMarcados.push({nombre: examen, precio: ""});
             }
         });
 
@@ -107,16 +112,17 @@ $('#btnImprimir').on('click', function () {
     seccionesConCheckboxes.forEach(function (seccion) {
         var selectSection = seccion.seccion;
         selectSection = selectSection.split('(')[0].trim();
-        contenidoImpreso += '<br> <h2 style="font-size: 20px;"><b>' + selectSection + '</b></h2>';
+        contenidoImpreso += '<br/><span style="font-size: 15px;"><b>' + selectSection + '</b></span>';
 
         if (seccion.checkboxes.length > 0) {
             contenidoImpreso += '<table style="width: 100%; border-collapse: collapse;">';
-            contenidoImpreso += '<tr><th style="border-bottom: 1px solid rgba(0,0,0,0.4); padding: 10px; font-size: 17px;">Examen</th><th style="border-bottom: 1px solid rgba(0,0,0,0.4); padding: 10px; width: 100px; font-size: 17px;">Precio</th></tr>';
+            contenidoImpreso += '<tr><th style="border-bottom: 1px solid rgba(0,0,0,0.4); padding: 0px; font-size: 12px;">Examen</th>' +
+                '<th style="border-bottom: 1px solid rgba(0,0,0,0.4); padding: 0px; width: 100px; font-size: 12px;">Valor</th></tr>';
 
             seccion.checkboxes.forEach(function (examen, index) {
                 contenidoImpreso += '<tr>';
-                contenidoImpreso += '<td style="padding: 10px; font-size: 17px;">' + examen.nombre + '</td>';
-                contenidoImpreso += '<td style="padding: 10px; font-size: 17px;">' + examen.precio + '</td>';
+                contenidoImpreso += '<td style="padding: 0px; font-size: 12px;">' + examen.nombre + '</td>';
+                contenidoImpreso += '<td style="padding: 0px; font-size: 12px;">' + examen.precio + '</td>';
                 contenidoImpreso += '</tr>';
 
                 // Agregar un borde inferior después de cada fila, excepto la última
@@ -124,15 +130,15 @@ $('#btnImprimir').on('click', function () {
                     contenidoImpreso += '<tr><td colspan="2" style="border-bottom: 1px solid #969696; padding: 0;"></td></tr>';
                 }
             });
-
             contenidoImpreso += '</table>';
         }
     });
 
-    var mensaje = "<br> <h2 style='font-size: 17px'><b>EXAMENES SELECCIONADOS:</b></h2>" + contenidoImpreso;
+    var mensaje = "<h2 style='font-size: 15px'>ORDEN DIGITAL: " + codigoOrden + "</h2>" +
+        "<h2 style='font-size: 15px'><b>EXAMENES SELECCIONADOS:</b></h2>" + contenidoImpreso;
     if (total > 0) {
-        mensaje += "<br><br><b style='font-size: 35px;'>Total:</b> $" + total.toFixed(2) + "";
-        mensaje += "<br><b style='font-size: 15px; color: red'>El valor indicado no contiene descuentos y/o promociones.:</b>";
+        mensaje += "<br><b style='font-size: 15px;'>Total:</b> <span style='font-size: 15px;'>$" + total.toFixed(2) + "</span>";
+        mensaje += "<br><b style='font-size: 10px; color: red'>El valor indicado no contiene descuentos y/o promociones, por ende puede estar sujeto a cambios.</b>";
     }
 
     var printWindow = window.open('', '', 'height=400,width=800');
@@ -153,7 +159,7 @@ $('#btnImprimir').on('click', function () {
     printWindow.document.head.innerHTML += logoStyles;
     printWindow.document.write(logoHtml);
 
-    var mensajeHtml = '<br/> <div style="font-size: 25px; ">' + mensaje + '</div>';
+    var mensajeHtml = '<div style="font-size: 12px; ">' + mensaje + '</div>';
     printWindow.document.write(mensajeHtml);
     printWindow.document.close();
 
@@ -161,9 +167,39 @@ $('#btnImprimir').on('click', function () {
     setTimeout(function () {
         printWindow.close();
     }, 1000);
+}
+
+$('#btnImprimir').on('click', function () {
+    // Seleccionar Todo
+    // const checkboxes = document.querySelectorAll('.acordeon-contenido input[type="checkbox"]');
+    // checkboxes.forEach(checkbox => {
+    //     checkbox.checked = true;
+    // });
+    // updateCheckboxCount(document.querySelector('.contador-check'), checkboxes);
+    document.getElementById("btnImprimir").disabled = true;
+    printPdf();
+    $('#correoModal').modal('hide');
+
 });
 
-$('#btnWhatsapp').on('click', function () {
+document.getElementById('btnEnviarwhatsapp').addEventListener('click', () => {
+    const datanombre = document.getElementById('nombrewhatsapp').value;
+    const datanumero = document.getElementById('numerowhatsapp').value;
+
+    if (!datanombre.trim()) {
+        sendToastify("No se ha llenado todos los datos.", 3000,
+            true, "bottom", true,
+            "linear-gradient(to right, #5e0210, #cc19be)");
+        return;
+    }
+
+    if (!validarNumeroTelefonoEcuador(datanumero)) {
+        sendToastify("Debe ingresar un correo válido.", 3000,
+            true, "bottom", true,
+            "linear-gradient(to right, #5e0210, #cc19be)");
+        return;
+    }
+
     var total = 0;
     var examenesSeleccionados = [];
     var examenesSeleccionados2 = [];
@@ -175,13 +211,13 @@ $('#btnWhatsapp').on('click', function () {
                 return this.nodeType === 3;
             }).text().trim();
             examenesSeleccionados.push(examen);
-            examenesSeleccionados2.push(examen + " - Precio: " + precio);
+            examenesSeleccionados2.push(examen + " - Valor: $" + precio);
             total += precio;
         }
     });
     let codigoOrden = generarCodigoAleatorio();
-    var mensaje = "Saludos, he cotizado desde su página web los siguientes exámenes\n\n" + examenesSeleccionados.join("\n");
-    var mensaje2 = "Se ha cotizado desde la página web los siguientes exámenes\n\n" + examenesSeleccionados2.join("\n");
+    var mensaje = "Saludos, soy " + datanombre + ", mi número de contacto es " + datanumero + ".\nHe cotizado desde su página web los siguientes exámenes\n\n" + examenesSeleccionados.join("\n");
+    var mensaje2 = "El Sr(a) " + datanombre + ", con número de contacto: " + datanumero + ".\nHa cotizado desde la página web los siguientes exámenes\n\n" + examenesSeleccionados2.join("\n");
 
     if (total > 0) {
         mensaje += "\n\nTotal: " + total.toFixed(2);
@@ -203,40 +239,19 @@ $('#btnWhatsapp').on('click', function () {
 
     // Abrir el enlace en una nueva ventana
     window.open(whatsappLink, "_blank");
+
+    $('#correoModal').modal('hide');
+    document.getElementById('nombrewhatsapp').value = '';
+    document.getElementById('numerowhatsapp').value = '';
 });
-
-function generarCodigoAleatorio() {
-    const fechaActual = new Date();
-
-    const año = fechaActual.getFullYear().toString().slice(-2); // Obtener los últimos dos dígitos del año
-    const mes = fechaActual.getMonth() + 1;
-    const dia = fechaActual.getDate();
-    const hora = fechaActual.getHours();
-    const minutos = fechaActual.getMinutes();
-    const segundos = fechaActual.getSeconds();
-    const milisegundos = fechaActual.getMilliseconds();
-
-    const codigo = `${año}${mes}${dia}${hora}${minutos}${segundos}${milisegundos}`;
-    return codigo;
-}
-
 
 // Evento cuando se cambia un checkbox
 $('.checkbox-label input[type="checkbox"]').on('change', function () {
     actualizarBotones();
 });
 
-// Función para actualizar el estado de los botones
-function actualizarBotones() {
-    var totalChecksSeleccionados = $('.checkbox-label input[type="checkbox"]:checked').length;
-    if (totalChecksSeleccionados > 0) {
-        $('#btnImprimir, #btnWhatsapp, #btnCorreo').prop('disabled', false);
-    } else {
-        $('#btnImprimir, #btnWhatsapp, #btnCorreo').prop('disabled', true);
-    }
-}
-
 //MAIL
+let codigoOrden = "";
 //https://dashboard.emailjs.com/admin
 document.getElementById('btnEnviar').addEventListener('click', () => {
     try {
@@ -266,11 +281,11 @@ document.getElementById('btnEnviar').addEventListener('click', () => {
                 var examen = $(this).parent().contents().filter(function () {
                     return this.nodeType === 3;
                 }).text().trim();
-                examenesSeleccionados.push(examen + " - Precio: " + precio);
+                examenesSeleccionados.push(examen + " - Valor: $" + precio);
                 total += precio;
             }
         });
-        let codigoOrden = generarCodigoAleatorio();
+        codigoOrden = generarCodigoAleatorio();
         var mensaje = "Los exámenes que ha cotizado en la página web son los siguientes \n\n" + examenesSeleccionados.join("\n");
         if (total > 0) {
             mensaje += "\n\nTotal: " + total.toFixed(2);
@@ -286,7 +301,11 @@ document.getElementById('btnEnviar').addEventListener('click', () => {
         enviarCorreo(asunto, 'Centro Clínico Diagnóstica', my_email, email, nombre, cc_email, mensaje);
 
         // Cerrar el modal
-        $('#correoModal').modal('hide');
+        // $('#correoModal').modal('hide');
+        document.getElementById('nombre').value = '';
+        document.getElementById('correo').value = '';
+
+        document.getElementById("btnImprimir").disabled = false;
 
     } catch (e) {
 
@@ -297,6 +316,44 @@ document.getElementById('btnEnviar').addEventListener('click', () => {
 function validateEmail(email) {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
+}
+
+function generarCodigoAleatorio() {
+    const fechaActual = new Date();
+
+    const año = fechaActual.getFullYear().toString().slice(-2); // Obtener los últimos dos dígitos del año
+    const mes = fechaActual.getMonth() + 1;
+    const dia = fechaActual.getDate();
+    const hora = fechaActual.getHours();
+    const minutos = fechaActual.getMinutes();
+    const segundos = fechaActual.getSeconds();
+    const milisegundos = fechaActual.getMilliseconds();
+
+    const codigo = `${año}${mes}${dia}${hora}${minutos}${segundos}${milisegundos}`;
+    return codigo;
+}
+
+// Función para actualizar el estado de los botones
+function actualizarBotones() {
+    var totalChecksSeleccionados = $('.checkbox-label input[type="checkbox"]:checked').length;
+    if (totalChecksSeleccionados > 0) {
+        $('#btnWhatsapp, #btnCorreo').prop('disabled', false);
+    } else {
+        $('#btnWhatsapp, #btnCorreo').prop('disabled', true);
+    }
+}
+
+// Función para validar el formato de números en Ecuador
+function validarNumeroTelefonoEcuador(numero) {
+    // Eliminar espacios en blanco, guiones y el prefijo internacional
+    numero = numero.replace(/\s/g, '').replace(/-/g, '').replace(/^\+593/, '');
+
+    // Verificar si el número coincide con los formatos válidos para Ecuador
+    if (/^(09\d{8}|02\d{7})$/.test(numero)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // const enviarCorreo = async (to_subject, from_name, reply_to, to_email, to_name, to_cc, message) => {
